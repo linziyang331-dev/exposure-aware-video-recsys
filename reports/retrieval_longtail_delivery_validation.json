@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-10-29T20:56:58.650683+08:00",
+  "canonical_output": "experiments\\retrieval_longtail_main_v2",
+  "selected_trial": "gated_fast",
+  "tests_run": 166,
+  "tests_passed": 165,
+  "tests_skipped": 1,
+  "tests_added": 14,
+  "rank_files_recomputed": 24,
+  "actual_checkpoint_replays": 12288,
+  "training_runs_validated": 14,
+  "old_components": {
+    "status": "PASS",
+    "old_system_input_files_unchanged": 620,
+    "old_system_sources_unchanged": 13,
+    "old_system_evaluation_outputs_unchanged": 10,
+    "old_system_manifest_sha256": "82db4779f79dbde11ef90c6ec24db923d375efc1cd3a4a80b17b22a3f9abfe91",
+    "old_v2_frozen_files_unchanged": 89
+  },
+  "report_mirrors_byte_identical": true,
+  "same_machine_from_scratch_seed42_reproduction_models": [
+    "control",
+    "gated_fast"
+  ],
+  "formal_pipeline_replaced": false,
+  "longtail_top20_improvement_claimed": false,
+  "new_installs_or_downloads": false,
+  "limitations": [
+    "existing test is iterative reassessment",
+    "no DIN adaptation or online benefit",
+    "local report integrity automated; global mirrors manually checked at delivery",
+    "phase-specific evaluate requires prior diagnosis; missing preflight is deferred",
+    "pre-review selection preserved; canonical selection imports validated eight training components"
+  ],
+  "files_sha256": {
+    "configs/retrieval_longtail.yaml": "799dbba7ad7dea67ecce56427dac1494bce8135f0c142183ee0fcde895e85249",
+    "experiments/retrieval_longtail_main_v2/evaluation_manifest.json": "af6561e84f40740ed883187aebc08b929b9bb0255b72e90200a9fa8619104049",
+    "experiments/retrieval_longtail_main_v2/report_manifest.json": "94affe06f00ab13da4d8ec4b28132034c53ffcebbfa93b181f321b82ab3b404d",
+    "experiments/retrieval_longtail_main_v2/reproduction.json": "ff966ceb0d7c1571eba1457b2a87bee464d126212680b96bd47390574c36a09e",
+    "experiments/retrieval_longtail_main_v2/verification.json": "8c932868d6370bfdbc5aac8b47588e6ddf11f70efc5d559dff4c9502abcb2734",
+    "reports/environment_logs/longtail_all_tests_review_fixed.txt": "94ed8c2db4774848f25899590a00bb70e7e842d7012b1292c2116a84987309b9",
+    "reports/retrieval_longtail_assessment.md": "d00a687019b2aa713153352968bca926c59553c4ff65ebb5ce8ff867d8959524",
+    "reports/retrieval_longtail_component_reuse.json": "0594869e0947c41f6be239d6074b44ea48fbd8442adee74e6b3a01f035da707e",
+    "reports/retrieval_longtail_report.md": "dea927186d4c03d1d08e378e35f6e312580773d3ca27a41f1c7620a0d812cb18",
+    "reports/retrieval_longtail_results.json": "013f53df63f1e8255faa8ebc5effb436fc7685fa44f3b3a7e1a3222d81b486de",
+    "reports/retrieval_longtail_review.md": "6b896064b3a5890b65d60e744298b9a41f843d2b8a39ac71137544bd6018b39b",
+    "src/retrieval_longtail/__init__.py": "59ad40e4f12d459315a1965161301cc4c7b799475198db10a8b0017bd1b4817e",
+    "src/retrieval_longtail/contracts.py": "1bf13cabeba26801d170f146993f9900a9174727d02cdc9a193d9d1d42ca9011",
+    "src/retrieval_longtail/diagnose.py": "4981d895e9a4af8c6c7c6517039ff4d7370b62cf9b159cdf3fcf7cdbf668c11b",
+    "src/retrieval_longtail/model.py": "c10af2c1a015f203fdc70ddecfa00ec07c602a601bf17b5ada3454bd7cf05c6b",
+    "src/retrieval_longtail/report.py": "f4bb2d7e7ee4d67420c9e9a9908d90318c9fd23496a67092dc45067236cfd772",
+    "src/retrieval_longtail/run.py": "9fbccb21e8710a84625f16a0eefbe474fca9fc004b1409af8f1039ed2e021e38",
+    "src/retrieval_longtail/train.py": "6d9d3828a639d3ad5f5dbb65c7cae996b841356056e304b3ffd9d52465b94b10",
+    "src/retrieval_longtail/verify.py": "71557bda3456c8b067796e135dea788dd1816578219845c69201f08a0c08c64f",
+    "tests/test_retrieval_longtail.py": "9ba638997b88255d85bf81eb21a81b46178791c3da4429c367c936adb9679ed5",
+    "tests/test_retrieval_longtail_run.py": "7beb4619a8ad758f14d09a6922624e61abe2ea411f69a5767418d02db1bc0c58",
+    "tests/test_retrieval_longtail_verify.py": "9dd8b8c455f743cacf93379d384b91f7b976ee3f667725a23a50c14b6184870a"
+  }
+}

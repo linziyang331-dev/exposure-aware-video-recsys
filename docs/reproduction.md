@@ -63,3 +63,13 @@ python -B -m src.system_evaluation.run --phase all
 它们依赖本地历史 manifest、selection、数据、教师、候选或报告签名。公开的聚合快照不能替代这些资产；缺少文件或哈希不符时应失败。合成 CQL 的正式 runner 也绑定旧阶段证据，纯源码试运行请使用上面的 `demo_cpu.py`。
 
 首版已验证本机算法和资产的同机复查；公开源码目录的测试/演示验收仍复用这台机器已有依赖。**从全新环境恢复所有历史冻结资产的一键脚本、新机器全链路重训和线上部署均未完成。**
+
+## v0.2.0长尾实验
+
+新增`src/retrieval_longtail`和`src/retrieval_balanced`。当前配置绑定既有历史实验和签名，必须先具备处理数据、原教师、旧选型台账和配置指定的复用目录。以下入口用于查看完整本地资产上的阶段契约，不是新克隆的一键重训：
+
+```powershell
+python -B -m src.retrieval_balanced.run --help
+```
+
+结合帮助与`configs/retrieval_balanced.yaml`执行阶段；完成目录不能覆盖。正式数值来自历史本机完整预算实验，源码测试与CPU演示只验证其覆盖的数学、边界和流程。多种子定义、随机来源退化及独立审查范围见[长尾说明](longtail.md)。

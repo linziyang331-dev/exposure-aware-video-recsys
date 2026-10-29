@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "tests_run": 170,
+  "tests_passed": 169,
+  "tests_skipped": 1,
+  "new_tests": 4,
+  "validation_positive_contexts_replayed": 54928,
+  "train_mean_score_contexts": 4096,
+  "train_derivative_contexts": 8192,
+  "independent_rank_partition_and_weight_mass_checks": true,
+  "cold_targets_kept": true,
+  "old_system_inputs_unchanged": 620,
+  "old_system_sources_unchanged": 13,
+  "previous_longtail_delivery_files_unchanged": 22,
+  "model_updates": false,
+  "installs_or_downloads": false,
+  "diagnostic_component_fingerprint": "57322be18ae51ec03e056c78a411e7dc4e6ab29c00b2dbe3893de74b7aa5d6d3",
+  "interpretation": "mechanism probes and associations; not a single-cause causal proof or deployable quality improvement",
+  "files_sha256": {
+    "experiments/retrieval_longtail_root_cause/audit/analysis.json": "0a63b8aff9895e32c81440c18fc6681f88551b396c721c91cb2ea7069cb6aa5b",
+    "experiments/retrieval_longtail_root_cause/audit/validation_probes.npz": "4c5a8a9400cc9b892024de5ac240da96696e46ab5f6e7cc46bb806d5e024a7d0",
+    "experiments/retrieval_longtail_root_cause/audit/training_probes.npz": "d138d4254c2b26843b78f6b95e757f6c804aaa51f52dad536ffe2183d9776171",
+    "experiments/retrieval_longtail_root_cause/audit/component.json": "1800b664749dfcbb557ab4227fc92acee7cf5f208e1ce496834da6547e7d9374",
+    "reports/longtail_root_cause_report.md": "9b8e56a11ce906d2f619190042de001ef5269b24cef8a81b3ecfe9afe34aff3b",
+    "reports/longtail_root_cause_results.json": "f8a31eb285ccfddf65702cbd6f9f8243eab0761b32f18c17b9e57a8f73006410",
+    "scripts/audit_longtail_root_cause.py": "4fed8b22478fcda6695e5a91db572b57d0fc5b3c1064feeae1a7ad2690a91bea",
+    "tests/test_longtail_root_cause.py": "d59333d9bff07d28ea73c6b895f265e37115bdc5c1e518eae89581fdfbaffd7c",
+    "docs/longtail_root_cause_audit.md": "0015df6d9111388fc4579cf34f3dadecf62cd99d1e919e68bafc843a8579c0f7",
+    "reports/environment_logs/longtail_root_cause_all_tests.txt": "09ac5fcb6d5f9b2376154a104ccf2eafd383c678980fc712c0daa570d642bda7"
+  }
+}

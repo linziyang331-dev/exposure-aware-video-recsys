@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "original_system_inputs": 620,
+  "original_system_sources": 13,
+  "original_system_outputs": 10,
+  "previous_longtail_and_rootcause_deliveries_unchanged": true,
+  "old_manifest_sha256": "82db4779f79dbde11ef90c6ec24db923d375efc1cd3a4a80b17b22a3f9abfe91"
+}

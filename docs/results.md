@@ -34,3 +34,22 @@ DIN 在同一 Top100 内重排，标准 NDCG@20 相对双塔原顺序提高 42.0
 - RTX4060 Laptop GPU 上预构造上下文到 Top20 的暖推理 p50≈4.27ms、p95≈7.18ms；不含历史查询、网络、并发或冷启动，不能作为线上 SLO。
 
 详细报告：[召回](../reports/retrieval_optimization_report.md)、[精排](../reports/ranking_v2_report.md)、[SASRec](../reports/sequential_report.md)、[曝光](../reports/exposure_evaluation_report.md)、[CQL](../reports/offline_rl_report.md)、[统一评估](../reports/system_evaluation_report.md)。这些是历史实验报告，原有测试计数表示对应阶段；首版新增交付检查另见 [发布说明](release.md)。
+# 后续本机长尾召回实验（2026-10-29，未采用）
+
+首轮长尾优化实现了候选无关历史注意力/门控和全局归一频次加权损失。仅标准训练/验证选择8组配置；控制与所选门控候选各42/43/44独立从头训练，主种子另在独立目录重训。旧双塔与DIN不修改。
+
+标准测试召回模型三种子均值：总体R20从10.4989%到10.4702%，NDCG20从0.038721到0.039042，总体R100从32.5048%到32.2374%；长尾R20从1.0147%到1.0055%，长尾R100从5.2934%到5.4135%。这些是全目录召回Top20，不能与DIN最终13.4482%混用。
+
+长尾候选覆盖小幅增加，但长尾Top20未改善，不作为新的正式模型，也不宣称已解决长尾。频次加权在验证中有更大的长尾提升，但伴随总体/头部退化，未通过预设门槛。下一步优先验证具有时点依据的视频侧共享信息，再对可信新召回适配DIN。
+
+本地记录：`reports/retrieval_longtail_assessment.md`、`reports/retrieval_longtail_report.md`、`experiments/retrieval_longtail_main_v2/verification.json`。本轮14项新增测试，全量166项运行通过（1项原有Windows符号链接权限跳过）；24个完整rank重算、12288条实际检查点上下文重放、14个训练组件核验。未更新首版`results/v0.1.0/summary.json`的冻结聚合结果。
+
+# 根因驱动后续改版（独立实验，2026-10-29）
+
+新增标准训练共现共享视频编码、单调风险混合权重及长尾实质增益选模；20组验证、候选三种子后选择共享表示+训练内logit adjustment（rho0，tau0.1）模型，并用新教师和新Top100适配DIN。最终模型未采用混合权重配置，不把对照损失的贡献冒领到所选模型。
+
+主种子标准测试完整链路R20：13.4482%→14.1840%；NDCG20：0.054840→0.057311；长尾R100：5.3507%→8.5168%；最终长尾R20：1.5914%→2.3565%。同一75430正事件，最终多命中555条，其中长尾多138条。
+
+三个精排种子均值R20为13.5578%→14.1146%，长尾R20为1.5599%→2.4360%；它们共享各自seed42召回器，不能称3条独立完整链路训练。随机测试总体R20均值0.5222%→0.5023%，有退化；长尾R20均值0.01284%→0.02368%。仍不能称全来源收益或长尾彻底解决。
+
+本地完整报告与检查点登记：`reports/balanced_retrieval_assessment.md`、`reports/balanced_selected_models.json`，最终核验`reports/balanced_delivery_validation.json`。原首版结果快照、默认FrozenPipeline和已发布仓库未覆盖。全部为已看过数据上的迭代复测，不证明线上收益。

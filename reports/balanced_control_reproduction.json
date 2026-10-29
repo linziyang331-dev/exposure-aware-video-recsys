@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "all_original_state_tensors_equal": {
+    "42": 32,
+    "43": 32,
+    "44": 32
+  },
+  "new_teacher_graph_buffers_are_additional_but_unused_for_alpha0": true,
+  "same_selected_epochs": {
+    "42": 3,
+    "43": 5,
+    "44": 3
+  }
+}

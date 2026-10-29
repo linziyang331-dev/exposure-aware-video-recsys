@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-10-29T23:56:33.260613+08:00",
+  "canonical_output": "experiments/retrieval_balanced_main_v3",
+  "selected_retriever": "graph_adjust10",
+  "validation_configurations": 20,
+  "retrieval_training_components": 26,
+  "independent_retraining_components": 2,
+  "adapted_din_training_components": 6,
+  "tests_run": 186,
+  "tests_passed": 185,
+  "tests_skipped": 1,
+  "tests_added": 16,
+  "retrieval_rank_files_recomputed": 36,
+  "adapted_rank_files_recomputed": 24,
+  "actual_retriever_context_replays": 18432,
+  "actual_ranker_context_replays": 6144,
+  "candidate_rows_checked": 1730584,
+  "old_assets_unchanged": {
+    "system_inputs": 620,
+    "system_sources": 13,
+    "system_outputs": 10,
+    "prior_two_deliveries": true
+  },
+  "primary_standard_test": {
+    "control": {
+      "recall@20": 0.13448230147156304,
+      "ndcg@20": 0.05484046739000875,
+      "recall@100": 0.32510937292854303
+    },
+    "graph_adjust10": {
+      "recall@20": 0.14184011666445712,
+      "ndcg@20": 0.05731124442918716,
+      "recall@100": 0.33962614344425296
+    }
+  },
+  "all_three_standard_test_r20_differences_positive": true,
+  "three_original_din_controls_state_tensors_equal": true,
+  "paired_seed42_r20_ci95": {
+    "difference": 0.007357815192894074,
+    "ci95_low": 0.005406892971987863,
+    "ci95_high": 0.009081132947658685
+  },
+  "report_mirrors_byte_identical": true,
+  "environment_check": "PASS",
+  "source_release_audit": {
+    "files": 260,
+    "bytes": 3336791
+  },
+  "new_installs_or_downloads": false,
+  "git_or_publication_actions": false,
+  "formal_default_replaced": false,
+  "limitations": [
+    "random source overallR20 decreases; tail improves but absolute coverage remains low",
+    "test is iterative reassessment",
+    "ranking seeds share retrieval seed42",
+    "independent review interrupted by service quota before full terminal verify/report review; author completed remaining verification",
+    "same-machine reproduction; no new-environment/online acceptance; no new CTR calibration",
+    "retain all three referenced experiment directories; failed partial GPU adaptation was preserved, not marked complete"
+  ],
+  "files_sha256": {
+    "configs/retrieval_balanced.yaml": "779cdc1194e542f5be0ed20ca7a06b6566b3db0f06a8033cbd3247513e1ab954",
+    "docs/results.md": "781ddd9b6c99395a4f30a2d09fefaebb808d0c502c102fe8a35044efb8a1af5f",
+    "docs/superpowers/plans/2026-10-29-balanced-retrieval.md": "5bb2fbcc33a41557f270f4774902a96807679d8895f109a5c3e35ddfc8a14aee",
+    "docs/superpowers/specs/2026-10-29-balanced-retrieval-design.md": "a5039667c3939a675e40cd37f8de53d40a2127b526f78feb606b773f5aa92965",
+    "experiments/retrieval_balanced_main_v3/adaptation_manifest.json": "a4bc3ef047267b955801b3bc58eb83b505e6af4006d8f61b41b50a1e3e4d2894",
+    "experiments/retrieval_balanced_main_v3/evaluation_manifest.json": "e25fb55560c77e7289f23e792df88d31d0d1d5d6106f3a300cd183fd3f7fd547",
+    "experiments/retrieval_balanced_main_v3/report_manifest.json": "97717dac15ac6bc63ba01978fd74e96191e2bb249e2943a41e4da44d557136bb",
+    "experiments/retrieval_balanced_main_v3/reproduction.json": "809f0dbd0e9ef1f4c29fbe73fffc3c950e1bb7a8188dd5d4db88dc7852f58401",
+    "experiments/retrieval_balanced_main_v3/verification.json": "4d6337a461e336f8275f36f7fe5ba423ea211314efc2bc085a392b1a6da68cf3",
+    "README.md": "a5e868295c71a9d6c16573e9f576c6d3fc6e70e85061010d7ddecf994b928f55",
+    "reports/balanced_component_reuse.json": "a0119b585afdb8cf3edc8a76a611b2d2933ed29be6b0642cdb062a8d249330bc",
+    "reports/balanced_control_reproduction.json": "f5953a558df2a9c4a981c6762402d12dcd5389ae148aab0e47589e90acd12ab6",
+    "reports/balanced_pipeline_analysis.json": "223e03c3f2d3dff13d7edbd2b0591fccab1decbac85e7f6b14eac7684b47cd05",
+    "reports/balanced_retrieval_assessment.md": "714e15a5c9338b7b9f9be959a82e682fcba7869a91e0df5fd9866ded5c1c6531",
+    "reports/balanced_retrieval_report.md": "bc3d2536da8fe0700214ceb5576c08ebb0c76d432aebfbc83f146027f264691d",
+    "reports/balanced_retrieval_results.json": "2ecde96f4472bec1e108b45a26b47c4a7f403dd8a80d2076658f02a614b62a0e",
+    "reports/balanced_retrieval_review.md": "5cc43a2834d8dfd4f8f5aaabf4dc803e5183b03f61d6538ccee9d3ab97bb69ef",
+    "reports/balanced_selected_models.json": "fa5b6a33c5e1c7ff3b37e4992ee7d6493332a890fb8fd4c0c09f2240ba9564c2",
+    "reports/environment_logs/balanced_all_tests_gpu_fixed.txt": "32565155cfbf349ec7d148d98380e551cbe055d90298b91b43db731faff5c2ef",
+    "reports/environment_logs/balanced_gpu_adapt_green.txt": "2af06a1712f4b7cb56e9344bfd98ca00b14104e251ed558c4d8057f54271d54a",
+    "reports/environment_logs/balanced_gpu_adapt_red.txt": "6be3c6310355339e4c25191838676dc163c28a79abf1776f769cc6dbc9ee4879",
+    "reports/environment_logs/balanced_verify_existing_report.txt": "3bb632c96e2b48658b34acc967305f6737985d96b5d87ae84fdd473519378da1",
+    "reports/project_status.md": "27e2dc82c01bb04388b320e75e7f23d21a84f82dd76aca7a5660b846f52defa4",
+    "src/retrieval_balanced/__init__.py": "a511c41d99edae3a03c06f374f017790e292ed292ec728c2f064f0ae7e7037bc",
+    "src/retrieval_balanced/adapt.py": "835b95cbdba43a8f158be4f0568ba2f4042c2a71c158714ea761a0af2dc2be24",
+    "src/retrieval_balanced/graph.py": "60c4df2418f38c5af8e33c91b9bc4f6e496a813bf95ebe1cee158b1cb443eacf",
+    "src/retrieval_balanced/model.py": "647fe6cf05a74aa3499bba60ab3ce4f569c3632b6ab2e5c4710f3e59a4c4a3ab",
+    "src/retrieval_balanced/objectives.py": "a7aa9210f65637c4b968087e299f4b9978cb9de020169eea3217438934d25ab2",
+    "src/retrieval_balanced/report.py": "92492d17a768b2469ede3a3f9fef4d5a1729cbb1dd22c3c86175d7720f1877a4",
+    "src/retrieval_balanced/run.py": "2633dfa002473ec4ed40a1a0d0365af9b4910de11becc5bdc2783b2ca3e5aca1",
+    "src/retrieval_balanced/selection.py": "0f443d092348d3a3cec54e9d8470efcc49cd63601f7c6f35a9c5330bc9cf579d",
+    "src/retrieval_balanced/train.py": "ae64d31b32c7a7a088fc5e67fc0b84449ceddf667de960864dbbf16c2253484c",
+    "src/retrieval_balanced/verify.py": "c8ad241a76f7e230a0ee35f30cc433984224c58c0341159d35e509b8263936ff",
+    "tests/test_balanced_adapt.py": "d75d57278e1b916ab82b6c32457c66c071f906db2e7d2d56c9717cdf5f2ac4e2",
+    "tests/test_balanced_retrieval.py": "550bb6fbf6339ff6a9e323855e57f32f929ad3ab39e6c509f984a0b1dd6333f3",
+    "tests/test_balanced_selection.py": "e047adb83bcd007affdf1b806d162ada32180667050d47880e5063888322e109",
+    "tests/test_balanced_train.py": "1544498184cd46a53accec175c3bf9cba00f138258990de9ae5c0c72033c1be6",
+    "tests/test_balanced_verify.py": "5ed832a7c19bcc3d074d2830c009fef9fdab1d8ae02d6bc7d4c7b04e6cf29f9f"
+  }
+}

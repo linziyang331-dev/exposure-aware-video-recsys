@@ -34,3 +34,9 @@ flowchart LR
 `FrozenPipeline.recommend(users, tabs, history)` 接收编码后的用户、场景和严格过去历史。返回候选 ID/分数和最终 Top20。它需要冻结的词表和检查点，不能直接在仅含源码的克隆中推理。当前响应重放限定检索 batch512、精排 batch256；其他批形不承诺逐位相同。
 
 本机工作区还有 `.runtime/`、数据、模型、完整实验、阶段计划及旧代码副本；这些均不属于首版提交范围。整理没有移动或重写冻结路径。后续长尾优化另建实验，不覆盖 V2。
+
+## v0.2.0长尾实验
+
+`src/retrieval_longtail`包含首轮对照和冻结选模；`src/retrieval_balanced`包含训练共现邻域、共享编码、频次调整、长尾约束选模和DIN教师适配。邻域仅由标准训练正反馈构造，不读取验证或测试点击建图。
+
+新DIN检查点通过`src.retrieval_balanced.adapt.load_model`恢复包含教师的模型；检查点和词表未公开。原`FrozenPipeline`默认仍为旧基准。方法、证据和限制见[长尾说明](longtail.md)，聚合摘要位于`results/v0.2.0/`。

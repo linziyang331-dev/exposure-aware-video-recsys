@@ -1,0 +1,45 @@
+prepared_directory: data/processed/kuairand_pure
+cache_directory: .runtime/retrieval_cache
+output_directory: experiments/retrieval_balanced_main_v3
+# Preserve pre-review graph metadata; reuse only matching completed train components.
+reuse_trials_from: experiments/retrieval_balanced_main
+reuse_replication_from: experiments/retrieval_balanced_main_v2
+device: cuda
+embedding_dim: 32
+temperature: 0.1
+history_decay: 0.9
+history_length: 50
+neighbors: 32
+graph_alpha: 0.0
+rho: 0.0
+tau: 0.0
+learning_rate: 0.001
+weight_decay: 0.00001
+batch_size: 1024
+eval_batch_size: 512
+epochs: 8
+seeds: [42, 43, 44]
+bootstrap_repeats: 500
+bootstrap_seed: 20261029
+gate: {retention: 0.98, tail20_delta: 0.002, tail100_delta: 0.01}
+trials:
+  - {name: control}
+  - {name: slow, learning_rate: 0.0003}
+  - {name: graph25, graph_alpha: 0.25}
+  - {name: graph50, graph_alpha: 0.5}
+  - {name: graph100, graph_alpha: 1.0}
+  - {name: graph25_slow, graph_alpha: 0.25, learning_rate: 0.0003}
+  - {name: graph50_slow, graph_alpha: 0.5, learning_rate: 0.0003}
+  - {name: graph100_slow, graph_alpha: 1.0, learning_rate: 0.0003}
+  - {name: mix10, rho: 0.1, learning_rate: 0.0003}
+  - {name: mix25, rho: 0.25, learning_rate: 0.0003}
+  - {name: mix50, rho: 0.5, learning_rate: 0.0003}
+  - {name: graph_mix10, graph_alpha: 0.5, rho: 0.1, learning_rate: 0.0003}
+  - {name: graph_mix25, graph_alpha: 0.5, rho: 0.25, learning_rate: 0.0003}
+  - {name: adjust10, tau: 0.1, learning_rate: 0.0003}
+  - {name: adjust25, tau: 0.25, learning_rate: 0.0003}
+  - {name: graph_adjust10, graph_alpha: 0.5, tau: 0.1, learning_rate: 0.0003}
+  - {name: graph_adjust25, graph_alpha: 0.5, tau: 0.25, learning_rate: 0.0003}
+  - {name: graph_temp20, graph_alpha: 0.5, temperature: 0.2, learning_rate: 0.0003}
+  - {name: graph8, graph_alpha: 0.5, neighbors: 8, learning_rate: 0.0003}
+  - {name: graph8_strong, graph_alpha: 1.0, neighbors: 8, learning_rate: 0.0003}

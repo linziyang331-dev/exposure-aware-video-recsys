@@ -1,4 +1,4 @@
-# Public v0.1.0 allowlist; see configs/release_v0.1.0.json.
+# Public v0.2.0 allowlist; see configs/release_v0.2.0.json.
 /*
 !/.gitignore
 !/release_manifest.json
@@ -108,3 +108,27 @@ __pycache__/
 *.sqlite
 *.db
 log_tensorboard/
+
+# v0.2.0 aggregate evidence
+!/results/v0.2.0/
+/results/v0.2.0/*
+!/docs/longtail.md
+!/results/v0.2.0/summary.json
+!/reports/retrieval_longtail_assessment.md
+!/reports/retrieval_longtail_report.md
+!/reports/retrieval_longtail_results.json
+!/reports/retrieval_longtail_review.md
+!/reports/retrieval_longtail_component_reuse.json
+!/reports/retrieval_longtail_delivery_validation.json
+!/reports/longtail_root_cause_report.md
+!/reports/longtail_root_cause_results.json
+!/reports/longtail_root_cause_verification.json
+!/reports/balanced_retrieval_assessment.md
+!/reports/balanced_retrieval_report.md
+!/reports/balanced_retrieval_results.json
+!/reports/balanced_retrieval_review.md
+!/reports/balanced_pipeline_analysis.json
+!/reports/balanced_selected_models.json
+!/reports/balanced_control_reproduction.json
+!/reports/balanced_component_reuse.json
+!/reports/balanced_delivery_validation.json

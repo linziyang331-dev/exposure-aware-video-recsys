@@ -1,0 +1,31 @@
+prepared_directory: data/processed/kuairand_pure
+cache_directory: .runtime/retrieval_cache
+output_directory: experiments/retrieval_longtail_main_v2
+# Same eight pre-review training components; strict source/config/data signatures checked.
+reuse_trials_from: experiments/retrieval_longtail_main
+device: cuda
+embedding_dim: 32
+temperature: 0.1
+history_decay: 0.9
+history_length: 50
+weight_cap: 3.0
+weight_decay: 0.00001
+batch_size: 1024
+eval_batch_size: 512
+epochs: 12
+patience: 3
+seeds: [42, 43, 44]
+bootstrap_repeats: 500
+bootstrap_seed: 20261029
+gate:
+  overall_retention: 0.99
+  head_retention: 0.98
+trials:
+  - {name: control, model: recency, learning_rate: 0.001, beta: 0.0}
+  - {name: recency_slow, model: recency, learning_rate: 0.0003, beta: 0.0}
+  - {name: recency_w25, model: recency, learning_rate: 0.0003, beta: 0.25}
+  - {name: recency_w50, model: recency, learning_rate: 0.0003, beta: 0.5}
+  - {name: gated_fast, model: gated, learning_rate: 0.001, beta: 0.0}
+  - {name: gated_slow, model: gated, learning_rate: 0.0003, beta: 0.0}
+  - {name: gated_w25, model: gated, learning_rate: 0.0003, beta: 0.25}
+  - {name: gated_w50, model: gated, learning_rate: 0.0003, beta: 0.5}

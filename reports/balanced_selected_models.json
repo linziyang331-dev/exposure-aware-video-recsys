@@ -1,0 +1,63 @@
+{
+  "selected": "graph_adjust10",
+  "models": {
+    "control": {
+      "retrieval_checkpoint": "experiments\\retrieval_balanced_main\\trials\\control\\best.pt",
+      "retrieval_sha256": "143b18ddfde232a53f2c0cab2a26a449c9e715ea7c345a1e3065c38dd429335c",
+      "pipeline_checkpoint": "experiments\\retrieval_balanced_main_v3\\adaptation\\runs\\control_42\\best.pt",
+      "pipeline_sha256": "a2c0b2d846d827fffc7d649040b3e67f557e3cd50d17d0143bfdf3300faf0fca",
+      "retriever_seed": 42,
+      "reranker_seed": 42,
+      "pipeline_contains_frozen_retriever": true,
+      "load_pipeline_with": "src.retrieval_balanced.adapt.load_model",
+      "configuration": {
+        "device": "cuda",
+        "embedding_dim": 32,
+        "temperature": 0.1,
+        "history_decay": 0.9,
+        "graph_alpha": 0.0,
+        "neighbors": 32,
+        "rho": 0.0,
+        "tau": 0.0,
+        "learning_rate": 0.001,
+        "weight_decay": 1e-05,
+        "batch_size": 1024,
+        "eval_batch_size": 512,
+        "epochs": 8
+      }
+    },
+    "graph_adjust10": {
+      "retrieval_checkpoint": "experiments\\retrieval_balanced_main\\trials\\graph_adjust10\\best.pt",
+      "retrieval_sha256": "b7da785bd27b0ebfd1ba95b1f6e247ae7f928918882e8e8c3937ea5b37ad5ed0",
+      "pipeline_checkpoint": "experiments\\retrieval_balanced_main_v3\\adaptation\\runs\\graph_adjust10_42\\best.pt",
+      "pipeline_sha256": "3dd4b0aa277751ea5e54b72e8cf3252f861954e7373f6d4a02d6cefeca78617e",
+      "retriever_seed": 42,
+      "reranker_seed": 42,
+      "pipeline_contains_frozen_retriever": true,
+      "load_pipeline_with": "src.retrieval_balanced.adapt.load_model",
+      "configuration": {
+        "device": "cuda",
+        "embedding_dim": 32,
+        "temperature": 0.1,
+        "history_decay": 0.9,
+        "graph_alpha": 0.5,
+        "neighbors": 32,
+        "rho": 0.0,
+        "tau": 0.1,
+        "learning_rate": 0.0003,
+        "weight_decay": 1e-05,
+        "batch_size": 1024,
+        "eval_batch_size": 512,
+        "epochs": 8
+      }
+    }
+  },
+  "catalog_size": 7538,
+  "history_length": 50,
+  "candidate_topk": 100,
+  "final_topk": 20,
+  "vocabulary": "data/processed/kuairand_pure/vocabulary.json",
+  "vocabulary_sha256": "a5e5073cb74d04712ad4bb7015aef20e0fd0fef285ab48563369ab9cd65c6d61",
+  "formal_default_replaced": false,
+  "final_delivery_verification": "reports/balanced_delivery_validation.json"
+}

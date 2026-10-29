@@ -1,0 +1,4708 @@
+{
+  "analysis": {
+    "scope": "read-only root-cause diagnostics; no training, new selection, deployment or causal exposure claim",
+    "data": {
+      "catalog_support": {
+        "head_target": {
+          "catalog_items": 1508,
+          "training_exposures": 826841,
+          "training_positive_events": 427359,
+          "observed_train_click_rate": 0.5168575336733423,
+          "exposures_per_item_quantiles": [
+            97.0,
+            223.0,
+            355.0,
+            603.25,
+            9110.0
+          ],
+          "positive_events_per_item_quantiles": [
+            74.0,
+            109.0,
+            167.5,
+            308.25,
+            5218.0
+          ],
+          "distinct_positive_users_quantiles": [
+            70.0,
+            108.0,
+            166.0,
+            307.25,
+            5191.0
+          ],
+          "items_with_no_more_than_5_positive_users": 0,
+          "first_observed_in_last3_train_days": 0
+        },
+        "tail_target": {
+          "catalog_items": 6030,
+          "training_exposures": 298848,
+          "training_positive_events": 98641,
+          "observed_train_click_rate": 0.3300708052253989,
+          "exposures_per_item_quantiles": [
+            1.0,
+            13.0,
+            29.0,
+            66.0,
+            890.0
+          ],
+          "positive_events_per_item_quantiles": [
+            0.0,
+            3.0,
+            9.0,
+            24.0,
+            74.0
+          ],
+          "distinct_positive_users_quantiles": [
+            0.0,
+            3.0,
+            9.0,
+            23.0,
+            74.0
+          ],
+          "items_with_no_more_than_5_positive_users": 2285,
+          "first_observed_in_last3_train_days": 8
+        },
+        "freq_zero": {
+          "catalog_items": 407,
+          "training_exposures": 2584,
+          "training_positive_events": 0,
+          "observed_train_click_rate": 0.0,
+          "exposures_per_item_quantiles": [
+            1.0,
+            2.0,
+            5.0,
+            8.0,
+            57.0
+          ],
+          "positive_events_per_item_quantiles": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "distinct_positive_users_quantiles": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "items_with_no_more_than_5_positive_users": 407,
+          "first_observed_in_last3_train_days": 3
+        },
+        "freq_1_5": {
+          "catalog_items": 1870,
+          "training_exposures": 27686,
+          "training_positive_events": 5043,
+          "observed_train_click_rate": 0.18214982301524235,
+          "exposures_per_item_quantiles": [
+            1.0,
+            7.0,
+            11.0,
+            18.0,
+            195.0
+          ],
+          "positive_events_per_item_quantiles": [
+            1.0,
+            1.0,
+            3.0,
+            4.0,
+            5.0
+          ],
+          "distinct_positive_users_quantiles": [
+            1.0,
+            1.0,
+            3.0,
+            4.0,
+            5.0
+          ],
+          "items_with_no_more_than_5_positive_users": 1870,
+          "first_observed_in_last3_train_days": 5
+        },
+        "freq_6_20": {
+          "catalog_items": 2044,
+          "training_exposures": 79485,
+          "training_positive_events": 23237,
+          "observed_train_click_rate": 0.29234446750959303,
+          "exposures_per_item_quantiles": [
+            7.0,
+            21.0,
+            31.0,
+            46.25,
+            698.0
+          ],
+          "positive_events_per_item_quantiles": [
+            6.0,
+            7.0,
+            11.0,
+            15.0,
+            20.0
+          ],
+          "distinct_positive_users_quantiles": [
+            3.0,
+            7.0,
+            11.0,
+            15.0,
+            20.0
+          ],
+          "items_with_no_more_than_5_positive_users": 8,
+          "first_observed_in_last3_train_days": 0
+        },
+        "freq_21_100": {
+          "catalog_items": 2028,
+          "training_exposures": 254661,
+          "training_positive_events": 97983,
+          "observed_train_click_rate": 0.3847585613816014,
+          "exposures_per_item_quantiles": [
+            26.0,
+            70.0,
+            107.0,
+            153.0,
+            890.0
+          ],
+          "positive_events_per_item_quantiles": [
+            21.0,
+            30.0,
+            43.0,
+            63.0,
+            100.0
+          ],
+          "distinct_positive_users_quantiles": [
+            18.0,
+            29.0,
+            43.0,
+            63.0,
+            100.0
+          ],
+          "items_with_no_more_than_5_positive_users": 0,
+          "first_observed_in_last3_train_days": 0
+        },
+        "freq_101_plus": {
+          "catalog_items": 1189,
+          "training_exposures": 761273,
+          "training_positive_events": 399737,
+          "observed_train_click_rate": 0.5250902107391172,
+          "exposures_per_item_quantiles": [
+            137.0,
+            280.0,
+            427.0,
+            712.0,
+            9110.0
+          ],
+          "positive_events_per_item_quantiles": [
+            101.0,
+            140.0,
+            214.0,
+            361.0,
+            5218.0
+          ],
+          "distinct_positive_users_quantiles": [
+            100.0,
+            140.0,
+            214.0,
+            361.0,
+            5191.0
+          ],
+          "items_with_no_more_than_5_positive_users": 0,
+          "first_observed_in_last3_train_days": 0
+        }
+      },
+      "partitions": {
+        "standard/train": {
+          "rows": 1125689,
+          "positive_events": 526000,
+          "groups": {
+            "head_target": {
+              "exposures": 826841,
+              "positive_events": 427359,
+              "positive_event_fraction": 0.8124695817490494,
+              "observed_click_rate": 0.5168575336733423
+            },
+            "tail_target": {
+              "exposures": 298848,
+              "positive_events": 98641,
+              "positive_event_fraction": 0.18753041825095057,
+              "observed_click_rate": 0.3300708052253989
+            },
+            "cold_target": {
+              "exposures": 0,
+              "positive_events": 0,
+              "positive_event_fraction": 0.0,
+              "observed_click_rate": null
+            },
+            "freq_zero": {
+              "exposures": 2584,
+              "positive_events": 0,
+              "positive_event_fraction": 0.0,
+              "observed_click_rate": 0.0
+            },
+            "freq_1_5": {
+              "exposures": 27686,
+              "positive_events": 5043,
+              "positive_event_fraction": 0.009587452471482889,
+              "observed_click_rate": 0.18214982301524235
+            }
+          }
+        },
+        "standard/validation": {
+          "rows": 122315,
+          "positive_events": 54928,
+          "groups": {
+            "head_target": {
+              "exposures": 81817,
+              "positive_events": 41817,
+              "positive_event_fraction": 0.7613057092921642,
+              "observed_click_rate": 0.5111040492807118
+            },
+            "tail_target": {
+              "exposures": 40481,
+              "positive_events": 13104,
+              "positive_event_fraction": 0.23856685115059714,
+              "observed_click_rate": 0.3237074182950026
+            },
+            "cold_target": {
+              "exposures": 17,
+              "positive_events": 7,
+              "positive_event_fraction": 0.00012743955723856686,
+              "observed_click_rate": 0.4117647058823529
+            },
+            "freq_zero": {
+              "exposures": 393,
+              "positive_events": 49,
+              "positive_event_fraction": 0.000892076900669968,
+              "observed_click_rate": 0.12468193384223919
+            },
+            "freq_1_5": {
+              "exposures": 4119,
+              "positive_events": 890,
+              "positive_event_fraction": 0.016203029420332072,
+              "observed_click_rate": 0.21607186210245205
+            }
+          }
+        },
+        "standard/test": {
+          "rows": 166618,
+          "positive_events": 75430,
+          "groups": {
+            "head_target": {
+              "exposures": 112310,
+              "positive_events": 57391,
+              "positive_event_fraction": 0.7608511202439348,
+              "observed_click_rate": 0.5110052533167126
+            },
+            "tail_target": {
+              "exposures": 54294,
+              "positive_events": 18035,
+              "positive_event_fraction": 0.2390958504573777,
+              "observed_click_rate": 0.3321729841234759
+            },
+            "cold_target": {
+              "exposures": 14,
+              "positive_events": 4,
+              "positive_event_fraction": 5.302929868752486e-05,
+              "observed_click_rate": 0.2857142857142857
+            },
+            "freq_zero": {
+              "exposures": 621,
+              "positive_events": 76,
+              "positive_event_fraction": 0.0010075566750629723,
+              "observed_click_rate": 0.12238325281803543
+            },
+            "freq_1_5": {
+              "exposures": 5077,
+              "positive_events": 1116,
+              "positive_event_fraction": 0.014795174333819435,
+              "observed_click_rate": 0.21981485129013198
+            }
+          }
+        },
+        "random/validation": {
+          "rows": 288622,
+          "positive_events": 48199,
+          "groups": {
+            "head_target": {
+              "exposures": 55366,
+              "positive_events": 12828,
+              "positive_event_fraction": 0.26614660055187866,
+              "observed_click_rate": 0.23169454177654156
+            },
+            "tail_target": {
+              "exposures": 231591,
+              "positive_events": 35073,
+              "positive_event_fraction": 0.7276706985622108,
+              "observed_click_rate": 0.15144370895242043
+            },
+            "cold_target": {
+              "exposures": 1665,
+              "positive_events": 298,
+              "positive_event_fraction": 0.006182700885910496,
+              "observed_click_rate": 0.178978978978979
+            },
+            "freq_zero": {
+              "exposures": 15942,
+              "positive_events": 2019,
+              "positive_event_fraction": 0.04188883586796407,
+              "observed_click_rate": 0.126646593902898
+            },
+            "freq_1_5": {
+              "exposures": 71720,
+              "positive_events": 9625,
+              "positive_event_fraction": 0.1996929396875454,
+              "observed_click_rate": 0.13420245398773006
+            }
+          }
+        },
+        "random/test": {
+          "rows": 897427,
+          "positive_events": 160735,
+          "groups": {
+            "head_target": {
+              "exposures": 171534,
+              "positive_events": 42856,
+              "positive_event_fraction": 0.2666251905309982,
+              "observed_click_rate": 0.24983968192894704
+            },
+            "tail_target": {
+              "exposures": 720664,
+              "positive_events": 116841,
+              "positive_event_fraction": 0.7269169751454257,
+              "observed_click_rate": 0.16212964710322703
+            },
+            "cold_target": {
+              "exposures": 5229,
+              "positive_events": 1038,
+              "positive_event_fraction": 0.006457834323576072,
+              "observed_click_rate": 0.1985083189902467
+            },
+            "freq_zero": {
+              "exposures": 49291,
+              "positive_events": 6601,
+              "positive_event_fraction": 0.04106759573210564,
+              "observed_click_rate": 0.1339189710089063
+            },
+            "freq_1_5": {
+              "exposures": 223293,
+              "positive_events": 31773,
+              "positive_event_fraction": 0.19767318878900053,
+              "observed_click_rate": 0.1422928618451989
+            }
+          }
+        }
+      }
+    },
+    "effective_training_weights": {
+      "0.0": {
+        "global_event_mean_weight": 1.0,
+        "catalog_fraction_at_raw_cap": 0.0,
+        "groups": {
+          "head_target": {
+            "weighted_event_share": 0.8124695817490494,
+            "weight_min": 1.0,
+            "weight_max": 1.0
+          },
+          "tail_target": {
+            "weighted_event_share": 0.18753041825095057,
+            "weight_min": 1.0,
+            "weight_max": 1.0
+          },
+          "freq_zero": {
+            "weighted_event_share": 0.0,
+            "weight_min": 1.0,
+            "weight_max": 1.0
+          },
+          "freq_1_5": {
+            "weighted_event_share": 0.009587452471482889,
+            "weight_min": 1.0,
+            "weight_max": 1.0
+          },
+          "freq_6_20": {
+            "weighted_event_share": 0.04417680608365019,
+            "weight_min": 1.0,
+            "weight_max": 1.0
+          },
+          "freq_21_100": {
+            "weighted_event_share": 0.18627946768060835,
+            "weight_min": 1.0,
+            "weight_max": 1.0
+          }
+        }
+      },
+      "0.25": {
+        "global_event_mean_weight": 0.999999993592954,
+        "catalog_fraction_at_raw_cap": 0.777659856725922,
+        "groups": {
+          "head_target": {
+            "weighted_event_share": 0.734378079455555,
+            "weight_min": 0.47306644916534424,
+            "weight_max": 1.3708510398864746
+          },
+          "tail_target": {
+            "weighted_event_share": 0.26562192054444494,
+            "weight_min": 1.3708510398864746,
+            "weight_max": 1.4191993474960327
+          },
+          "freq_zero": {
+            "weighted_event_share": 0.0,
+            "weight_min": 1.4191993474960327,
+            "weight_max": 1.4191993474960327
+          },
+          "freq_1_5": {
+            "weighted_event_share": 0.013606506378855257,
+            "weight_min": 1.4191993474960327,
+            "weight_max": 1.4191993474960327
+          },
+          "freq_6_20": {
+            "weighted_event_share": 0.06269569477006932,
+            "weight_min": 1.4191993474960327,
+            "weight_max": 1.4191993474960327
+          },
+          "freq_21_100": {
+            "weighted_event_share": 0.2584867601296181,
+            "weight_min": 1.271446704864502,
+            "weight_max": 1.4191993474960327
+          }
+        }
+      },
+      "0.5": {
+        "global_event_mean_weight": 1.000000036548129,
+        "catalog_fraction_at_raw_cap": 0.9822234014327408,
+        "groups": {
+          "head_target": {
+            "weighted_event_share": 0.7925015958557297,
+            "weight_min": 0.3688262104988098,
+            "weight_max": 1.1064786911010742
+          },
+          "tail_target": {
+            "weighted_event_share": 0.20749840414427034,
+            "weight_min": 1.1064786911010742,
+            "weight_max": 1.1064786911010742
+          },
+          "freq_zero": {
+            "weighted_event_share": 0.0,
+            "weight_min": 1.1064786911010742,
+            "weight_max": 1.1064786911010742
+          },
+          "freq_1_5": {
+            "weighted_event_share": 0.01060831147392621,
+            "weight_min": 1.1064786911010742,
+            "weight_max": 1.1064786911010742
+          },
+          "freq_6_20": {
+            "weighted_event_share": 0.048880692785965366,
+            "weight_min": 1.1064786911010742,
+            "weight_max": 1.1064786911010742
+          },
+          "freq_21_100": {
+            "weighted_event_share": 0.20611425404515404,
+            "weight_min": 1.1064786911010742,
+            "weight_max": 1.1064786911010742
+          }
+        }
+      }
+    },
+    "tail_rank_competition": {
+      "20": {
+        "queries": 13104,
+        "global_hits": 182,
+        "head_crowding_losses": 1398,
+        "within_tail_failures": 11524
+      },
+      "100": {
+        "queries": 13104,
+        "global_hits": 836,
+        "head_crowding_losses": 3356,
+        "within_tail_failures": 8912
+      }
+    },
+    "validation_fixed_score_probes": {
+      "original": {
+        "queries": 54928,
+        "users": 17964,
+        "recall@20": 0.10970725313137197,
+        "ndcg@20": 0.04121616938987233,
+        "recall@100": 0.33665889892222545,
+        "ndcg@100": 0.08170410681695299,
+        "mrr": 0.02988599631821723,
+        "user_macro": {
+          "recall@20": 0.11801801004139066,
+          "ndcg@20": 0.044560836714498765,
+          "recall@100": 0.3457448679914443,
+          "ndcg@100": 0.08529610563327059,
+          "mrr": 0.03186657612645039
+        },
+        "groups": {
+          "head_target": {
+            "queries": 41817,
+            "users": 15803,
+            "recall@20": 0.1397517755936581,
+            "ndcg@20": 0.05247115151923923,
+            "recall@100": 0.42222062797426885,
+            "ndcg@100": 0.10291924819876401,
+            "mrr": 0.03747057794713359,
+            "user_macro": {
+              "recall@20": 0.14978200493390445,
+              "ndcg@20": 0.05635860185005747,
+              "recall@100": 0.43503598205768457,
+              "ndcg@100": 0.10741403198408032,
+              "mrr": 0.039735664877572886
+            }
+          },
+          "tail_target": {
+            "queries": 13104,
+            "users": 8610,
+            "recall@20": 0.013888888888888888,
+            "ndcg@20": 0.005321703996251642,
+            "recall@100": 0.06379731379731379,
+            "ndcg@100": 0.01404677787804328,
+            "mrr": 0.005698324767380237,
+            "user_macro": {
+              "recall@20": 0.013845749681986616,
+              "ndcg@20": 0.005322384269474991,
+              "recall@100": 0.06140184824853813,
+              "ndcg@100": 0.013625506136991868,
+              "mrr": 0.005634389345927063
+            }
+          },
+          "cold_target": {
+            "queries": 7,
+            "users": 7,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.0,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.0
+            }
+          },
+          "freq_zero": {
+            "queries": 49,
+            "users": 49,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.00015498838910642124,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.00015498838910642124
+            }
+          },
+          "freq_1_5": {
+            "queries": 890,
+            "users": 850,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.0005069593830087508,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.0005002078777151455
+            }
+          },
+          "freq_6_20": {
+            "queries": 3121,
+            "users": 2718,
+            "recall@20": 0.004485741749439282,
+            "ndcg@20": 0.0024391393872808154,
+            "recall@100": 0.02531239987183595,
+            "ndcg@100": 0.006038701417219436,
+            "mrr": 0.0034852426111349165,
+            "user_macro": {
+              "recall@20": 0.003832474858964925,
+              "ndcg@20": 0.0016955364267282474,
+              "recall@100": 0.02503065979887172,
+              "ndcg@100": 0.0053616703858407255,
+              "mrr": 0.0027209858979879153
+            }
+          },
+          "freq_21_100": {
+            "queries": 12713,
+            "users": 8394,
+            "recall@20": 0.0202941870526233,
+            "ndcg@20": 0.0073377415889435684,
+            "recall@100": 0.09848186895304019,
+            "ndcg@100": 0.020903682741313125,
+            "mrr": 0.007542511923315458,
+            "user_macro": {
+              "recall@20": 0.02043783163332842,
+              "ndcg@20": 0.007620966984010307,
+              "recall@100": 0.09924676923426029,
+              "ndcg@100": 0.021305695446622072,
+              "mrr": 0.00787793415048863
+            }
+          },
+          "freq_101_plus": {
+            "queries": 38148,
+            "users": 15121,
+            "recall@20": 0.15083359547027367,
+            "ndcg@20": 0.05670086215264142,
+            "recall@100": 0.44985320331341094,
+            "ndcg@100": 0.11018265370211124,
+            "mrr": 0.040221081608855784,
+            "user_macro": {
+              "recall@20": 0.16114967297842409,
+              "ndcg@20": 0.06072191732187773,
+              "recall@100": 0.4618189181276218,
+              "ndcg@100": 0.11461148275213164,
+              "mrr": 0.042544042474299736
+            }
+          },
+          "history_target_seen": {
+            "queries": 172,
+            "users": 149,
+            "recall@20": 0.3081395348837209,
+            "ndcg@20": 0.1384720493033423,
+            "recall@100": 0.6104651162790697,
+            "ndcg@100": 0.19318256532890024,
+            "mrr": 0.09906345928558914,
+            "user_macro": {
+              "recall@20": 0.31420581655480984,
+              "ndcg@20": 0.13449261619727682,
+              "recall@100": 0.6152125279642058,
+              "ndcg@100": 0.1881022149206379,
+              "mrr": 0.09165983945208052
+            }
+          },
+          "history_target_unseen": {
+            "queries": 54749,
+            "users": 17961,
+            "recall@20": 0.10909788306635737,
+            "ndcg@20": 0.040915899098919316,
+            "recall@100": 0.33584175053425636,
+            "ndcg@100": 0.08136433136687471,
+            "mrr": 0.029672488826643674,
+            "user_macro": {
+              "recall@20": 0.11745628958610689,
+              "ndcg@20": 0.04425923666833362,
+              "recall@100": 0.3451966496111291,
+              "ndcg@100": 0.08499983104246177,
+              "mrr": 0.03164722511995074
+            }
+          },
+          "empty_history": {
+            "queries": 557,
+            "users": 555,
+            "recall@20": 0.10771992818671454,
+            "ndcg@20": 0.04541245039294312,
+            "recall@100": 0.2836624775583483,
+            "ndcg@100": 0.07785765603612357,
+            "mrr": 0.033586793182422706,
+            "user_macro": {
+              "recall@20": 0.10810810810810811,
+              "ndcg@20": 0.0455760988628276,
+              "recall@100": 0.2828828828828829,
+              "ndcg@100": 0.07781583534504928,
+              "mrr": 0.03366640284046246
+            }
+          }
+        }
+      },
+      "center05": {
+        "queries": 54928,
+        "users": 17964,
+        "recall@20": 0.09769152344887853,
+        "ndcg@20": 0.036409069260239214,
+        "recall@100": 0.3118445965627731,
+        "ndcg@100": 0.07444252797180928,
+        "mrr": 0.02673387680326155,
+        "user_macro": {
+          "recall@20": 0.10294623876003409,
+          "ndcg@20": 0.03878150193659666,
+          "recall@100": 0.320334577897923,
+          "ndcg@100": 0.07751867136760836,
+          "mrr": 0.02837342909952552
+        },
+        "groups": {
+          "head_target": {
+            "queries": 41817,
+            "users": 15803,
+            "recall@20": 0.11820551450367076,
+            "ndcg@20": 0.04392913461022227,
+            "recall@100": 0.36941913575818447,
+            "ndcg@100": 0.08860415707319624,
+            "mrr": 0.03167266078294565,
+            "user_macro": {
+              "recall@20": 0.12400030715753499,
+              "ndcg@20": 0.04623093779091387,
+              "recall@100": 0.3770529118258618,
+              "ndcg@100": 0.09136617825428128,
+              "mrr": 0.033028513794387114
+            }
+          },
+          "tail_target": {
+            "queries": 13104,
+            "users": 8610,
+            "recall@20": 0.032280219780219783,
+            "ndcg@20": 0.012430764219379942,
+            "recall@100": 0.12828144078144077,
+            "ndcg@100": 0.02929022741954313,
+            "mrr": 0.010987693001305887,
+            "user_macro": {
+              "recall@20": 0.03233172943974338,
+              "ndcg@20": 0.012806406241203477,
+              "recall@100": 0.12659002921198043,
+              "ndcg@100": 0.02937760784495502,
+              "mrr": 0.011441971057351851
+            }
+          },
+          "cold_target": {
+            "queries": 7,
+            "users": 7,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.0,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.0
+            }
+          },
+          "freq_zero": {
+            "queries": 49,
+            "users": 49,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.00023874899760263751,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.00023874899760263751
+            }
+          },
+          "freq_1_5": {
+            "queries": 890,
+            "users": 850,
+            "recall@20": 0.0011235955056179776,
+            "ndcg@20": 0.000269452209627114,
+            "recall@100": 0.016853932584269662,
+            "ndcg@100": 0.0028649388679393806,
+            "mrr": 0.0010655493037915065,
+            "user_macro": {
+              "recall@20": 0.001176470588235294,
+              "ndcg@20": 0.0002821323136095664,
+              "recall@100": 0.017058823529411765,
+              "ndcg@100": 0.0028997644521442253,
+              "mrr": 0.001051656171242727
+            }
+          },
+          "freq_6_20": {
+            "queries": 3121,
+            "users": 2718,
+            "recall@20": 0.011214354373598205,
+            "ndcg@20": 0.004581293662016688,
+            "recall@100": 0.07209227811598846,
+            "ndcg@100": 0.01515912483478727,
+            "mrr": 0.00551510198915907,
+            "user_macro": {
+              "recall@20": 0.011374785381407897,
+              "ndcg@20": 0.004178064538587613,
+              "recall@100": 0.07333210694137847,
+              "ndcg@100": 0.014922255493489947,
+              "mrr": 0.0049671488916873
+            }
+          },
+          "freq_21_100": {
+            "queries": 12713,
+            "users": 8394,
+            "recall@20": 0.0451506332100999,
+            "ndcg@20": 0.016782920112975545,
+            "recall@100": 0.17981593644301108,
+            "ndcg@100": 0.040439317554990965,
+            "mrr": 0.014210467905849178,
+            "user_macro": {
+              "recall@20": 0.04537419963617247,
+              "ndcg@20": 0.017422383195679594,
+              "recall@100": 0.18087130452212652,
+              "ndcg@100": 0.041273016666478354,
+              "mrr": 0.015009811608543902
+            }
+          },
+          "freq_101_plus": {
+            "queries": 38148,
+            "users": 15121,
+            "recall@20": 0.12467232882457796,
+            "ndcg@20": 0.04645009077656598,
+            "recall@100": 0.3827985739750446,
+            "ndcg@100": 0.09240360459675744,
+            "mrr": 0.03328111658994096,
+            "user_macro": {
+              "recall@20": 0.1299062504494028,
+              "ndcg@20": 0.04860541893128048,
+              "recall@100": 0.389259207555173,
+              "ndcg@100": 0.09490215202722656,
+              "mrr": 0.03458576924394595
+            }
+          },
+          "history_target_seen": {
+            "queries": 172,
+            "users": 149,
+            "recall@20": 0.28488372093023256,
+            "ndcg@20": 0.1299658630760916,
+            "recall@100": 0.5872093023255814,
+            "ndcg@100": 0.1858040959566354,
+            "mrr": 0.09536207677662001,
+            "user_macro": {
+              "recall@20": 0.280089485458613,
+              "ndcg@20": 0.12157519186024929,
+              "recall@100": 0.5937360178970917,
+              "ndcg@100": 0.1793225143434525,
+              "mrr": 0.08606181368556573
+            }
+          },
+          "history_target_unseen": {
+            "queries": 54749,
+            "users": 17961,
+            "recall@20": 0.09711592905806499,
+            "ndcg@20": 0.03611980543712819,
+            "recall@100": 0.3110193793493945,
+            "ndcg@100": 0.07410219130816999,
+            "mrr": 0.026521691863668234,
+            "user_macro": {
+              "recall@20": 0.10248794314414164,
+              "ndcg@20": 0.03851189871663056,
+              "recall@100": 0.3197861312888285,
+              "ndcg@100": 0.07722860404093208,
+              "mrr": 0.028162224113885994
+            }
+          },
+          "empty_history": {
+            "queries": 557,
+            "users": 555,
+            "recall@20": 0.08797127468581688,
+            "ndcg@20": 0.0374874133187473,
+            "recall@100": 0.26750448833034113,
+            "ndcg@100": 0.06934163666844452,
+            "mrr": 0.02844656823861127,
+            "user_macro": {
+              "recall@20": 0.08828828828828829,
+              "ndcg@20": 0.03762250309647251,
+              "recall@100": 0.26756756756756755,
+              "ndcg@100": 0.06944860206282126,
+              "mrr": 0.028529717759928415
+            }
+          }
+        }
+      },
+      "center1": {
+        "queries": 54928,
+        "users": 17964,
+        "recall@20": 0.06754296533644043,
+        "ndcg@20": 0.02480821475975887,
+        "recall@100": 0.21812190503932422,
+        "ndcg@100": 0.05148360497694412,
+        "mrr": 0.01837536770532395,
+        "user_macro": {
+          "recall@20": 0.07146344783412084,
+          "ndcg@20": 0.02624617379674819,
+          "recall@100": 0.22194415512020318,
+          "ndcg@100": 0.052984944137256205,
+          "mrr": 0.01918722320833642
+        },
+        "groups": {
+          "head_target": {
+            "queries": 41817,
+            "users": 15803,
+            "recall@20": 0.06975631920032523,
+            "ndcg@20": 0.025176296161429714,
+            "recall@100": 0.22414329100605018,
+            "ndcg@100": 0.052600331267568926,
+            "mrr": 0.018388522761987807,
+            "user_macro": {
+              "recall@20": 0.07171177369988938,
+              "ndcg@20": 0.025730742935798745,
+              "recall@100": 0.2245055813986943,
+              "ndcg@100": 0.05294394185871423,
+              "mrr": 0.018554842010954555
+            }
+          },
+          "tail_target": {
+            "queries": 13104,
+            "users": 8610,
+            "recall@20": 0.060515873015873016,
+            "ndcg@20": 0.023646859259884665,
+            "recall@100": 0.199023199023199,
+            "ndcg@100": 0.047947451278819914,
+            "mrr": 0.018343203676739153,
+            "user_macro": {
+              "recall@20": 0.06175488081411427,
+              "ndcg@20": 0.024306584504368824,
+              "recall@100": 0.19941886510701842,
+              "ndcg@100": 0.048460925140553085,
+              "mrr": 0.01881814670043796
+            }
+          },
+          "cold_target": {
+            "queries": 7,
+            "users": 7,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.0,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.0
+            }
+          },
+          "freq_zero": {
+            "queries": 49,
+            "users": 49,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.0006121067062228321,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.0006121067062228321
+            }
+          },
+          "freq_1_5": {
+            "queries": 890,
+            "users": 850,
+            "recall@20": 0.0033707865168539327,
+            "ndcg@20": 0.0016786828631426436,
+            "recall@100": 0.05056179775280899,
+            "ndcg@100": 0.009655565760782548,
+            "mrr": 0.003252713627664274,
+            "user_macro": {
+              "recall@20": 0.0035294117647058825,
+              "ndcg@20": 0.001757679703761121,
+              "recall@100": 0.049803921568627445,
+              "ndcg@100": 0.009550223046036501,
+              "mrr": 0.0032755180590254645
+            }
+          },
+          "freq_6_20": {
+            "queries": 3121,
+            "users": 2718,
+            "recall@20": 0.031079782121115028,
+            "ndcg@20": 0.011026810703365567,
+            "recall@100": 0.12784363985901956,
+            "ndcg@100": 0.028050834097272454,
+            "mrr": 0.00944302881586175,
+            "user_macro": {
+              "recall@20": 0.032100809418690215,
+              "ndcg@20": 0.0111130894001905,
+              "recall@100": 0.12919426048565122,
+              "ndcg@100": 0.02820559926627688,
+              "mrr": 0.009304379745484417
+            }
+          },
+          "freq_21_100": {
+            "queries": 12713,
+            "users": 8394,
+            "recall@20": 0.07740108550302839,
+            "ndcg@20": 0.030162289557931973,
+            "recall@100": 0.24982301581058758,
+            "ndcg@100": 0.06054623933161645,
+            "mrr": 0.022902419159092587,
+            "user_macro": {
+              "recall@20": 0.07956717950463484,
+              "ndcg@20": 0.03104685390729793,
+              "recall@100": 0.25368380097651005,
+              "ndcg@100": 0.06174578064061266,
+              "mrr": 0.023487944178755656
+            }
+          },
+          "freq_101_plus": {
+            "queries": 38148,
+            "users": 15121,
+            "recall@20": 0.06883716053266226,
+            "ndcg@20": 0.024727475338697832,
+            "recall@100": 0.21917269581629442,
+            "ndcg@100": 0.05143197564239443,
+            "mrr": 0.01797649001931842,
+            "user_macro": {
+              "recall@20": 0.06988984381596233,
+              "ndcg@20": 0.024842480504675604,
+              "recall@100": 0.2187103912743377,
+              "ndcg@100": 0.05134062156228298,
+              "mrr": 0.01783601779472614
+            }
+          },
+          "history_target_seen": {
+            "queries": 172,
+            "users": 149,
+            "recall@20": 0.19767441860465115,
+            "ndcg@20": 0.0956979000922334,
+            "recall@100": 0.4069767441860465,
+            "ndcg@100": 0.134105199573167,
+            "mrr": 0.07369116681624446,
+            "user_macro": {
+              "recall@20": 0.1894854586129754,
+              "ndcg@20": 0.09328216969542186,
+              "recall@100": 0.4076062639821029,
+              "ndcg@100": 0.1332478718107325,
+              "mrr": 0.07341333777690949
+            }
+          },
+          "history_target_unseen": {
+            "queries": 54749,
+            "users": 17961,
+            "recall@20": 0.06714277886354089,
+            "ndcg@20": 0.024588678907526543,
+            "recall@100": 0.21755648504995526,
+            "ndcg@100": 0.05123062265698007,
+            "mrr": 0.01820393644862262,
+            "user_macro": {
+              "recall@20": 0.07118122940216014,
+              "ndcg@20": 0.026073950575458697,
+              "recall@100": 0.22151527434345744,
+              "ndcg@100": 0.05278022465597038,
+              "mrr": 0.019042350886220923
+            }
+          },
+          "empty_history": {
+            "queries": 557,
+            "users": 555,
+            "recall@20": 0.03231597845601436,
+            "ndcg@20": 0.01035687240195695,
+            "recall@100": 0.12028725314183124,
+            "ndcg@100": 0.02624635448754982,
+            "mrr": 0.007905779237097468,
+            "user_macro": {
+              "recall@20": 0.032432432432432434,
+              "ndcg@20": 0.010394194464666705,
+              "recall@100": 0.12072072072072072,
+              "ndcg@100": 0.026340935945162614,
+              "mrr": 0.007931619916752775
+            }
+          }
+        }
+      }
+    },
+    "validation_top100_head_slots": {
+      "head_target": {
+        "queries": 41817,
+        "mean_head_slots_in_top100": 95.63488533371596
+      },
+      "tail_target": {
+        "queries": 13104,
+        "mean_head_slots_in_top100": 90.07188644688645
+      },
+      "cold_target": {
+        "queries": 7,
+        "mean_head_slots_in_top100": 95.85714285714286
+      },
+      "freq_zero": {
+        "queries": 49,
+        "mean_head_slots_in_top100": 77.22448979591837
+      },
+      "freq_1_5": {
+        "queries": 890,
+        "mean_head_slots_in_top100": 84.86741573033707
+      },
+      "freq_6_20": {
+        "queries": 3121,
+        "mean_head_slots_in_top100": 87.41845562319769
+      },
+      "freq_21_100": {
+        "queries": 12713,
+        "mean_head_slots_in_top100": 91.88263981750964
+      },
+      "freq_101_plus": {
+        "queries": 38148,
+        "mean_head_slots_in_top100": 95.92148998636888
+      },
+      "history_target_seen": {
+        "queries": 172,
+        "mean_head_slots_in_top100": 79.73255813953489
+      },
+      "history_target_unseen": {
+        "queries": 54749,
+        "mean_head_slots_in_top100": 94.35335805220187
+      },
+      "empty_history": {
+        "queries": 557,
+        "mean_head_slots_in_top100": 94.87073608617594
+      }
+    },
+    "training_context_mean_score_spearman_with_log_click_count": 0.9332711074126164,
+    "train_sample_score_shift_derivative_groups": {
+      "head_target": {
+        "attraction_mass": 0.814697265625,
+        "competition_mass": 0.811037515501086,
+        "logit_shift_derivative": -0.00365975012391386
+      },
+      "tail_target": {
+        "attraction_mass": 0.185302734375,
+        "competition_mass": 0.18896248449891387,
+        "logit_shift_derivative": 0.0036597501239138555
+      },
+      "freq_zero": {
+        "attraction_mass": 0.0,
+        "competition_mass": 7.224986731691998e-05,
+        "logit_shift_derivative": 7.224986731691998e-05
+      },
+      "freq_1_5": {
+        "attraction_mass": 0.0091552734375,
+        "competition_mass": 0.008503581500361006,
+        "logit_shift_derivative": -0.0006516919371389934
+      },
+      "freq_6_20": {
+        "attraction_mass": 0.0419921875,
+        "competition_mass": 0.04586294479278647,
+        "logit_shift_derivative": 0.0038707572927864694
+      },
+      "freq_21_100": {
+        "attraction_mass": 0.18017578125,
+        "competition_mass": 0.18705278485487437,
+        "logit_shift_derivative": 0.006877003604874366
+      }
+    },
+    "train_derivative_sample_size": 8192,
+    "initial_to_fitted_embedding_movement": {
+      "head_target": {
+        "initial_to_fitted_cosine_quantiles": [
+          -0.18032009899616241,
+          0.24838514253497124,
+          0.36328206956386566,
+          0.47306400537490845,
+          0.7829008102416992
+        ],
+        "relative_parameter_change_quantiles": [
+          0.8640671968460083,
+          1.3074743747711182,
+          1.443756103515625,
+          1.5731415748596191,
+          2.0291593074798584
+        ]
+      },
+      "tail_target": {
+        "initial_to_fitted_cosine_quantiles": [
+          -0.250083863735199,
+          0.4648338705301285,
+          0.5745095312595367,
+          0.6713328063488007,
+          0.9128429293632507
+        ],
+        "relative_parameter_change_quantiles": [
+          0.4600113034248352,
+          1.0562699735164642,
+          1.1961623430252075,
+          1.3502252995967865,
+          2.2468013763427734
+        ]
+      },
+      "freq_zero": {
+        "initial_to_fitted_cosine_quantiles": [
+          0.18126218020915985,
+          0.3743791878223419,
+          0.4375471770763397,
+          0.49458298087120056,
+          0.7004721760749817
+        ],
+        "relative_parameter_change_quantiles": [
+          0.7474176287651062,
+          1.0422756671905518,
+          1.1175739765167236,
+          1.1933456659317017,
+          1.4532840251922607
+        ]
+      },
+      "freq_1_5": {
+        "initial_to_fitted_cosine_quantiles": [
+          0.015250942669808865,
+          0.5272906571626663,
+          0.6227333247661591,
+          0.7004612684249878,
+          0.9128429293632507
+        ],
+        "relative_parameter_change_quantiles": [
+          0.4600113034248352,
+          1.0104617476463318,
+          1.1525402069091797,
+          1.322518676519394,
+          2.2468013763427734
+        ]
+      }
+    },
+    "itemcf_comparison": {
+      "standard/validation": {
+        "head_target": {
+          "tower": {
+            "queries": 41817,
+            "users": 15803,
+            "recall@20": 0.1397517755936581,
+            "ndcg@20": 0.05247115151923923,
+            "recall@100": 0.42222062797426885,
+            "ndcg@100": 0.10291924819876401,
+            "mrr": 0.03747057794713359,
+            "user_macro": {
+              "recall@20": 0.14978200493390445,
+              "ndcg@20": 0.05635860185005747,
+              "recall@100": 0.43503598205768457,
+              "ndcg@100": 0.10741403198408032,
+              "mrr": 0.039735664877572886
+            }
+          },
+          "itemcf": {
+            "queries": 41817,
+            "users": 15803,
+            "recall@20": 0.12289260348662027,
+            "ndcg@20": 0.048902706859689664,
+            "recall@100": 0.379247674390798,
+            "ndcg@100": 0.094420725036425,
+            "mrr": 0.03665842521086949,
+            "user_macro": {
+              "recall@20": 0.12442621031231935,
+              "ndcg@20": 0.0502929191839864,
+              "recall@100": 0.37292548253009195,
+              "ndcg@100": 0.09448696933037477,
+              "mrr": 0.037775394980779885
+            }
+          },
+          "paired20": {
+            "queries": 41817,
+            "both_hit": 2822,
+            "tower_only": 3022,
+            "itemcf_only": 2317,
+            "both_miss": 33656
+          },
+          "paired100": {
+            "queries": 41817,
+            "both_hit": 11681,
+            "tower_only": 5975,
+            "itemcf_only": 4178,
+            "both_miss": 19983
+          }
+        },
+        "tail_target": {
+          "tower": {
+            "queries": 13104,
+            "users": 8610,
+            "recall@20": 0.013888888888888888,
+            "ndcg@20": 0.005321703996251642,
+            "recall@100": 0.06379731379731379,
+            "ndcg@100": 0.01404677787804328,
+            "mrr": 0.005698324767380237,
+            "user_macro": {
+              "recall@20": 0.013845749681986616,
+              "ndcg@20": 0.005322384269474991,
+              "recall@100": 0.06140184824853813,
+              "ndcg@100": 0.013625506136991868,
+              "mrr": 0.005634389345927063
+            }
+          },
+          "itemcf": {
+            "queries": 13104,
+            "users": 8610,
+            "recall@20": 0.018391330891330892,
+            "ndcg@20": 0.006552616662356799,
+            "recall@100": 0.06837606837606838,
+            "ndcg@100": 0.015328823769953506,
+            "mrr": 0.00577737635600508,
+            "user_macro": {
+              "recall@20": 0.0181613295724794,
+              "ndcg@20": 0.006561392551137284,
+              "recall@100": 0.06562713999125148,
+              "ndcg@100": 0.014909853428443913,
+              "mrr": 0.005762811126241527
+            }
+          },
+          "paired20": {
+            "queries": 13104,
+            "both_hit": 33,
+            "tower_only": 149,
+            "itemcf_only": 208,
+            "both_miss": 12714
+          },
+          "paired100": {
+            "queries": 13104,
+            "both_hit": 306,
+            "tower_only": 530,
+            "itemcf_only": 590,
+            "both_miss": 11678
+          }
+        },
+        "freq_zero": {
+          "tower": {
+            "queries": 49,
+            "users": 49,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.00015498838910642124,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.00015498838910642124
+            }
+          },
+          "itemcf": {
+            "queries": 49,
+            "users": 49,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.00013697277770700485,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.00013697277770700485
+            }
+          },
+          "paired20": {
+            "queries": 49,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 0,
+            "both_miss": 49
+          },
+          "paired100": {
+            "queries": 49,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 0,
+            "both_miss": 49
+          }
+        },
+        "freq_1_5": {
+          "tower": {
+            "queries": 890,
+            "users": 850,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.0005069593830087508,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.0005002078777151455
+            }
+          },
+          "itemcf": {
+            "queries": 890,
+            "users": 850,
+            "recall@20": 0.011235955056179775,
+            "ndcg@20": 0.004186919202841863,
+            "recall@100": 0.033707865168539325,
+            "ndcg@100": 0.008136093374863963,
+            "mrr": 0.0037497786179081557,
+            "user_macro": {
+              "recall@20": 0.010196078431372548,
+              "ndcg@20": 0.0032618514335062696,
+              "recall@100": 0.03137254901960784,
+              "ndcg@100": 0.006978845716326085,
+              "mrr": 0.002856333348214996
+            }
+          },
+          "paired20": {
+            "queries": 890,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 10,
+            "both_miss": 880
+          },
+          "paired100": {
+            "queries": 890,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 30,
+            "both_miss": 860
+          }
+        },
+        "freq_6_20": {
+          "tower": {
+            "queries": 3121,
+            "users": 2718,
+            "recall@20": 0.004485741749439282,
+            "ndcg@20": 0.0024391393872808154,
+            "recall@100": 0.02531239987183595,
+            "ndcg@100": 0.006038701417219436,
+            "mrr": 0.0034852426111349165,
+            "user_macro": {
+              "recall@20": 0.003832474858964925,
+              "ndcg@20": 0.0016955364267282474,
+              "recall@100": 0.02503065979887172,
+              "ndcg@100": 0.0053616703858407255,
+              "mrr": 0.0027209858979879153
+            }
+          },
+          "itemcf": {
+            "queries": 3121,
+            "users": 2718,
+            "recall@20": 0.016981736622877282,
+            "ndcg@20": 0.0065433513453592475,
+            "recall@100": 0.06055751361743031,
+            "ndcg@100": 0.014074420818462548,
+            "mrr": 0.005695938095271048,
+            "user_macro": {
+              "recall@20": 0.016740250183958794,
+              "ndcg@20": 0.006582693000815692,
+              "recall@100": 0.05943095413294089,
+              "ndcg@100": 0.013952572317630673,
+              "mrr": 0.005754305152588465
+            }
+          },
+          "paired20": {
+            "queries": 3121,
+            "both_hit": 2,
+            "tower_only": 12,
+            "itemcf_only": 51,
+            "both_miss": 3056
+          },
+          "paired100": {
+            "queries": 3121,
+            "both_hit": 19,
+            "tower_only": 60,
+            "itemcf_only": 170,
+            "both_miss": 2872
+          }
+        },
+        "freq_21_100": {
+          "tower": {
+            "queries": 12713,
+            "users": 8394,
+            "recall@20": 0.0202941870526233,
+            "ndcg@20": 0.0073377415889435684,
+            "recall@100": 0.09848186895304019,
+            "ndcg@100": 0.020903682741313125,
+            "mrr": 0.007542511923315458,
+            "user_macro": {
+              "recall@20": 0.02043783163332842,
+              "ndcg@20": 0.007620966984010307,
+              "recall@100": 0.09924676923426029,
+              "ndcg@100": 0.021305695446622072,
+              "mrr": 0.00787793415048863
+            }
+          },
+          "itemcf": {
+            "queries": 12713,
+            "users": 8394,
+            "recall@20": 0.020530165971839848,
+            "ndcg@20": 0.0073923303047875935,
+            "recall@100": 0.07889561865806655,
+            "ndcg@100": 0.01765521739882694,
+            "mrr": 0.006699525993123749,
+            "user_macro": {
+              "recall@20": 0.021085828501839942,
+              "ndcg@20": 0.007691744248120236,
+              "recall@100": 0.07780316439179913,
+              "ndcg@100": 0.017660031145855445,
+              "mrr": 0.00687603853584758
+            }
+          },
+          "paired20": {
+            "queries": 12713,
+            "both_hit": 48,
+            "tower_only": 210,
+            "itemcf_only": 213,
+            "both_miss": 12242
+          },
+          "paired100": {
+            "queries": 12713,
+            "both_hit": 459,
+            "tower_only": 793,
+            "itemcf_only": 544,
+            "both_miss": 10917
+          }
+        },
+        "freq_101_plus": {
+          "tower": {
+            "queries": 38148,
+            "users": 15121,
+            "recall@20": 0.15083359547027367,
+            "ndcg@20": 0.05670086215264142,
+            "recall@100": 0.44985320331341094,
+            "ndcg@100": 0.11018265370211124,
+            "mrr": 0.040221081608855784,
+            "user_macro": {
+              "recall@20": 0.16114967297842409,
+              "ndcg@20": 0.06072191732187773,
+              "recall@100": 0.4618189181276218,
+              "ndcg@100": 0.11461148275213164,
+              "mrr": 0.042544042474299736
+            }
+          },
+          "itemcf": {
+            "queries": 38148,
+            "users": 15121,
+            "recall@20": 0.13253643703470694,
+            "ndcg@20": 0.052760383996304026,
+            "recall@100": 0.40717730942644437,
+            "ndcg@100": 0.1015424713290426,
+            "mrr": 0.039382405248769285,
+            "user_macro": {
+              "recall@20": 0.13344978045793746,
+              "ndcg@20": 0.05390322910643811,
+              "recall@100": 0.39967187558498674,
+              "ndcg@100": 0.10126241582189294,
+              "mrr": 0.04034553217814577
+            }
+          },
+          "paired20": {
+            "queries": 38148,
+            "both_hit": 2805,
+            "tower_only": 2949,
+            "itemcf_only": 2251,
+            "both_miss": 30143
+          },
+          "paired100": {
+            "queries": 38148,
+            "both_hit": 11509,
+            "tower_only": 5652,
+            "itemcf_only": 4024,
+            "both_miss": 16963
+          }
+        }
+      },
+      "standard/test": {
+        "head_target": {
+          "tower": {
+            "queries": 57391,
+            "users": 17519,
+            "recall@20": 0.1330696450662996,
+            "ndcg@20": 0.04952231873508956,
+            "recall@100": 0.41048247983133246,
+            "ndcg@100": 0.0989925746787376,
+            "mrr": 0.035400181287625336,
+            "user_macro": {
+              "recall@20": 0.1434630590932,
+              "ndcg@20": 0.053616096468765105,
+              "recall@100": 0.4222121801733486,
+              "ndcg@100": 0.1034767640430315,
+              "mrr": 0.03782395002138708
+            }
+          },
+          "itemcf": {
+            "queries": 57391,
+            "users": 17519,
+            "recall@20": 0.12259761983586277,
+            "ndcg@20": 0.04790114726905368,
+            "recall@100": 0.3789095851265878,
+            "ndcg@100": 0.09339862508146356,
+            "mrr": 0.03549428775690466,
+            "user_macro": {
+              "recall@20": 0.12734502927898292,
+              "ndcg@20": 0.04981138547870845,
+              "recall@100": 0.3734586661400062,
+              "ndcg@100": 0.09360303310993515,
+              "mrr": 0.03637249112539218
+            }
+          },
+          "paired20": {
+            "queries": 57391,
+            "both_hit": 3795,
+            "tower_only": 3842,
+            "itemcf_only": 3241,
+            "both_miss": 46513
+          },
+          "paired100": {
+            "queries": 57391,
+            "both_hit": 15914,
+            "tower_only": 7644,
+            "itemcf_only": 5832,
+            "both_miss": 28001
+          }
+        },
+        "tail_target": {
+          "tower": {
+            "queries": 18035,
+            "users": 10342,
+            "recall@20": 0.009758802328805102,
+            "ndcg@20": 0.0039292588796871085,
+            "recall@100": 0.053507069586914334,
+            "ndcg@100": 0.011532884495232163,
+            "mrr": 0.004767569927064868,
+            "user_macro": {
+              "recall@20": 0.009567956270721694,
+              "ndcg@20": 0.003378094983558199,
+              "recall@100": 0.054408820263171224,
+              "ndcg@100": 0.011143189111423053,
+              "mrr": 0.00414942359112002
+            }
+          },
+          "itemcf": {
+            "queries": 18035,
+            "users": 10342,
+            "recall@20": 0.015026337676739674,
+            "ndcg@20": 0.005515668037015167,
+            "recall@100": 0.058996395896867206,
+            "ndcg@100": 0.013242528700791008,
+            "mrr": 0.005205144299230935,
+            "user_macro": {
+              "recall@20": 0.014895278446815869,
+              "ndcg@20": 0.005585110426992229,
+              "recall@100": 0.057258527139246077,
+              "ndcg@100": 0.013035667351609635,
+              "mrr": 0.00525974358549859
+            }
+          },
+          "paired20": {
+            "queries": 18035,
+            "both_hit": 34,
+            "tower_only": 142,
+            "itemcf_only": 237,
+            "both_miss": 17622
+          },
+          "paired100": {
+            "queries": 18035,
+            "both_hit": 325,
+            "tower_only": 640,
+            "itemcf_only": 739,
+            "both_miss": 16331
+          }
+        },
+        "freq_zero": {
+          "tower": {
+            "queries": 76,
+            "users": 76,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.00015992990397595202,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.00015992990397595202
+            }
+          },
+          "itemcf": {
+            "queries": 76,
+            "users": 76,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.000136438343617211,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.000136438343617211
+            }
+          },
+          "paired20": {
+            "queries": 76,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 0,
+            "both_miss": 76
+          },
+          "paired100": {
+            "queries": 76,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 0,
+            "both_miss": 76
+          }
+        },
+        "freq_1_5": {
+          "tower": {
+            "queries": 1116,
+            "users": 1037,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.007168458781362007,
+            "ndcg@100": 0.001191914971015256,
+            "mrr": 0.0005911120417638388,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.005625200900032144,
+              "ndcg@100": 0.0009114720013484435,
+              "mrr": 0.0005417737266118941
+            }
+          },
+          "itemcf": {
+            "queries": 1116,
+            "users": 1037,
+            "recall@20": 0.00985663082437276,
+            "ndcg@20": 0.004920945632018122,
+            "recall@100": 0.03136200716845878,
+            "ndcg@100": 0.008674890672587619,
+            "mrr": 0.0049528105020893495,
+            "user_macro": {
+              "recall@20": 0.007553841208614593,
+              "ndcg@20": 0.004017495623278242,
+              "recall@100": 0.030054644808743168,
+              "ndcg@100": 0.007944643764924902,
+              "mrr": 0.0044836913676239935
+            }
+          },
+          "paired20": {
+            "queries": 1116,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 11,
+            "both_miss": 1105
+          },
+          "paired100": {
+            "queries": 1116,
+            "both_hit": 0,
+            "tower_only": 8,
+            "itemcf_only": 35,
+            "both_miss": 1073
+          }
+        },
+        "freq_6_20": {
+          "tower": {
+            "queries": 4499,
+            "users": 3695,
+            "recall@20": 0.003556345854634363,
+            "ndcg@20": 0.0012742222031055493,
+            "recall@100": 0.02222716159146477,
+            "ndcg@100": 0.0045115542457672625,
+            "mrr": 0.002085361540123442,
+            "user_macro": {
+              "recall@20": 0.0025587403124615574,
+              "ndcg@20": 0.000827378898591116,
+              "recall@100": 0.02003936523557633,
+              "ndcg@100": 0.0038372283525178845,
+              "mrr": 0.0017774986411086375
+            }
+          },
+          "itemcf": {
+            "queries": 4499,
+            "users": 3695,
+            "recall@20": 0.010002222716159146,
+            "ndcg@20": 0.003470312416628252,
+            "recall@100": 0.044009779951100246,
+            "ndcg@100": 0.009405612367024236,
+            "mrr": 0.003523298118758966,
+            "user_macro": {
+              "recall@20": 0.010058637798827243,
+              "ndcg@20": 0.0035735302410331133,
+              "recall@100": 0.04140320662648132,
+              "ndcg@100": 0.00903206897798597,
+              "mrr": 0.003536782655205394
+            }
+          },
+          "paired20": {
+            "queries": 4499,
+            "both_hit": 0,
+            "tower_only": 16,
+            "itemcf_only": 45,
+            "both_miss": 4438
+          },
+          "paired100": {
+            "queries": 4499,
+            "both_hit": 29,
+            "tower_only": 71,
+            "itemcf_only": 169,
+            "both_miss": 4230
+          }
+        },
+        "freq_21_100": {
+          "tower": {
+            "queries": 17158,
+            "users": 10073,
+            "recall@20": 0.015444690523371022,
+            "ndcg@20": 0.006100973154187424,
+            "recall@100": 0.08316820142207716,
+            "ndcg@100": 0.017847187703283012,
+            "mrr": 0.006935833518928445,
+            "user_macro": {
+              "recall@20": 0.015875207476648535,
+              "ndcg@20": 0.005646563454682668,
+              "recall@100": 0.08647125786051103,
+              "ndcg@100": 0.017880506188767145,
+              "mrr": 0.00632975900042107
+            }
+          },
+          "itemcf": {
+            "queries": 17158,
+            "users": 10073,
+            "recall@20": 0.01981582935074018,
+            "ndcg@20": 0.006961996708304478,
+            "recall@100": 0.0767571978086024,
+            "ndcg@100": 0.016958582189427463,
+            "mrr": 0.006294740225027846,
+            "user_macro": {
+              "recall@20": 0.01928139946356962,
+              "ndcg@20": 0.006836356393885348,
+              "recall@100": 0.0761303660883631,
+              "ndcg@100": 0.01683804877703168,
+              "mrr": 0.006254540727787591
+            }
+          },
+          "paired20": {
+            "queries": 17158,
+            "both_hit": 51,
+            "tower_only": 214,
+            "itemcf_only": 289,
+            "both_miss": 16604
+          },
+          "paired100": {
+            "queries": 17158,
+            "both_hit": 514,
+            "tower_only": 913,
+            "itemcf_only": 803,
+            "both_miss": 14928
+          }
+        },
+        "freq_101_plus": {
+          "tower": {
+            "queries": 52577,
+            "users": 16856,
+            "recall@20": 0.1432565570496605,
+            "ndcg@20": 0.053304417432515384,
+            "recall@100": 0.4372254027426441,
+            "ndcg@100": 0.10577683623992716,
+            "mrr": 0.03782216594926717,
+            "user_macro": {
+              "recall@20": 0.15460550931317826,
+              "ndcg@20": 0.057919189657341885,
+              "recall@100": 0.44985405744893053,
+              "ndcg@100": 0.11077213248318905,
+              "mrr": 0.04064604560754669
+            }
+          },
+          "itemcf": {
+            "queries": 52577,
+            "users": 16856,
+            "recall@20": 0.13144530878521027,
+            "ndcg@20": 0.05150562347712872,
+            "recall@100": 0.40435932061547825,
+            "ndcg@100": 0.099969513588318,
+            "mrr": 0.038068609263392256,
+            "user_macro": {
+              "recall@20": 0.13641478726905226,
+              "ndcg@20": 0.05362291154115791,
+              "recall@100": 0.39909296155405477,
+              "ndcg@100": 0.1003742465377107,
+              "mrr": 0.03916242126118191
+            }
+          },
+          "paired20": {
+            "queries": 52577,
+            "both_hit": 3778,
+            "tower_only": 3754,
+            "itemcf_only": 3133,
+            "both_miss": 41912
+          },
+          "paired100": {
+            "queries": 52577,
+            "both_hit": 15696,
+            "tower_only": 7292,
+            "itemcf_only": 5564,
+            "both_miss": 24025
+          }
+        }
+      },
+      "random/validation": {
+        "head_target": {
+          "tower": {
+            "queries": 12828,
+            "users": 5508,
+            "recall@20": 0.012862488306828812,
+            "ndcg@20": 0.004204067877709201,
+            "recall@100": 0.07740879326473339,
+            "ndcg@100": 0.0154604764701785,
+            "mrr": 0.004869066288454583,
+            "user_macro": {
+              "recall@20": 0.014684239974833336,
+              "ndcg@20": 0.004785057666359499,
+              "recall@100": 0.08123776218527573,
+              "ndcg@100": 0.016326501202255258,
+              "mrr": 0.005128944555026206
+            }
+          },
+          "itemcf": {
+            "queries": 12828,
+            "users": 5508,
+            "recall@20": 0.013486124103523543,
+            "ndcg@20": 0.0048233843064995775,
+            "recall@100": 0.0724976613657624,
+            "ndcg@100": 0.01505720112772399,
+            "mrr": 0.00527068088698761,
+            "user_macro": {
+              "recall@20": 0.01537540991244695,
+              "ndcg@20": 0.005838541217542433,
+              "recall@100": 0.07370292793672727,
+              "ndcg@100": 0.015921227130927904,
+              "mrr": 0.0060076562519073805
+            }
+          },
+          "paired20": {
+            "queries": 12828,
+            "both_hit": 62,
+            "tower_only": 103,
+            "itemcf_only": 111,
+            "both_miss": 12552
+          },
+          "paired100": {
+            "queries": 12828,
+            "both_hit": 492,
+            "tower_only": 501,
+            "itemcf_only": 438,
+            "both_miss": 11397
+          }
+        },
+        "tail_target": {
+          "tower": {
+            "queries": 35073,
+            "users": 8905,
+            "recall@20": 5.7023921535083966e-05,
+            "ndcg@20": 1.5081200514673106e-05,
+            "recall@100": 0.0017392296068200611,
+            "ndcg@100": 0.0003006489418684666,
+            "mrr": 0.0004888594024535251,
+            "user_macro": {
+              "recall@20": 0.00014972861688190156,
+              "ndcg@20": 3.851555102568332e-05,
+              "recall@100": 0.0021896558597542504,
+              "ndcg@100": 0.00038908949620168414,
+              "mrr": 0.0005154004739010554
+            }
+          },
+          "itemcf": {
+            "queries": 35073,
+            "users": 8905,
+            "recall@20": 0.00045619137228067173,
+            "ndcg@20": 0.00014012979045793108,
+            "recall@100": 0.003364411370569954,
+            "ndcg@100": 0.0006546428293816576,
+            "mrr": 0.0005553485033480039,
+            "user_macro": {
+              "recall@20": 0.000537285099328895,
+              "ndcg@20": 0.0001580659792112161,
+              "recall@100": 0.004315213331978483,
+              "ndcg@100": 0.0008196684633029804,
+              "mrr": 0.0005856615608360787
+            }
+          },
+          "paired20": {
+            "queries": 35073,
+            "both_hit": 1,
+            "tower_only": 1,
+            "itemcf_only": 15,
+            "both_miss": 35056
+          },
+          "paired100": {
+            "queries": 35073,
+            "both_hit": 21,
+            "tower_only": 40,
+            "itemcf_only": 97,
+            "both_miss": 34915
+          }
+        },
+        "freq_zero": {
+          "tower": {
+            "queries": 2019,
+            "users": 1576,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.0001386908094007947,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.00013871616066643574
+            }
+          },
+          "itemcf": {
+            "queries": 2019,
+            "users": 1576,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.00013640435903021717,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.00013639292353367406
+            }
+          },
+          "paired20": {
+            "queries": 2019,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 0,
+            "both_miss": 2019
+          },
+          "paired100": {
+            "queries": 2019,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 0,
+            "both_miss": 2019
+          }
+        },
+        "freq_1_5": {
+          "tower": {
+            "queries": 9625,
+            "users": 4689,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.0002198661846036241,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.00022310972487940174
+            }
+          },
+          "itemcf": {
+            "queries": 9625,
+            "users": 4689,
+            "recall@20": 0.0006233766233766234,
+            "ndcg@20": 0.00019783859212232978,
+            "recall@100": 0.0024935064935064934,
+            "ndcg@100": 0.0005248242703810229,
+            "mrr": 0.0005377799627907418,
+            "user_macro": {
+              "recall@20": 0.0007235779788562897,
+              "ndcg@20": 0.0002532744291657088,
+              "recall@100": 0.0031236565145714213,
+              "ndcg@100": 0.000668804074246672,
+              "mrr": 0.0005915002627460713
+            }
+          },
+          "paired20": {
+            "queries": 9625,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 6,
+            "both_miss": 9619
+          },
+          "paired100": {
+            "queries": 9625,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 24,
+            "both_miss": 9601
+          }
+        },
+        "freq_6_20": {
+          "tower": {
+            "queries": 12027,
+            "users": 5304,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0003325850170449821,
+            "ndcg@100": 5.4873350757774816e-05,
+            "mrr": 0.00039485513794040037,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0006284565108094519,
+              "ndcg@100": 0.00010297076479159332,
+              "mrr": 0.0004067042665806164
+            }
+          },
+          "itemcf": {
+            "queries": 12027,
+            "users": 5304,
+            "recall@20": 8.314625426124553e-05,
+            "ndcg@20": 2.319306108348964e-05,
+            "recall@100": 0.001579778830963665,
+            "ndcg@100": 0.00029402574485639835,
+            "mrr": 0.0004358364329927156,
+            "user_macro": {
+              "recall@20": 6.284565108094519e-05,
+              "ndcg@20": 1.753035103388197e-05,
+              "recall@100": 0.002113185017596782,
+              "ndcg@100": 0.00039059343389392676,
+              "mrr": 0.0004635215072593711
+            }
+          },
+          "paired20": {
+            "queries": 12027,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 1,
+            "both_miss": 12026
+          },
+          "paired100": {
+            "queries": 12027,
+            "both_hit": 0,
+            "tower_only": 4,
+            "itemcf_only": 19,
+            "both_miss": 12004
+          }
+        },
+        "freq_21_100": {
+          "tower": {
+            "queries": 13740,
+            "users": 5665,
+            "recall@20": 0.0001455604075691412,
+            "ndcg@20": 3.8496575374900284e-05,
+            "recall@100": 0.006186317321688501,
+            "ndcg@100": 0.0010646615095121987,
+            "mrr": 0.0009599092567086652,
+            "user_macro": {
+              "recall@20": 0.000264783759929391,
+              "ndcg@20": 6.87504806399938e-05,
+              "recall@100": 0.0074860666939219455,
+              "ndcg@100": 0.0012916812813190681,
+              "mrr": 0.0010067107669432258
+            }
+          },
+          "itemcf": {
+            "queries": 13740,
+            "users": 5665,
+            "recall@20": 0.000727802037845706,
+            "ndcg@20": 0.0002351988898036727,
+            "recall@100": 0.00727802037845706,
+            "ndcg@100": 0.0013752171542035637,
+            "mrr": 0.000836594216491751,
+            "user_macro": {
+              "recall@20": 0.0009738158281847602,
+              "ndcg@20": 0.00031864172096931695,
+              "recall@100": 0.008078951792544026,
+              "ndcg@100": 0.001546783067069884,
+              "mrr": 0.0008883670492293851
+            }
+          },
+          "paired20": {
+            "queries": 13740,
+            "both_hit": 1,
+            "tower_only": 1,
+            "itemcf_only": 9,
+            "both_miss": 13729
+          },
+          "paired100": {
+            "queries": 13740,
+            "both_hit": 29,
+            "tower_only": 56,
+            "itemcf_only": 71,
+            "both_miss": 13584
+          }
+        },
+        "freq_101_plus": {
+          "tower": {
+            "queries": 10490,
+            "users": 4945,
+            "recall@20": 0.01572926596758818,
+            "ndcg@20": 0.005141066037679088,
+            "recall@100": 0.09199237368922783,
+            "ndcg@100": 0.018454074505942917,
+            "mrr": 0.005650318729110729,
+            "user_macro": {
+              "recall@20": 0.017286781581523747,
+              "ndcg@20": 0.005600275066707615,
+              "recall@100": 0.09580193385547939,
+              "ndcg@100": 0.019229564223072117,
+              "mrr": 0.005834797588233752
+            }
+          },
+          "itemcf": {
+            "queries": 10490,
+            "users": 4945,
+            "recall@20": 0.016396568160152527,
+            "ndcg@20": 0.005850750608558302,
+            "recall@100": 0.08627264061010487,
+            "ndcg@100": 0.01798197322085644,
+            "mrr": 0.006187024844543247,
+            "user_macro": {
+              "recall@20": 0.018370118253839184,
+              "ndcg@20": 0.00688271351108176,
+              "recall@100": 0.08726957142793103,
+              "ndcg@100": 0.018810768749844203,
+              "mrr": 0.006911725593625063
+            }
+          },
+          "paired20": {
+            "queries": 10490,
+            "both_hit": 62,
+            "tower_only": 103,
+            "itemcf_only": 110,
+            "both_miss": 10215
+          },
+          "paired100": {
+            "queries": 10490,
+            "both_hit": 484,
+            "tower_only": 481,
+            "itemcf_only": 421,
+            "both_miss": 9104
+          }
+        }
+      },
+      "random/test": {
+        "head_target": {
+          "tower": {
+            "queries": 42856,
+            "users": 14238,
+            "recall@20": 0.014187044987866344,
+            "ndcg@20": 0.004751117269703794,
+            "recall@100": 0.0803388090349076,
+            "ndcg@100": 0.016256646399723244,
+            "mrr": 0.005239148623896003,
+            "user_macro": {
+              "recall@20": 0.01638957858003782,
+              "ndcg@20": 0.005442098284911781,
+              "recall@100": 0.08491104244201995,
+              "ndcg@100": 0.017363745010387312,
+              "mrr": 0.0056024493743361565
+            }
+          },
+          "itemcf": {
+            "queries": 42856,
+            "users": 14238,
+            "recall@20": 0.013533694231846182,
+            "ndcg@20": 0.004608091674688731,
+            "recall@100": 0.07242859809594923,
+            "ndcg@100": 0.014808492514821187,
+            "mrr": 0.005014768797670501,
+            "user_macro": {
+              "recall@20": 0.014462450664014538,
+              "ndcg@20": 0.005036999211467699,
+              "recall@100": 0.07448001121527366,
+              "ndcg@100": 0.015432910003507726,
+              "mrr": 0.005319015444923004
+            }
+          },
+          "paired20": {
+            "queries": 42856,
+            "both_hit": 227,
+            "tower_only": 381,
+            "itemcf_only": 353,
+            "both_miss": 41895
+          },
+          "paired100": {
+            "queries": 42856,
+            "both_hit": 1702,
+            "tower_only": 1741,
+            "itemcf_only": 1402,
+            "both_miss": 38011
+          }
+        },
+        "tail_target": {
+          "tower": {
+            "queries": 116841,
+            "users": 19756,
+            "recall@20": 5.9910476630634796e-05,
+            "ndcg@20": 1.877312871900051e-05,
+            "recall@100": 0.001206768172131358,
+            "ndcg@100": 0.0002102523763500535,
+            "mrr": 0.00046374826659394553,
+            "user_macro": {
+              "recall@20": 0.00011132570608172957,
+              "ndcg@20": 3.798983083895397e-05,
+              "recall@100": 0.0015967500281059246,
+              "ndcg@100": 0.0002866638419183631,
+              "mrr": 0.0005029849489300401
+            }
+          },
+          "itemcf": {
+            "queries": 116841,
+            "users": 19756,
+            "recall@20": 0.00041937333641444357,
+            "ndcg@20": 0.00013987720943564697,
+            "recall@100": 0.0027644405645278628,
+            "ndcg@100": 0.0005428813813657244,
+            "mrr": 0.0005413797412068131,
+            "user_macro": {
+              "recall@20": 0.0005536641990221165,
+              "ndcg@20": 0.00020678349270485157,
+              "recall@100": 0.003700381286285106,
+              "ndcg@100": 0.000739748452023936,
+              "mrr": 0.0006208015535110008
+            }
+          },
+          "paired20": {
+            "queries": 116841,
+            "both_hit": 0,
+            "tower_only": 7,
+            "itemcf_only": 49,
+            "both_miss": 116785
+          },
+          "paired100": {
+            "queries": 116841,
+            "both_hit": 34,
+            "tower_only": 107,
+            "itemcf_only": 289,
+            "both_miss": 116411
+          }
+        },
+        "freq_zero": {
+          "tower": {
+            "queries": 6601,
+            "users": 4759,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.00013856419234034874,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.00013870060436334844
+            }
+          },
+          "itemcf": {
+            "queries": 6601,
+            "users": 4759,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.00013644091715410414,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.00013644879119082705
+            }
+          },
+          "paired20": {
+            "queries": 6601,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 0,
+            "both_miss": 6601
+          },
+          "paired100": {
+            "queries": 6601,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 0,
+            "both_miss": 6601
+          }
+        },
+        "freq_1_5": {
+          "tower": {
+            "queries": 31773,
+            "users": 12391,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.0,
+            "ndcg@100": 0.0,
+            "mrr": 0.00021220500014254256,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0,
+              "ndcg@100": 0.0,
+              "mrr": 0.0002149186610122698
+            }
+          },
+          "itemcf": {
+            "queries": 31773,
+            "users": 12391,
+            "recall@20": 0.000629465269253769,
+            "ndcg@20": 0.00021359423665144294,
+            "recall@100": 0.002612280867403141,
+            "ndcg@100": 0.0005591194407098624,
+            "mrr": 0.0005595621982272731,
+            "user_macro": {
+              "recall@20": 0.000677463033205104,
+              "ndcg@20": 0.00024894560754015684,
+              "recall@100": 0.0026272791304924135,
+              "ndcg@100": 0.0005903293762329675,
+              "mrr": 0.0005984944164066381
+            }
+          },
+          "paired20": {
+            "queries": 31773,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 20,
+            "both_miss": 31753
+          },
+          "paired100": {
+            "queries": 31773,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 83,
+            "both_miss": 31690
+          }
+        },
+        "freq_6_20": {
+          "tower": {
+            "queries": 40130,
+            "users": 13699,
+            "recall@20": 0.0,
+            "ndcg@20": 0.0,
+            "recall@100": 0.000174433092449539,
+            "ndcg@100": 2.8733137146284005e-05,
+            "mrr": 0.00038041495643584153,
+            "user_macro": {
+              "recall@20": 0.0,
+              "ndcg@20": 0.0,
+              "recall@100": 0.0002186622779366775,
+              "ndcg@100": 3.6607799122225515e-05,
+              "mrr": 0.00039821294302604105
+            }
+          },
+          "itemcf": {
+            "queries": 40130,
+            "users": 13699,
+            "recall@20": 0.000299028158484924,
+            "ndcg@20": 9.020325405113975e-05,
+            "recall@100": 0.002367306254672315,
+            "ndcg@100": 0.00044298742381447445,
+            "mrr": 0.0004546872380255201,
+            "user_macro": {
+              "recall@20": 0.00033283625151644714,
+              "ndcg@20": 9.871738481806702e-05,
+              "recall@100": 0.0027934711573948967,
+              "ndcg@100": 0.0005136761714464956,
+              "mrr": 0.00047723181815882075
+            }
+          },
+          "paired20": {
+            "queries": 40130,
+            "both_hit": 0,
+            "tower_only": 0,
+            "itemcf_only": 12,
+            "both_miss": 40118
+          },
+          "paired100": {
+            "queries": 40130,
+            "both_hit": 2,
+            "tower_only": 5,
+            "itemcf_only": 93,
+            "both_miss": 40030
+          }
+        },
+        "freq_21_100": {
+          "tower": {
+            "queries": 46395,
+            "users": 14677,
+            "recall@20": 0.00023709451449509646,
+            "ndcg@20": 7.778815175148117e-05,
+            "recall@100": 0.004871214570535618,
+            "ndcg@100": 0.0008588363451631541,
+            "mrr": 0.0009289363900052655,
+            "user_macro": {
+              "recall@20": 0.0002566127898280246,
+              "ndcg@20": 8.668888696516651e-05,
+              "recall@100": 0.005664585467482881,
+              "ndcg@100": 0.001000945740405913,
+              "mrr": 0.0009863839159205154
+            }
+          },
+          "itemcf": {
+            "queries": 46395,
+            "users": 14677,
+            "recall@20": 0.0005388511693070374,
+            "ndcg@20": 0.00017861617573089645,
+            "recall@100": 0.004569457915723677,
+            "ndcg@100": 0.000874073053640908,
+            "mrr": 0.0007666268467616138,
+            "user_macro": {
+              "recall@20": 0.0006791651490840698,
+              "ndcg@20": 0.0002558883730482116,
+              "recall@100": 0.005715039074611272,
+              "ndcg@100": 0.0011219970484709332,
+              "mrr": 0.0008562594673493701
+            }
+          },
+          "paired20": {
+            "queries": 46395,
+            "both_hit": 0,
+            "tower_only": 11,
+            "itemcf_only": 25,
+            "both_miss": 46359
+          },
+          "paired100": {
+            "queries": 46395,
+            "both_hit": 54,
+            "tower_only": 172,
+            "itemcf_only": 158,
+            "both_miss": 46011
+          }
+        },
+        "freq_101_plus": {
+          "tower": {
+            "queries": 34798,
+            "users": 13032,
+            "recall@20": 0.01735731938617162,
+            "ndcg@20": 0.005810631977199051,
+            "recall@100": 0.09629863785275015,
+            "ndcg@100": 0.019548886803383275,
+            "mrr": 0.006112209233966264,
+            "user_macro": {
+              "recall@20": 0.01991503251315423,
+              "ndcg@20": 0.006642548386176935,
+              "recall@100": 0.10098636676302408,
+              "ndcg@100": 0.02075733842454203,
+              "mrr": 0.006557776970086325
+            }
+          },
+          "itemcf": {
+            "queries": 34798,
+            "users": 13032,
+            "recall@20": 0.016437726306109547,
+            "ndcg@20": 0.005607635096812954,
+            "recall@100": 0.08727513075464108,
+            "ndcg@100": 0.017873698260368703,
+            "mrr": 0.005910524004236843,
+            "user_macro": {
+              "recall@20": 0.017478795710343574,
+              "ndcg@20": 0.006103104831488552,
+              "recall@100": 0.08928611576249108,
+              "ndcg@100": 0.018550869452425508,
+              "mrr": 0.006268508168795005
+            }
+          },
+          "paired20": {
+            "queries": 34798,
+            "both_hit": 227,
+            "tower_only": 377,
+            "itemcf_only": 345,
+            "both_miss": 33849
+          },
+          "paired100": {
+            "queries": 34798,
+            "both_hit": 1680,
+            "tower_only": 1671,
+            "itemcf_only": 1357,
+            "both_miss": 30090
+          }
+        }
+      }
+    },
+    "frozen_pipeline_failure_breakdown": {
+      "standard/validation": {
+        "head_target": {
+          "queries": 41817,
+          "outside_pool": 24161,
+          "pool_not_top20": 10143,
+          "top20_hits": 7513
+        },
+        "tail_target": {
+          "queries": 13104,
+          "outside_pool": 12268,
+          "pool_not_top20": 549,
+          "top20_hits": 287
+        },
+        "freq_zero": {
+          "queries": 49,
+          "outside_pool": 49,
+          "pool_not_top20": 0,
+          "top20_hits": 0
+        },
+        "freq_1_5": {
+          "queries": 890,
+          "outside_pool": 890,
+          "pool_not_top20": 0,
+          "top20_hits": 0
+        },
+        "freq_6_20": {
+          "queries": 3121,
+          "outside_pool": 3042,
+          "pool_not_top20": 62,
+          "top20_hits": 17
+        },
+        "freq_21_100": {
+          "queries": 12713,
+          "outside_pool": 11461,
+          "pool_not_top20": 819,
+          "top20_hits": 433
+        },
+        "freq_101_plus": {
+          "queries": 38148,
+          "outside_pool": 20987,
+          "pool_not_top20": 9811,
+          "top20_hits": 7350
+        }
+      },
+      "standard/test": {
+        "head_target": {
+          "queries": 57391,
+          "outside_pool": 33833,
+          "pool_not_top20": 13701,
+          "top20_hits": 9857
+        },
+        "tail_target": {
+          "queries": 18035,
+          "outside_pool": 17070,
+          "pool_not_top20": 678,
+          "top20_hits": 287
+        },
+        "freq_zero": {
+          "queries": 76,
+          "outside_pool": 76,
+          "pool_not_top20": 0,
+          "top20_hits": 0
+        },
+        "freq_1_5": {
+          "queries": 1116,
+          "outside_pool": 1108,
+          "pool_not_top20": 8,
+          "top20_hits": 0
+        },
+        "freq_6_20": {
+          "queries": 4499,
+          "outside_pool": 4399,
+          "pool_not_top20": 75,
+          "top20_hits": 25
+        },
+        "freq_21_100": {
+          "queries": 17158,
+          "outside_pool": 15731,
+          "pool_not_top20": 966,
+          "top20_hits": 461
+        },
+        "freq_101_plus": {
+          "queries": 52577,
+          "outside_pool": 29589,
+          "pool_not_top20": 13330,
+          "top20_hits": 9658
+        }
+      },
+      "random/validation": {
+        "head_target": {
+          "queries": 12828,
+          "outside_pool": 11835,
+          "pool_not_top20": 771,
+          "top20_hits": 222
+        },
+        "tail_target": {
+          "queries": 35073,
+          "outside_pool": 35012,
+          "pool_not_top20": 53,
+          "top20_hits": 8
+        },
+        "freq_zero": {
+          "queries": 2019,
+          "outside_pool": 2019,
+          "pool_not_top20": 0,
+          "top20_hits": 0
+        },
+        "freq_1_5": {
+          "queries": 9625,
+          "outside_pool": 9625,
+          "pool_not_top20": 0,
+          "top20_hits": 0
+        },
+        "freq_6_20": {
+          "queries": 12027,
+          "outside_pool": 12023,
+          "pool_not_top20": 4,
+          "top20_hits": 0
+        },
+        "freq_21_100": {
+          "queries": 13740,
+          "outside_pool": 13655,
+          "pool_not_top20": 74,
+          "top20_hits": 11
+        },
+        "freq_101_plus": {
+          "queries": 10490,
+          "outside_pool": 9525,
+          "pool_not_top20": 746,
+          "top20_hits": 219
+        }
+      },
+      "random/test": {
+        "head_target": {
+          "queries": 42856,
+          "outside_pool": 39413,
+          "pool_not_top20": 2628,
+          "top20_hits": 815
+        },
+        "tail_target": {
+          "queries": 116841,
+          "outside_pool": 116700,
+          "pool_not_top20": 126,
+          "top20_hits": 15
+        },
+        "freq_zero": {
+          "queries": 6601,
+          "outside_pool": 6601,
+          "pool_not_top20": 0,
+          "top20_hits": 0
+        },
+        "freq_1_5": {
+          "queries": 31773,
+          "outside_pool": 31773,
+          "pool_not_top20": 0,
+          "top20_hits": 0
+        },
+        "freq_6_20": {
+          "queries": 40130,
+          "outside_pool": 40123,
+          "pool_not_top20": 7,
+          "top20_hits": 0
+        },
+        "freq_21_100": {
+          "queries": 46395,
+          "outside_pool": 46169,
+          "pool_not_top20": 199,
+          "top20_hits": 27
+        },
+        "freq_101_plus": {
+          "queries": 34798,
+          "outside_pool": 31447,
+          "pool_not_top20": 2548,
+          "top20_hits": 803
+        }
+      }
+    },
+    "existing_training_curves": {
+      "control": {
+        "best_epoch": 0,
+        "rows": [
+          {
+            "epoch": 0,
+            "loss": 7.141607042073297,
+            "metrics": {
+              "recall@20": 0.10970725313137197,
+              "ndcg@20": 0.04121616938987233,
+              "recall@100": 0.33665889892222545
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.1397517755936581,
+              "ndcg@20": 0.05247115151923923,
+              "recall@100": 0.42222062797426885,
+              "ndcg@100": 0.10291924819876401,
+              "mrr": 0.03747057794713359,
+              "user_macro": {
+                "recall@20": 0.14978200493390445,
+                "ndcg@20": 0.05635860185005747,
+                "recall@100": 0.43503598205768457,
+                "ndcg@100": 0.10741403198408032,
+                "mrr": 0.039735664877572886
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.013888888888888888,
+              "ndcg@20": 0.005321703996251642,
+              "recall@100": 0.06379731379731379,
+              "ndcg@100": 0.01404677787804328,
+              "mrr": 0.005698324767380237,
+              "user_macro": {
+                "recall@20": 0.013845749681986616,
+                "ndcg@20": 0.005322384269474991,
+                "recall@100": 0.06140184824853813,
+                "ndcg@100": 0.013625506136991868,
+                "mrr": 0.005634389345927063
+              }
+            }
+          },
+          {
+            "epoch": 1,
+            "loss": 6.399360910669479,
+            "metrics": {
+              "recall@20": 0.10925211185551996,
+              "ndcg@20": 0.039682795879999594,
+              "recall@100": 0.34872924555782114
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.1365951646459574,
+              "ndcg@20": 0.04962497685272288,
+              "recall@100": 0.42805557548365497,
+              "ndcg@100": 0.10162961124747785,
+              "mrr": 0.03499539811354169,
+              "user_macro": {
+                "recall@20": 0.14709102471505514,
+                "ndcg@20": 0.05391146435329171,
+                "recall@100": 0.4388323491798225,
+                "ndcg@100": 0.10611823910743942,
+                "mrr": 0.0375971323419533
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.022054334554334556,
+              "ndcg@20": 0.007976873858844975,
+              "recall@100": 0.09577228327228328,
+              "ndcg@100": 0.020857449522030995,
+              "mrr": 0.007488561418242995,
+              "user_macro": {
+                "recall@20": 0.021154300596809308,
+                "ndcg@20": 0.0077275354856220805,
+                "recall@100": 0.09543135435992578,
+                "ndcg@100": 0.020676060685136815,
+                "mrr": 0.0073606759824491
+              }
+            }
+          },
+          {
+            "epoch": 2,
+            "loss": 6.130496903887266,
+            "metrics": {
+              "recall@20": 0.106339207690067,
+              "ndcg@20": 0.03825102375079268,
+              "recall@100": 0.3516421497232741
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.1323385226104216,
+              "ndcg@20": 0.047572258950103155,
+              "recall@100": 0.42879690078197863,
+              "ndcg@100": 0.10045746820914246,
+              "mrr": 0.03370083637327196,
+              "user_macro": {
+                "recall@20": 0.14385534010573484,
+                "ndcg@20": 0.05226477780303149,
+                "recall@100": 0.4394107185733248,
+                "ndcg@100": 0.10509948665758845,
+                "mrr": 0.03644583220478735
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.023427960927960928,
+              "ndcg@20": 0.008525876073494903,
+              "recall@100": 0.10561660561660562,
+              "ndcg@100": 0.02283315400793481,
+              "mrr": 0.007976552909623333,
+              "user_macro": {
+                "recall@20": 0.023504281239472874,
+                "ndcg@20": 0.008514056016305116,
+                "recall@100": 0.10458557702460142,
+                "ndcg@100": 0.022627427183195527,
+                "mrr": 0.007909915381768167
+              }
+            }
+          },
+          {
+            "epoch": 3,
+            "loss": 5.956999961171314,
+            "metrics": {
+              "recall@20": 0.10073186717157005,
+              "ndcg@20": 0.03539248306787697,
+              "recall@100": 0.3473274104281969
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.1251883205394935,
+              "ndcg@20": 0.04395577791283382,
+              "recall@100": 0.42269890236028407,
+              "ndcg@100": 0.09694297192672904,
+              "mrr": 0.031090726949948015,
+              "user_macro": {
+                "recall@20": 0.13713978981160338,
+                "ndcg@20": 0.04876372994526452,
+                "recall@100": 0.43327603265359715,
+                "ndcg@100": 0.10166466201532966,
+                "mrr": 0.033904658506638055
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.02274114774114774,
+              "ndcg@20": 0.008084519610147613,
+              "recall@100": 0.10699023199023198,
+              "ndcg@100": 0.022828332095500902,
+              "mrr": 0.007723769940630848,
+              "user_macro": {
+                "recall@20": 0.02252397041595648,
+                "ndcg@20": 0.007896703996082865,
+                "recall@100": 0.10656965372993248,
+                "ndcg@100": 0.022587416432577258,
+                "mrr": 0.007524161206367543
+              }
+            }
+          }
+        ]
+      },
+      "recency_slow": {
+        "best_epoch": 2,
+        "rows": [
+          {
+            "epoch": 0,
+            "loss": 7.704033223286328,
+            "metrics": {
+              "recall@20": 0.09492426449169822,
+              "ndcg@20": 0.03550063196930889,
+              "recall@100": 0.2935479172735217
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.1239687208551546,
+              "ndcg@20": 0.04633544201084567,
+              "recall@100": 0.3787215725661812,
+              "ndcg@100": 0.0917077888797146,
+              "mrr": 0.03322812037314854,
+              "user_macro": {
+                "recall@20": 0.1312020863627776,
+                "ndcg@20": 0.04894421994669655,
+                "recall@100": 0.3870701492472248,
+                "ndcg@100": 0.09456234397575183,
+                "mrr": 0.03457114086179531
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.0022893772893772895,
+              "ndcg@20": 0.0009439510258444065,
+              "recall@100": 0.0219017094017094,
+              "ndcg@100": 0.00432109746915984,
+              "mrr": 0.00211992210869613,
+              "user_macro": {
+                "recall@20": 0.001835075493612079,
+                "ndcg@20": 0.0006559548817774675,
+                "recall@100": 0.02011628228527183,
+                "ndcg@100": 0.003804273369064342,
+                "mrr": 0.0018604118538904887
+              }
+            }
+          },
+          {
+            "epoch": 1,
+            "loss": 6.727095327181508,
+            "metrics": {
+              "recall@20": 0.107012816778328,
+              "ndcg@20": 0.039789704361062654,
+              "recall@100": 0.3284845616079231
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.13743214482148408,
+              "ndcg@20": 0.05108367291898284,
+              "recall@100": 0.41569218260516055,
+              "ndcg@100": 0.10068270843746017,
+              "mrr": 0.03621958207889124,
+              "user_macro": {
+                "recall@20": 0.14672201064042883,
+                "ndcg@20": 0.054519936804996616,
+                "recall@100": 0.428117675402034,
+                "ndcg@100": 0.10470978377522484,
+                "mrr": 0.03807983982588319
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.009996947496947496,
+              "ndcg@20": 0.0037700649184480846,
+              "recall@100": 0.05036630036630037,
+              "ndcg@100": 0.010717252482817777,
+              "mrr": 0.004406960149543225,
+              "user_macro": {
+                "recall@20": 0.009559205796139595,
+                "ndcg@20": 0.003434719646409914,
+                "recall@100": 0.04785479232343343,
+                "ndcg@100": 0.010034046766878338,
+                "mrr": 0.004063005142785494
+              }
+            }
+          },
+          {
+            "epoch": 2,
+            "loss": 6.477513051964937,
+            "metrics": {
+              "recall@20": 0.11203757646373434,
+              "ndcg@20": 0.04139123649725282,
+              "recall@100": 0.34452374016894843
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.1423105435588397,
+              "ndcg@20": 0.05256540271434465,
+              "recall@100": 0.4281751440801588,
+              "ndcg@100": 0.10356973316596854,
+              "mrr": 0.03701118033219791,
+              "user_macro": {
+                "recall@20": 0.1511146254595312,
+                "ndcg@20": 0.05614153408068453,
+                "recall@100": 0.439480469951459,
+                "ndcg@100": 0.10762861137656994,
+                "mrr": 0.03911984005387176
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.015491452991452992,
+              "ndcg@20": 0.005754761371745436,
+              "recall@100": 0.07776251526251526,
+              "ndcg@100": 0.01661283758166105,
+              "mrr": 0.006111087046025764,
+              "user_macro": {
+                "recall@20": 0.015412864332724957,
+                "ndcg@20": 0.0056034029322276375,
+                "recall@100": 0.07548384542286982,
+                "ndcg@100": 0.016075255397746704,
+                "mrr": 0.00588589416924575
+              }
+            }
+          },
+          {
+            "epoch": 3,
+            "loss": 6.301367719584998,
+            "metrics": {
+              "recall@20": 0.11081779784445092,
+              "ndcg@20": 0.04035924429424826,
+              "recall@100": 0.34787357995921936
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.13917784633043978,
+              "ndcg@20": 0.050728436584826474,
+              "recall@100": 0.4286295047468733,
+              "ndcg@100": 0.10237151465477946,
+              "mrr": 0.03567984958434238,
+              "user_macro": {
+                "recall@20": 0.14818827135053214,
+                "ndcg@20": 0.054127830898694745,
+                "recall@100": 0.43810514477605783,
+                "ndcg@100": 0.10586990454359849,
+                "mrr": 0.03750036779846405
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.020375457875457876,
+              "ndcg@20": 0.007291020904058231,
+              "recall@100": 0.09035409035409035,
+              "ndcg@100": 0.019503158602001594,
+              "mrr": 0.007028782367937635,
+              "user_macro": {
+                "recall@20": 0.019726558768370615,
+                "ndcg@20": 0.007088873241233712,
+                "recall@100": 0.08713079023183552,
+                "ndcg@100": 0.018867505237966205,
+                "mrr": 0.006883399476625002
+              }
+            }
+          },
+          {
+            "epoch": 4,
+            "loss": 6.158409756373996,
+            "metrics": {
+              "recall@20": 0.11032624526653073,
+              "ndcg@20": 0.03959136264557216,
+              "recall@100": 0.351842411884649
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.137743023172394,
+              "ndcg@20": 0.04958376979188795,
+              "recall@100": 0.4317622019752732,
+              "ndcg@100": 0.10211325881811864,
+              "mrr": 0.03475887295048945,
+              "user_macro": {
+                "recall@20": 0.14715361955760373,
+                "ndcg@20": 0.05320596363001492,
+                "recall@100": 0.44165042916456543,
+                "ndcg@100": 0.10588846920824306,
+                "mrr": 0.03677101045984357
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.022893772893772892,
+              "ndcg@20": 0.007725111874893886,
+              "recall@100": 0.0969932844932845,
+              "ndcg@100": 0.020654939570672274,
+              "mrr": 0.007054839131611986,
+              "user_macro": {
+                "recall@20": 0.022067966876329247,
+                "ndcg@20": 0.0074247923224264375,
+                "recall@100": 0.09397277905988706,
+                "ndcg@100": 0.019990010124492,
+                "mrr": 0.0068370839724452995
+              }
+            }
+          },
+          {
+            "epoch": 5,
+            "loss": 6.049114788156952,
+            "metrics": {
+              "recall@20": 0.10981648703757646,
+              "ndcg@20": 0.03930284895582702,
+              "recall@100": 0.354773521701136
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.1364516823301528,
+              "ndcg@20": 0.048924018780802866,
+              "recall@100": 0.4335318172035297,
+              "ndcg@100": 0.10196155315247869,
+              "mrr": 0.034316756499511956,
+              "user_macro": {
+                "recall@20": 0.14599103462278093,
+                "ndcg@20": 0.052861493655047,
+                "recall@100": 0.4438138233691138,
+                "ndcg@100": 0.10610932209181066,
+                "mrr": 0.03668852212445315
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.024877899877899876,
+              "ndcg@20": 0.008621122870026986,
+              "recall@100": 0.10363247863247864,
+              "ndcg@100": 0.02234409650796645,
+              "mrr": 0.007726275605143883,
+              "user_macro": {
+                "recall@20": 0.024129749460759912,
+                "ndcg@20": 0.008355137479018278,
+                "recall@100": 0.10118717035964424,
+                "ndcg@100": 0.021790531404064683,
+                "mrr": 0.007535481468728991
+              }
+            }
+          }
+        ]
+      },
+      "recency_w25": {
+        "best_epoch": 2,
+        "rows": [
+          {
+            "epoch": 0,
+            "loss": 8.092938460999115,
+            "metrics": {
+              "recall@20": 0.08895281095251967,
+              "ndcg@20": 0.03282228905989424,
+              "recall@100": 0.2873762015729682
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.11555109166128608,
+              "ndcg@20": 0.042672460744937864,
+              "recall@100": 0.3675299519334242,
+              "ndcg@100": 0.08751385710026142,
+              "mrr": 0.030829040215611975,
+              "user_macro": {
+                "recall@20": 0.12204608855360839,
+                "ndcg@20": 0.045146576068900435,
+                "recall@100": 0.37586018259931747,
+                "ndcg@100": 0.09034417526055372,
+                "mrr": 0.03223378724084631
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.004120879120879121,
+              "ndcg@20": 0.0014063188729246197,
+              "recall@100": 0.031746031746031744,
+              "ndcg@100": 0.006174105216876339,
+              "mrr": 0.002547509549722053,
+              "user_macro": {
+                "recall@20": 0.0037777224711022625,
+                "ndcg@20": 0.0011491466635969497,
+                "recall@100": 0.029427437641723356,
+                "ndcg@100": 0.0055857623313697305,
+                "mrr": 0.0022985211525301335
+              }
+            }
+          },
+          {
+            "epoch": 1,
+            "loss": 7.021791399662033,
+            "metrics": {
+              "recall@20": 0.1010777745412176,
+              "ndcg@20": 0.03724498265790983,
+              "recall@100": 0.32096562773084764
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.12844058636439726,
+              "ndcg@20": 0.0473098734669615,
+              "recall@100": 0.39790037544539303,
+              "ndcg@100": 0.09532039787270116,
+              "mrr": 0.033672043183864506,
+              "user_macro": {
+                "recall@20": 0.1360821622908521,
+                "ndcg@20": 0.05029321315596044,
+                "recall@100": 0.40837733680168253,
+                "ndcg@100": 0.0989077798299998,
+                "mrr": 0.035430517575386296
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.013812576312576312,
+              "ndcg@20": 0.005146171296225756,
+              "recall@100": 0.07562576312576312,
+              "ndcg@100": 0.015858325557110215,
+              "mrr": 0.005689048818840139,
+              "user_macro": {
+                "recall@20": 0.013299043194513579,
+                "ndcg@20": 0.004825052917817295,
+                "recall@100": 0.07344067856262977,
+                "ndcg@100": 0.01525424994516109,
+                "mrr": 0.005384643804702048
+              }
+            }
+          },
+          {
+            "epoch": 2,
+            "loss": 6.716333427617759,
+            "metrics": {
+              "recall@20": 0.10615715117972618,
+              "ndcg@20": 0.03870094791317235,
+              "recall@100": 0.33512962423536263
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.13197981682091015,
+              "ndcg@20": 0.04822203855178209,
+              "recall@100": 0.40617452232345697,
+              "ndcg@100": 0.09713271399965583,
+              "mrr": 0.034002476841959534,
+              "user_macro": {
+                "recall@20": 0.1395426875838171,
+                "ndcg@20": 0.05134226527350566,
+                "recall@100": 0.4161061554356383,
+                "ndcg@100": 0.10074104192875621,
+                "mrr": 0.035872122360869944
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.023809523809523808,
+              "ndcg@20": 0.008338269296005759,
+              "recall@100": 0.1085927960927961,
+              "ndcg@100": 0.023137899823266982,
+              "mrr": 0.007754578204688431,
+              "user_macro": {
+                "recall@20": 0.023818096344228747,
+                "ndcg@20": 0.008222219980670324,
+                "recall@100": 0.10735616493456215,
+                "ndcg@100": 0.022785918523007195,
+                "mrr": 0.007560095739744208
+              }
+            }
+          },
+          {
+            "epoch": 3,
+            "loss": 6.493985480798061,
+            "metrics": {
+              "recall@20": 0.10426376347218176,
+              "ndcg@20": 0.03751793128574979,
+              "recall@100": 0.3364040198077483
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.12791448453978047,
+              "ndcg@20": 0.046100969843293586,
+              "recall@100": 0.4031135662529593,
+              "ndcg@100": 0.09523376032778169,
+              "mrr": 0.03250071211206833,
+              "user_macro": {
+                "recall@20": 0.13533063232623718,
+                "ndcg@20": 0.049053201965240247,
+                "recall@100": 0.41071568802463393,
+                "ndcg@100": 0.09828151946471296,
+                "mrr": 0.03420911063191993
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.028846153846153848,
+              "ndcg@20": 0.010148097811863321,
+              "recall@100": 0.12370268620268621,
+              "ndcg@100": 0.026670659515402227,
+              "mrr": 0.008967785074598436,
+              "user_macro": {
+                "recall@20": 0.02852059670875002,
+                "ndcg@20": 0.010078316007773624,
+                "recall@100": 0.12145577225716599,
+                "ndcg@100": 0.026241996962097055,
+                "mrr": 0.008912013978238436
+              }
+            }
+          },
+          {
+            "epoch": 4,
+            "loss": 6.3119655053026325,
+            "metrics": {
+              "recall@20": 0.10521045732595398,
+              "ndcg@20": 0.03745330436578577,
+              "recall@100": 0.34133775123798427
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.12856015496090106,
+              "ndcg@20": 0.04590880027694914,
+              "recall@100": 0.407681086639405,
+              "ndcg@100": 0.09571434469113274,
+              "mrr": 0.032174629053612465,
+              "user_macro": {
+                "recall@20": 0.13691043720037802,
+                "ndcg@20": 0.04902838344738525,
+                "recall@100": 0.41610522054705223,
+                "ndcg@100": 0.09891623879429488,
+                "mrr": 0.033834370958194165
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.030753968253968252,
+              "ndcg@20": 0.01049044574349041,
+              "recall@100": 0.12980769230769232,
+              "ndcg@100": 0.027785598126839287,
+              "mrr": 0.009068393164104478,
+              "user_macro": {
+                "recall@20": 0.03057551623753714,
+                "ndcg@20": 0.010381457545918323,
+                "recall@100": 0.1255298002423438,
+                "ndcg@100": 0.026980346825133363,
+                "mrr": 0.008934021216299612
+              }
+            }
+          },
+          {
+            "epoch": 5,
+            "loss": 6.179502745102567,
+            "metrics": {
+              "recall@20": 0.10411811826390911,
+              "ndcg@20": 0.03685129757508615,
+              "recall@100": 0.34454194581998254
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.12624052418872708,
+              "ndcg@20": 0.04480995601689781,
+              "recall@100": 0.4089246000430447,
+              "ndcg@100": 0.09522748810846428,
+              "mrr": 0.03151623303470203,
+              "user_macro": {
+                "recall@20": 0.13463932279323487,
+                "ndcg@20": 0.04827644967936859,
+                "recall@100": 0.41745219645812615,
+                "ndcg@100": 0.09883048000357833,
+                "mrr": 0.0336267085831938
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.033577533577533576,
+              "ndcg@20": 0.011473606718995452,
+              "recall@100": 0.13927045177045178,
+              "ndcg@100": 0.029855123665468494,
+              "mrr": 0.00960051304126234,
+              "user_macro": {
+                "recall@20": 0.0336699247326425,
+                "ndcg@20": 0.011411894844654455,
+                "recall@100": 0.13687960993710124,
+                "ndcg@100": 0.029320848442618768,
+                "mrr": 0.009421615701903335
+              }
+            }
+          }
+        ]
+      },
+      "recency_w50": {
+        "best_epoch": 2,
+        "rows": [
+          {
+            "epoch": 0,
+            "loss": 7.888142502846374,
+            "metrics": {
+              "recall@20": 0.08835202446839499,
+              "ndcg@20": 0.032507312811164805,
+              "recall@100": 0.2897247305563647
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.11526412702967692,
+              "ndcg@20": 0.042401829890916426,
+              "recall@100": 0.3730301073725997,
+              "ndcg@100": 0.08823290658359806,
+              "mrr": 0.030793269207601243,
+              "user_macro": {
+                "recall@20": 0.12184632580548264,
+                "ndcg@20": 0.045063139521069544,
+                "recall@100": 0.3811261598101601,
+                "ndcg@100": 0.09120746153924132,
+                "mrr": 0.03241558640074044
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.0025183150183150185,
+              "ndcg@20": 0.0009496609846770679,
+              "recall@100": 0.02403846153846154,
+              "ndcg@100": 0.00466112262598247,
+              "mrr": 0.0021446759201004867,
+              "user_macro": {
+                "recall@20": 0.0021254355400696866,
+                "ndcg@20": 0.000689979407892973,
+                "recall@100": 0.02248755599800896,
+                "ndcg@100": 0.004192359414075324,
+                "mrr": 0.001903777172084054
+              }
+            }
+          },
+          {
+            "epoch": 1,
+            "loss": 6.863313402560274,
+            "metrics": {
+              "recall@20": 0.10027672589571802,
+              "ndcg@20": 0.03709366371567851,
+              "recall@100": 0.32320492280803964
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.12832101776789345,
+              "ndcg@20": 0.04745986061115057,
+              "recall@100": 0.4064136595164646,
+              "ndcg@100": 0.09696652429699884,
+              "mrr": 0.03411352925613479,
+              "user_macro": {
+                "recall@20": 0.13627702242190284,
+                "ndcg@20": 0.05046112690925756,
+                "recall@100": 0.41733398958237605,
+                "ndcg@100": 0.10058678073162736,
+                "mrr": 0.035798801438999175
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.010836385836385836,
+              "ndcg@20": 0.004033254685462889,
+              "recall@100": 0.05784493284493285,
+              "ndcg@100": 0.012113888907487528,
+              "mrr": 0.0046628119622320755,
+              "user_macro": {
+                "recall@20": 0.010449643271942925,
+                "ndcg@20": 0.0037239689236217054,
+                "recall@100": 0.05571290304739782,
+                "ndcg@100": 0.011501440766022294,
+                "mrr": 0.004337847555650775
+              }
+            }
+          },
+          {
+            "epoch": 2,
+            "loss": 6.58921953896062,
+            "metrics": {
+              "recall@20": 0.10599330032041945,
+              "ndcg@20": 0.038850740968184735,
+              "recall@100": 0.33944436353043983
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.13379725948776813,
+              "ndcg@20": 0.04906744133949318,
+              "recall@100": 0.41880096611425977,
+              "ndcg@100": 0.09985642755999356,
+              "mrr": 0.03485459776900645,
+              "user_macro": {
+                "recall@20": 0.14164196398349674,
+                "ndcg@20": 0.05225233533807698,
+                "recall@100": 0.42964266360619935,
+                "ndcg@100": 0.10362116100828159,
+                "mrr": 0.036734410967564295
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.017322954822954824,
+              "ndcg@20": 0.006268338324699759,
+              "recall@100": 0.08638583638583638,
+              "ndcg@100": 0.018333685507666796,
+              "mrr": 0.006457216427352666,
+              "user_macro": {
+                "recall@20": 0.01713870914219346,
+                "ndcg@20": 0.006099553654541637,
+                "recall@100": 0.08424704989164919,
+                "ndcg@100": 0.01782929947817998,
+                "mrr": 0.006246031476399495
+              }
+            }
+          },
+          {
+            "epoch": 3,
+            "loss": 6.390772219697785,
+            "metrics": {
+              "recall@20": 0.10426376347218176,
+              "ndcg@20": 0.037641168733873936,
+              "recall@100": 0.34201136032624524
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.1296362723294354,
+              "ndcg@20": 0.046887261328509816,
+              "recall@100": 0.41801181337733456,
+              "ndcg@100": 0.09833884574258468,
+              "mrr": 0.033359657960896155,
+              "user_macro": {
+                "recall@20": 0.13818385533954114,
+                "ndcg@20": 0.05007852142266145,
+                "recall@100": 0.4272096720846986,
+                "ndcg@100": 0.10163906238020973,
+                "mrr": 0.03506967259482634
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.023351648351648352,
+              "ndcg@20": 0.008155487579359922,
+              "recall@100": 0.09966422466422467,
+              "ndcg@100": 0.02142787335167016,
+              "mrr": 0.007489504306617262,
+              "user_macro": {
+                "recall@20": 0.022988269956911073,
+                "ndcg@20": 0.008023811469162992,
+                "recall@100": 0.09602686898854146,
+                "ndcg@100": 0.02072874544966741,
+                "mrr": 0.007353611274582103
+              }
+            }
+          },
+          {
+            "epoch": 4,
+            "loss": 6.228403376155026,
+            "metrics": {
+              "recall@20": 0.1052832799300903,
+              "ndcg@20": 0.037533281974490317,
+              "recall@100": 0.34641712787649287
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.13047325250496208,
+              "ndcg@20": 0.046655455106116274,
+              "recall@100": 0.42183800846545666,
+              "ndcg@100": 0.09863223613852312,
+              "mrr": 0.032924664641763975,
+              "user_macro": {
+                "recall@20": 0.13933542289721498,
+                "ndcg@20": 0.049928436161550155,
+                "recall@100": 0.43155055679310256,
+                "ndcg@100": 0.10209565297864133,
+                "mrr": 0.034655077037553314
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.024954212454212456,
+              "ndcg@20": 0.008442990393951444,
+              "recall@100": 0.10592185592185592,
+              "ndcg@100": 0.022552739907785876,
+              "mrr": 0.007593125657372802,
+              "user_macro": {
+                "recall@20": 0.02425645202648687,
+                "ndcg@20": 0.008169171587501092,
+                "recall@100": 0.10263256004545203,
+                "ndcg@100": 0.021840520676533186,
+                "mrr": 0.007380748951082534
+              }
+            }
+          },
+          {
+            "epoch": 5,
+            "loss": 6.108212343919413,
+            "metrics": {
+              "recall@20": 0.10517404602388582,
+              "ndcg@20": 0.037166490793406004,
+              "recall@100": 0.34996722982813866
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.1295167037329316,
+              "ndcg@20": 0.045854996510723826,
+              "recall@100": 0.42399024320252526,
+              "ndcg@100": 0.09829489769909791,
+              "mrr": 0.03223798270100857,
+              "user_macro": {
+                "recall@20": 0.13916320857175027,
+                "ndcg@20": 0.04951047717648436,
+                "recall@100": 0.43368922993038245,
+                "ndcg@100": 0.102008885961145,
+                "mrr": 0.034250898243082833
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.027548840048840048,
+              "ndcg@20": 0.00945990668584147,
+              "recall@100": 0.11393467643467643,
+              "ndcg@100": 0.024452779858254718,
+              "mrr": 0.008248560498042951,
+              "user_macro": {
+                "recall@20": 0.027228859023284112,
+                "ndcg@20": 0.009259240579826744,
+                "recall@100": 0.11085242670608524,
+                "ndcg@100": 0.023767639507033127,
+                "mrr": 0.008015501932786651
+              }
+            }
+          }
+        ]
+      },
+      "gated_fast": {
+        "best_epoch": 0,
+        "rows": [
+          {
+            "epoch": 0,
+            "loss": 7.137764164086984,
+            "metrics": {
+              "recall@20": 0.10923390620448588,
+              "ndcg@20": 0.04164060331287041,
+              "recall@100": 0.33456524905330615
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.1391061051725375,
+              "ndcg@20": 0.05304549770644367,
+              "recall@100": 0.41906401702656815,
+              "ndcg@100": 0.10304313459914531,
+              "mrr": 0.0383297873695103,
+              "user_macro": {
+                "recall@20": 0.14857910366265753,
+                "ndcg@20": 0.057139537993518806,
+                "recall@100": 0.4325504621777764,
+                "ndcg@100": 0.1079520329420477,
+                "mrr": 0.04101311044534328
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.013965201465201466,
+              "ndcg@20": 0.005267970175441909,
+              "recall@100": 0.0650946275946276,
+              "ndcg@100": 0.014214384108815195,
+              "mrr": 0.005614338766611626,
+              "user_macro": {
+                "recall@20": 0.01415933853216083,
+                "ndcg@20": 0.005394212292625113,
+                "recall@100": 0.06293904701570205,
+                "ndcg@100": 0.013884317206321545,
+                "mrr": 0.0056361522634360735
+              }
+            }
+          },
+          {
+            "epoch": 1,
+            "loss": 6.358652683316075,
+            "metrics": {
+              "recall@20": 0.10734051849694146,
+              "ndcg@20": 0.039296198062030586,
+              "recall@100": 0.34372269152344886
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.13434727503168567,
+              "ndcg@20": 0.04922350100481029,
+              "recall@100": 0.42195757706196046,
+              "ndcg@100": 0.10053605307352151,
+              "mrr": 0.03499200757427001,
+              "user_macro": {
+                "recall@20": 0.14497261368157846,
+                "ndcg@20": 0.053608271709648984,
+                "recall@100": 0.4343093216376284,
+                "ndcg@100": 0.1053381828203006,
+                "mrr": 0.037659666307484185
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.021214896214896216,
+              "ndcg@20": 0.007637547743670937,
+              "recall@100": 0.09424603174603174,
+              "ndcg@100": 0.020379851986417848,
+              "mrr": 0.0072541187405641165,
+              "user_macro": {
+                "recall@20": 0.021143742049665397,
+                "ndcg@20": 0.0075998789090662945,
+                "recall@100": 0.09277276246788442,
+                "ndcg@100": 0.02005717861681089,
+                "mrr": 0.00714819256990705
+              }
+            }
+          },
+          {
+            "epoch": 2,
+            "loss": 6.048593329527532,
+            "metrics": {
+              "recall@20": 0.10446402563355665,
+              "ndcg@20": 0.0378603544368692,
+              "recall@100": 0.3459619866006408
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.130281942750556,
+              "ndcg@20": 0.04715571521969506,
+              "recall@100": 0.42198149078126124,
+              "ndcg@100": 0.09923689331640541,
+              "mrr": 0.033641142798179195,
+              "user_macro": {
+                "recall@20": 0.14130469956420597,
+                "ndcg@20": 0.051606205125001206,
+                "recall@100": 0.43344707289548867,
+                "ndcg@100": 0.10389682450573563,
+                "mrr": 0.03627143437272084
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.022130647130647132,
+              "ndcg@20": 0.008217567549325629,
+              "recall@100": 0.10355616605616606,
+              "ndcg@100": 0.022418914640465602,
+              "mrr": 0.007899746428406339,
+              "user_macro": {
+                "recall@20": 0.022453404125877992,
+                "ndcg@20": 0.008348086471593444,
+                "recall@100": 0.10343293562805757,
+                "ndcg@100": 0.02243232362206376,
+                "mrr": 0.007926205637395647
+              }
+            }
+          },
+          {
+            "epoch": 3,
+            "loss": 5.87556720833724,
+            "metrics": {
+              "recall@20": 0.10054981066122924,
+              "ndcg@20": 0.035759071531760195,
+              "recall@100": 0.3434131954558695
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.12530788913599733,
+              "ndcg@20": 0.04448804688476649,
+              "recall@100": 0.4187053112370567,
+              "ndcg@100": 0.09668642895635852,
+              "mrr": 0.03158242083813822,
+              "user_macro": {
+                "recall@20": 0.1371277009479138,
+                "ndcg@20": 0.049126611127945086,
+                "recall@100": 0.4313581468363275,
+                "ndcg@100": 0.10154662228867886,
+                "mrr": 0.03421381637680947
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.021596459096459096,
+              "ndcg@20": 0.007922590393486226,
+              "recall@100": 0.10332722832722832,
+              "ndcg@100": 0.02220518039247514,
+              "mrr": 0.007712127501468172,
+              "user_macro": {
+                "recall@20": 0.021313030755539468,
+                "ndcg@20": 0.007702629932615247,
+                "recall@100": 0.10152891533553556,
+                "ndcg@100": 0.021726052184681474,
+                "mrr": 0.007478452489334948
+              }
+            }
+          }
+        ]
+      },
+      "gated_slow": {
+        "best_epoch": 2,
+        "rows": [
+          {
+            "epoch": 0,
+            "loss": 7.702916807312476,
+            "metrics": {
+              "recall@20": 0.0955250509758229,
+              "ndcg@20": 0.03587486774742406,
+              "recall@100": 0.29036192834255753
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.12459047755697443,
+              "ndcg@20": 0.04677653917240076,
+              "recall@100": 0.37460841284645,
+              "ndcg@100": 0.09128796374603247,
+              "mrr": 0.033492751368253866,
+              "user_macro": {
+                "recall@20": 0.1313402591514472,
+                "ndcg@20": 0.04952701071009917,
+                "recall@100": 0.38385220927481095,
+                "ndcg@100": 0.09454192704863291,
+                "mrr": 0.03515112956006649
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.0028235653235653235,
+              "ndcg@20": 0.001105021143027005,
+              "recall@100": 0.021672771672771672,
+              "ndcg@100": 0.004324216101780513,
+              "mrr": 0.002097136706078008,
+              "user_macro": {
+                "recall@20": 0.00232481610530391,
+                "ndcg@20": 0.0008103648610880874,
+                "recall@100": 0.020312620983352687,
+                "ndcg@100": 0.0038892439223413406,
+                "mrr": 0.001850147426662058
+              }
+            }
+          },
+          {
+            "epoch": 1,
+            "loss": 6.719839926295407,
+            "metrics": {
+              "recall@20": 0.10530148558112438,
+              "ndcg@20": 0.03957564405468642,
+              "recall@100": 0.3237875036411302
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.1351125140493101,
+              "ndcg@20": 0.05082822205161389,
+              "recall@100": 0.40933113327115767,
+              "ndcg@100": 0.0997078485120316,
+              "mrr": 0.03639071771744176,
+              "user_macro": {
+                "recall@20": 0.14417250379545596,
+                "ndcg@20": 0.05442962175289023,
+                "recall@100": 0.4215519350711684,
+                "ndcg@100": 0.10394837051328334,
+                "mrr": 0.038543022755642475
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.010225885225885226,
+              "ndcg@20": 0.003687974290558415,
+              "recall@100": 0.050976800976800976,
+              "ndcg@100": 0.010682756211748346,
+              "mrr": 0.004227584504483946,
+              "user_macro": {
+                "recall@20": 0.009849565842597201,
+                "ndcg@20": 0.00341887907542951,
+                "recall@100": 0.04770491123278579,
+                "ndcg@100": 0.009933369958473534,
+                "mrr": 0.003950511263223638
+              }
+            }
+          },
+          {
+            "epoch": 2,
+            "loss": 6.428382201988887,
+            "metrics": {
+              "recall@20": 0.10850568016312263,
+              "ndcg@20": 0.04038358662671497,
+              "recall@100": 0.33542091465190793
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.13762345457589018,
+              "ndcg@20": 0.05124454419257114,
+              "recall@100": 0.41707917832460484,
+              "ndcg@100": 0.10107851350321055,
+              "mrr": 0.036420190697783704,
+              "user_macro": {
+                "recall@20": 0.14771956599960454,
+                "ndcg@20": 0.05545312879226341,
+                "recall@100": 0.4288329659308576,
+                "ndcg@100": 0.10561924637151923,
+                "mrr": 0.03899025086430958
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.015644078144078144,
+              "ndcg@20": 0.005746073086954509,
+              "recall@100": 0.07501526251526251,
+              "ndcg@100": 0.016083993139417663,
+              "mrr": 0.0059519166024155894,
+              "user_macro": {
+                "recall@20": 0.015559980089596814,
+                "ndcg@20": 0.005583410394793885,
+                "recall@100": 0.07294526901669758,
+                "ndcg@100": 0.015573164706838227,
+                "mrr": 0.005711931719531123
+              }
+            }
+          },
+          {
+            "epoch": 3,
+            "loss": 6.178555036523043,
+            "metrics": {
+              "recall@20": 0.10271628313428488,
+              "ndcg@20": 0.03772784473624873,
+              "recall@100": 0.33292674046023885
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.12930148025922472,
+              "ndcg@20": 0.04750636763352445,
+              "recall@100": 0.41050290551689506,
+              "ndcg@100": 0.09761077067586343,
+              "mrr": 0.033986456034330446,
+              "user_macro": {
+                "recall@20": 0.13924783720815434,
+                "ndcg@20": 0.05153253598422819,
+                "recall@100": 0.42209356882959503,
+                "ndcg@100": 0.10197289716783738,
+                "mrr": 0.03636528980095711
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.017933455433455432,
+              "ndcg@20": 0.006543137999204724,
+              "recall@100": 0.08554639804639805,
+              "ndcg@100": 0.01833923401347187,
+              "mrr": 0.006593567562188951,
+              "user_macro": {
+                "recall@20": 0.017776395110889884,
+                "ndcg@20": 0.006426091644301385,
+                "recall@100": 0.08331642708820408,
+                "ndcg@100": 0.01786386725781544,
+                "mrr": 0.006437067399461143
+              }
+            }
+          },
+          {
+            "epoch": 4,
+            "loss": 5.976509380311567,
+            "metrics": {
+              "recall@20": 0.10069545586950189,
+              "ndcg@20": 0.03595794374925944,
+              "recall@100": 0.33332726478298863
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.12602530071502022,
+              "ndcg@20": 0.045130516474739604,
+              "recall@100": 0.4088050314465409,
+              "ndcg@100": 0.09545547421945165,
+              "mrr": 0.0319679852749065,
+              "user_macro": {
+                "recall@20": 0.1368182207589357,
+                "ndcg@20": 0.04940997918949333,
+                "recall@100": 0.42178802379024394,
+                "ndcg@100": 0.10017189216305161,
+                "mrr": 0.03445142060705696
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.019917582417582416,
+              "ndcg@20": 0.006705977322583642,
+              "recall@100": 0.09264346764346765,
+              "ndcg@100": 0.019351661584816163,
+              "mrr": 0.006415234746588715,
+              "user_macro": {
+                "recall@20": 0.019502239920358388,
+                "ndcg@20": 0.006389290527938108,
+                "recall@100": 0.09114660794103303,
+                "ndcg@100": 0.018864616785156926,
+                "mrr": 0.006096578786042259
+              }
+            }
+          },
+          {
+            "epoch": 5,
+            "loss": 5.847931212972779,
+            "metrics": {
+              "recall@20": 0.0977279347509467,
+              "ndcg@20": 0.03509615766262149,
+              "recall@100": 0.3354027090008739
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.12150560776717603,
+              "ndcg@20": 0.04373245242259277,
+              "recall@100": 0.41086161130640647,
+              "ndcg@100": 0.09533337709326885,
+              "mrr": 0.03155993969798089,
+              "user_macro": {
+                "recall@20": 0.1326152436278758,
+                "ndcg@20": 0.04828001040998088,
+                "recall@100": 0.42355199064674354,
+                "ndcg@100": 0.10029997951001796,
+                "mrr": 0.03432676156806964
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.0219017094017094,
+              "ndcg@20": 0.007555081283341826,
+              "recall@100": 0.09478021978021978,
+              "ndcg@100": 0.0202420800439492,
+              "mrr": 0.006970867524714942,
+              "user_macro": {
+                "recall@20": 0.021706210939660416,
+                "ndcg@20": 0.0073760488586623206,
+                "recall@100": 0.09418866363988315,
+                "ndcg@100": 0.01997695337039496,
+                "mrr": 0.0067554366131695525
+              }
+            }
+          }
+        ]
+      },
+      "gated_w25": {
+        "best_epoch": 2,
+        "rows": [
+          {
+            "epoch": 0,
+            "loss": 8.090559423671476,
+            "metrics": {
+              "recall@20": 0.08986309350422371,
+              "ndcg@20": 0.03355143733462078,
+              "recall@100": 0.2845361200116516
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.11667503646842194,
+              "ndcg@20": 0.04359648880928666,
+              "recall@100": 0.36406246263481357,
+              "ndcg@100": 0.0876017173892196,
+              "mrr": 0.031556606081435505,
+              "user_macro": {
+                "recall@20": 0.12316046814241105,
+                "ndcg@20": 0.046382735768320665,
+                "recall@100": 0.3714981601771915,
+                "ndcg@100": 0.09062503337789468,
+                "mrr": 0.03334414495779376
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.00434981684981685,
+              "ndcg@20": 0.001513963475130459,
+              "recall@100": 0.030906593406593408,
+              "ndcg@100": 0.006072857658246616,
+              "mrr": 0.002499334927968211,
+              "user_macro": {
+                "recall@20": 0.004219069741717825,
+                "ndcg@20": 0.0013119926812132988,
+                "recall@100": 0.029219208008406616,
+                "ndcg@100": 0.005605735494227264,
+                "mrr": 0.0022682808409406497
+              }
+            }
+          },
+          {
+            "epoch": 1,
+            "loss": 7.021410255432129,
+            "metrics": {
+              "recall@20": 0.09922079813574133,
+              "ndcg@20": 0.036814362229749494,
+              "recall@100": 0.3144115933585785
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.1260970418729225,
+              "ndcg@20": 0.04678967869656039,
+              "recall@100": 0.3896262285673291,
+              "ndcg@100": 0.09374074152305722,
+              "mrr": 0.033498205007046346,
+              "user_macro": {
+                "recall@20": 0.13413096666183602,
+                "ndcg@20": 0.04988981306439878,
+                "recall@100": 0.4015019477977006,
+                "ndcg@100": 0.09760158208124287,
+                "mrr": 0.035308040740973504
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.013507326007326008,
+              "ndcg@20": 0.00500116716282165,
+              "recall@100": 0.07455738705738706,
+              "ndcg@100": 0.015601602713047684,
+              "mrr": 0.005550147150226649,
+              "user_macro": {
+                "recall@20": 0.013066755157347492,
+                "ndcg@20": 0.0047476915611519045,
+                "recall@100": 0.07219793756379123,
+                "ndcg@100": 0.01500958205692632,
+                "mrr": 0.005306870602499397
+              }
+            }
+          },
+          {
+            "epoch": 2,
+            "loss": 6.672032670474325,
+            "metrics": {
+              "recall@20": 0.10258884357704631,
+              "ndcg@20": 0.0376906994628729,
+              "recall@100": 0.323514418875619
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.12724490039935912,
+              "ndcg@20": 0.04689820662005927,
+              "recall@100": 0.39261544347992444,
+              "ndcg@100": 0.09414241825263447,
+              "mrr": 0.033373299351882074,
+              "user_macro": {
+                "recall@20": 0.13581051798150712,
+                "ndcg@20": 0.050368418534331924,
+                "recall@100": 0.4019137422331004,
+                "ndcg@100": 0.09783587028690224,
+                "mrr": 0.035429822118594155
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.023962148962148964,
+              "ndcg@20": 0.00832817718755068,
+              "recall@100": 0.10317460317460317,
+              "ndcg@100": 0.0221583947999081,
+              "mrr": 0.007562744567290167,
+              "user_macro": {
+                "recall@20": 0.02411592279188098,
+                "ndcg@20": 0.008263773182155166,
+                "recall@100": 0.10184374858590885,
+                "ndcg@100": 0.021816894511054223,
+                "mrr": 0.007400058134663102
+              }
+            }
+          },
+          {
+            "epoch": 3,
+            "loss": 6.366296240802954,
+            "metrics": {
+              "recall@20": 0.09630789397028838,
+              "ndcg@20": 0.03495560684693141,
+              "recall@100": 0.31748834838333817
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.11810985962646771,
+              "ndcg@20": 0.04294370621066777,
+              "recall@100": 0.3815433914436712,
+              "ndcg@100": 0.08988290624038897,
+              "mrr": 0.030842525754145412,
+              "user_macro": {
+                "recall@20": 0.12696160413532034,
+                "ndcg@20": 0.04655252076850283,
+                "recall@100": 0.3899364370609846,
+                "ndcg@100": 0.09348732158031563,
+                "mrr": 0.032967796961453445
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.026785714285714284,
+              "ndcg@20": 0.009482952554697345,
+              "recall@100": 0.11324786324786325,
+              "ndcg@100": 0.024581818655235323,
+              "mrr": 0.008459165315820135,
+              "user_macro": {
+                "recall@20": 0.02696896792715608,
+                "ndcg@20": 0.009420009214203242,
+                "recall@100": 0.11265177911519375,
+                "ndcg@100": 0.024338537055488465,
+                "mrr": 0.008283363110979318
+              }
+            }
+          },
+          {
+            "epoch": 4,
+            "loss": 6.1217985331459195,
+            "metrics": {
+              "recall@20": 0.09306728808622196,
+              "ndcg@20": 0.03320073787244543,
+              "recall@100": 0.3185260704922808
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.11339885692421742,
+              "ndcg@20": 0.040643851557321725,
+              "recall@100": 0.3800129134084224,
+              "ndcg@100": 0.0881073831260945,
+              "mrr": 0.029287246935270857,
+              "user_macro": {
+                "recall@20": 0.1234503556124558,
+                "ndcg@20": 0.04492155953036431,
+                "recall@100": 0.39189440770926176,
+                "ndcg@100": 0.09273791538543451,
+                "mrr": 0.03196863242864411
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.028235653235653236,
+              "ndcg@20": 0.00946628428610807,
+              "recall@100": 0.12248168498168498,
+              "ndcg@100": 0.025991231664066146,
+              "mrr": 0.008247425819282946,
+              "user_macro": {
+                "recall@20": 0.02815584918372375,
+                "ndcg@20": 0.009327722040087251,
+                "recall@100": 0.12172751657943294,
+                "ndcg@100": 0.025720102192811057,
+                "mrr": 0.008062891381845995
+              }
+            }
+          },
+          {
+            "epoch": 5,
+            "loss": 5.974284857267663,
+            "metrics": {
+              "recall@20": 0.09259394115933586,
+              "ndcg@20": 0.032789002230701525,
+              "recall@100": 0.32087459947567726
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.11182055145036708,
+              "ndcg@20": 0.0397106205885809,
+              "recall@100": 0.38192601095248346,
+              "ndcg@100": 0.0876968628911891,
+              "mrr": 0.028578986762900226,
+              "user_macro": {
+                "recall@20": 0.12196717504847947,
+                "ndcg@20": 0.044033880202096615,
+                "recall@100": 0.39568156562971557,
+                "ndcg@100": 0.09276729822553931,
+                "mrr": 0.03134805839592068
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.03128815628815629,
+              "ndcg@20": 0.010718505294206796,
+              "recall@100": 0.12622100122100122,
+              "ndcg@100": 0.027289788179204848,
+              "mrr": 0.008954930372184896,
+              "user_macro": {
+                "recall@20": 0.03160168132293568,
+                "ndcg@20": 0.010715270227514423,
+                "recall@100": 0.12591423191597406,
+                "ndcg@100": 0.02716620261085465,
+                "mrr": 0.008830236348141934
+              }
+            }
+          }
+        ]
+      },
+      "gated_w50": {
+        "best_epoch": 2,
+        "rows": [
+          {
+            "epoch": 0,
+            "loss": 7.886683949256578,
+            "metrics": {
+              "recall@20": 0.08813355665598602,
+              "ndcg@20": 0.03264880980576793,
+              "recall@100": 0.28575589863093503
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.11485759380156396,
+              "ndcg@20": 0.04253854196620426,
+              "recall@100": 0.36788865772293566,
+              "ndcg@100": 0.08756125104574457,
+              "mrr": 0.03094576962778765,
+              "user_macro": {
+                "recall@20": 0.12150578988055935,
+                "ndcg@20": 0.045283829356628384,
+                "recall@100": 0.3767409140603961,
+                "ndcg@100": 0.09073516278139888,
+                "mrr": 0.03264517734353045
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.0028998778998779,
+              "ndcg@20": 0.0011065030227760612,
+              "recall@100": 0.023809523809523808,
+              "ndcg@100": 0.004689960867757683,
+              "mrr": 0.002149402065232231,
+              "user_macro": {
+                "recall@20": 0.002644212156407278,
+                "ndcg@20": 0.000882513036947824,
+                "recall@100": 0.022451883192301306,
+                "ndcg@100": 0.004273688348338166,
+                "mrr": 0.001922132759216998
+              }
+            }
+          },
+          {
+            "epoch": 1,
+            "loss": 6.861404957745918,
+            "metrics": {
+              "recall@20": 0.09889309641712787,
+              "ndcg@20": 0.036694333222178875,
+              "recall@100": 0.3169057675502476
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.12652748882033624,
+              "ndcg@20": 0.04697750234131493,
+              "recall@100": 0.39833082239280676,
+              "ndcg@100": 0.0953887918232993,
+              "mrr": 0.033854443102570415,
+              "user_macro": {
+                "recall@20": 0.1349701679955899,
+                "ndcg@20": 0.05028811886195375,
+                "recall@100": 0.41032368619981513,
+                "ndcg@100": 0.0994077962110531,
+                "mrr": 0.03582225978176692
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.01076007326007326,
+              "ndcg@20": 0.0038986660425118116,
+              "recall@100": 0.05723443223443223,
+              "ndcg@100": 0.011903454670029548,
+              "mrr": 0.004492352908913624,
+              "user_macro": {
+                "recall@20": 0.010507715281234446,
+                "ndcg@20": 0.00365924738765293,
+                "recall@100": 0.054245755212654165,
+                "ndcg@100": 0.011194219312520933,
+                "mrr": 0.004214442354034112
+              }
+            }
+          },
+          {
+            "epoch": 2,
+            "loss": 6.544798879311565,
+            "metrics": {
+              "recall@20": 0.10304398485289834,
+              "ndcg@20": 0.037839034580021774,
+              "recall@100": 0.32786556947276435
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.12997106439964606,
+              "ndcg@20": 0.047782579610848905,
+              "recall@100": 0.40452447569170435,
+              "ndcg@100": 0.09664684145766576,
+              "mrr": 0.03402931812252862,
+              "user_macro": {
+                "recall@20": 0.13907984254307415,
+                "ndcg@20": 0.05143909157347742,
+                "recall@100": 0.41632803385519984,
+                "ndcg@100": 0.10079863117578237,
+                "mrr": 0.03617654341691779
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.017170329670329672,
+              "ndcg@20": 0.006127774711887022,
+              "recall@100": 0.0834096459096459,
+              "ndcg@100": 0.017706944980300416,
+              "mrr": 0.006231720203853269,
+              "user_macro": {
+                "recall@20": 0.016854985896797743,
+                "ndcg@20": 0.00591179600129648,
+                "recall@100": 0.0815658325414423,
+                "ndcg@100": 0.017230520829220698,
+                "mrr": 0.005994105034799675
+              }
+            }
+          },
+          {
+            "epoch": 3,
+            "loss": 6.266436653543335,
+            "metrics": {
+              "recall@20": 0.09690868045441305,
+              "ndcg@20": 0.034900882421598306,
+              "recall@100": 0.3245157296824934
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.12074036874955162,
+              "ndcg@20": 0.043539817774121026,
+              "recall@100": 0.39706339526986634,
+              "ndcg@100": 0.09270069973536826,
+              "mrr": 0.031170686995258153,
+              "user_macro": {
+                "recall@20": 0.12951948197495683,
+                "ndcg@20": 0.047244869791015776,
+                "recall@100": 0.4065754940711029,
+                "ndcg@100": 0.0966240178897013,
+                "mrr": 0.03345406797861833
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.020909645909645908,
+              "ndcg@20": 0.0073512751673636256,
+              "recall@100": 0.09317765567765568,
+              "ndcg@100": 0.01992854678511621,
+              "mrr": 0.006953002447862515,
+              "user_macro": {
+                "recall@20": 0.02080089094026376,
+                "ndcg@20": 0.0071868083673674,
+                "recall@100": 0.09136147437541166,
+                "ndcg@100": 0.019443749938839093,
+                "mrr": 0.006722937179957378
+              }
+            }
+          },
+          {
+            "epoch": 4,
+            "loss": 6.043408868985484,
+            "metrics": {
+              "recall@20": 0.09390474803378969,
+              "ndcg@20": 0.033288319905394624,
+              "recall@100": 0.3250436935624818
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.11626850324030896,
+              "ndcg@20": 0.041375664386500595,
+              "recall@100": 0.3952459526030083,
+              "ndcg@100": 0.0910010395068743,
+              "mrr": 0.029750359900207066,
+              "user_macro": {
+                "recall@20": 0.12582327542423777,
+                "ndcg@20": 0.045315833774597955,
+                "recall@100": 0.4082235297590958,
+                "ndcg@100": 0.09560966408088972,
+                "mrr": 0.03213076041975577
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.022588522588522588,
+              "ndcg@20": 0.00749806762158272,
+              "recall@100": 0.10119047619047619,
+              "ndcg@100": 0.02120023036616357,
+              "mrr": 0.006888540091681243,
+              "user_macro": {
+                "recall@20": 0.022628449753885293,
+                "ndcg@20": 0.007303918713757455,
+                "recall@100": 0.09938896179314297,
+                "ndcg@100": 0.02068557454020741,
+                "mrr": 0.006600066626731226
+              }
+            }
+          },
+          {
+            "epoch": 5,
+            "loss": 5.906081166938231,
+            "metrics": {
+              "recall@20": 0.09310369938829012,
+              "ndcg@20": 0.03285456933412306,
+              "recall@100": 0.3271919603845034
+            },
+            "head": {
+              "queries": 41817,
+              "users": 15803,
+              "recall@20": 0.11461845660855632,
+              "ndcg@20": 0.040538702494276116,
+              "recall@100": 0.39742210105937775,
+              "ndcg@100": 0.09076572574367442,
+              "mrr": 0.02921597102687555,
+              "user_macro": {
+                "recall@20": 0.12577802504731322,
+                "ndcg@20": 0.04499570642596198,
+                "recall@100": 0.41212557580409354,
+                "ndcg@100": 0.09592650440953639,
+                "mrr": 0.03188232159185535
+              }
+            },
+            "tail": {
+              "queries": 13104,
+              "users": 8610,
+              "recall@20": 0.024496336996336996,
+              "ndcg@20": 0.008350798396029285,
+              "recall@100": 0.10325091575091574,
+              "ndcg@100": 0.022076213319724296,
+              "mrr": 0.007432883181966677,
+              "user_macro": {
+                "recall@20": 0.024497538852939548,
+                "ndcg@20": 0.008211032551643387,
+                "recall@100": 0.10364942355360472,
+                "ndcg@100": 0.02197541069477247,
+                "mrr": 0.0072305225621489755
+              }
+            }
+          }
+        ]
+      }
+    },
+    "model_parameters_unchanged": true,
+    "probe_design": {
+      "mean_score_train_exposure_contexts": 4096,
+      "centering_alphas": [
+        0,
+        0.5,
+        1.0
+      ],
+      "probe_partition": "standard/validation",
+      "tail_only_is_comparable_full_catalog_metric": false
+    }
+  },
+  "tail_only_frequency_strata": {
+    "standard/validation": {
+      "zero": {
+        "queries": 49,
+        "tower_hits100": 0,
+        "tower_recall100": 0.0,
+        "itemcf_hits100": 0,
+        "itemcf_recall100": 0.0,
+        "tower_outside100": 49
+      },
+      "1_5": {
+        "queries": 890,
+        "tower_hits100": 0,
+        "tower_recall100": 0.0,
+        "itemcf_hits100": 30,
+        "itemcf_recall100": 0.033707865168539325,
+        "tower_outside100": 890
+      },
+      "6_20": {
+        "queries": 3121,
+        "tower_hits100": 79,
+        "tower_recall100": 0.02531239987183595,
+        "itemcf_hits100": 189,
+        "itemcf_recall100": 0.06055751361743031,
+        "tower_outside100": 3042
+      },
+      "21_plus": {
+        "queries": 9044,
+        "tower_hits100": 757,
+        "tower_recall100": 0.08370190181335692,
+        "itemcf_hits100": 677,
+        "itemcf_recall100": 0.0748562582927908,
+        "tower_outside100": 8287
+      }
+    },
+    "standard/test": {
+      "zero": {
+        "queries": 76,
+        "tower_hits100": 0,
+        "tower_recall100": 0.0,
+        "itemcf_hits100": 0,
+        "itemcf_recall100": 0.0,
+        "tower_outside100": 76
+      },
+      "1_5": {
+        "queries": 1116,
+        "tower_hits100": 8,
+        "tower_recall100": 0.007168458781362007,
+        "itemcf_hits100": 35,
+        "itemcf_recall100": 0.03136200716845878,
+        "tower_outside100": 1108
+      },
+      "6_20": {
+        "queries": 4499,
+        "tower_hits100": 100,
+        "tower_recall100": 0.02222716159146477,
+        "itemcf_hits100": 198,
+        "itemcf_recall100": 0.044009779951100246,
+        "tower_outside100": 4399
+      },
+      "21_plus": {
+        "queries": 12344,
+        "tower_hits100": 857,
+        "tower_recall100": 0.06942644199611148,
+        "itemcf_hits100": 831,
+        "itemcf_recall100": 0.0673201555411536,
+        "tower_outside100": 11487
+      }
+    }
+  },
+  "diagnostic_component_fingerprint": "57322be18ae51ec03e056c78a411e7dc4e6ab29c00b2dbe3893de74b7aa5d6d3"
+}
