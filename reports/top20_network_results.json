@@ -1,0 +1,784 @@
+{
+  "scope": "Fixed identical V2 Top100; final evaluation is Top20; network changes only",
+  "adoption_status": "EXPERIMENTAL_KEEP_ORIGINAL_DIN_DEFAULT",
+  "reason": "Primary-seed Top20 confidence intervals include zero; observed gains are small",
+  "variant": "protected_gated_copy_safe",
+  "configuration_count": 6,
+  "stages": [
+    {
+      "stage": "首轮",
+      "variant": "v2_continued",
+      "best_after_update": {
+        "queries": 54928,
+        "users": 17964,
+        "recall@10": 0.08627658025050976,
+        "ndcg@10": 0.04357568372368411,
+        "recall@20": 0.14131226332653657,
+        "ndcg@20": 0.05735579755376096,
+        "recall@100": 0.33665889892222545,
+        "ndcg@100": 0.09319832447289998,
+        "user_macro": {
+          "recall@10": 0.09136828279544901,
+          "ndcg@10": 0.04620812272333258,
+          "recall@20": 0.14687734034134128,
+          "ndcg@20": 0.060114121452709446,
+          "recall@100": 0.3457448679914443,
+          "ndcg@100": 0.09658281312360188,
+          "mrr@100": 0.041262093481937934
+        },
+        "mrr@100": 0.039242217319400086,
+        "retrieval_miss_queries": 36436,
+        "conditional_hit_metrics": {
+          "queries": 18492,
+          "users": 10721,
+          "recall@10": 0.25627298291152933,
+          "ndcg@10": 0.1294357103382285,
+          "recall@20": 0.41974908068353883,
+          "ndcg@20": 0.17036768592001852,
+          "mrr": 0.11656373096041574,
+          "user_macro": {
+            "recall@10": 0.2530339132882519,
+            "ndcg@10": 0.1277874185709696,
+            "recall@20": 0.4144610694542933,
+            "ndcg@20": 0.1682049603865496,
+            "mrr": 0.11534662758533663
+          }
+        }
+      },
+      "best_epoch_after_update": 0,
+      "selected_baseline": true,
+      "elapsed_seconds": 87.70635310001671
+    },
+    {
+      "stage": "首轮",
+      "variant": "dice",
+      "best_after_update": {
+        "queries": 54928,
+        "users": 17964,
+        "recall@10": 0.08629478590154384,
+        "ndcg@10": 0.04362095290183996,
+        "recall@20": 0.14140329158170697,
+        "ndcg@20": 0.057415672894394296,
+        "recall@100": 0.33665889892222545,
+        "ndcg@100": 0.09323675817613179,
+        "user_macro": {
+          "recall@10": 0.09131953528486607,
+          "ndcg@10": 0.04623439747783503,
+          "recall@20": 0.1470634395938064,
+          "ndcg@20": 0.06019714703378159,
+          "recall@100": 0.3457448679914443,
+          "ndcg@100": 0.09662244964233481,
+          "mrr@100": 0.04131981616562048
+        },
+        "mrr@100": 0.039295016140040294,
+        "retrieval_miss_queries": 36436,
+        "conditional_hit_metrics": {
+          "queries": 18492,
+          "users": 10721,
+          "recall@10": 0.2563270603504218,
+          "ndcg@10": 0.12957017634610998,
+          "recall@20": 0.4200194678780013,
+          "ndcg@20": 0.17054553756993782,
+          "mrr": 0.11672056275903814,
+          "user_macro": {
+            "recall@10": 0.25303052652173674,
+            "ndcg@10": 0.12791546460546677,
+            "recall@20": 0.4148946866097648,
+            "ndcg@20": 0.16843467252102043,
+            "mrr": 0.11552692437767022
+          }
+        }
+      },
+      "best_epoch_after_update": 0,
+      "selected_baseline": true,
+      "elapsed_seconds": 88.52095019991975
+    },
+    {
+      "stage": "首轮",
+      "variant": "gated",
+      "best_after_update": {
+        "queries": 54928,
+        "users": 17964,
+        "recall@10": 0.08715045150014565,
+        "ndcg@10": 0.04394321105802729,
+        "recall@20": 0.14200407806583162,
+        "ndcg@20": 0.05769027478012158,
+        "recall@100": 0.33665889892222545,
+        "ndcg@100": 0.0934341740474396,
+        "user_macro": {
+          "recall@10": 0.09270259106640044,
+          "ndcg@10": 0.04670095845665835,
+          "recall@20": 0.1475623956092521,
+          "ndcg@20": 0.06043818666514201,
+          "recall@100": 0.3457448679914443,
+          "ndcg@100": 0.0968103642215885,
+          "mrr@100": 0.04145232767326813
+        },
+        "mrr@100": 0.039455744200171276,
+        "retrieval_miss_queries": 36436,
+        "conditional_hit_metrics": {
+          "queries": 18492,
+          "users": 10721,
+          "recall@10": 0.25886869997836903,
+          "ndcg@10": 0.1305274008758016,
+          "recall@20": 0.4218040233614536,
+          "ndcg@20": 0.17136120555497072,
+          "mrr": 0.11719798385393726,
+          "user_macro": {
+            "recall@10": 0.25646290081970197,
+            "ndcg@10": 0.12898184745342106,
+            "recall@20": 0.41639329733792496,
+            "ndcg@20": 0.16902390479910057,
+            "mrr": 0.11576139514524872
+          }
+        }
+      },
+      "best_epoch_after_update": 0,
+      "selected_baseline": true,
+      "elapsed_seconds": 138.9970155999763
+    },
+    {
+      "stage": "首轮",
+      "variant": "gated_copy_safe",
+      "best_after_update": {
+        "queries": 54928,
+        "users": 17964,
+        "recall@10": 0.08709583454704341,
+        "ndcg@10": 0.04393659488737084,
+        "recall@20": 0.14191304981066122,
+        "ndcg@20": 0.057675479829152713,
+        "recall@100": 0.33665889892222545,
+        "ndcg@100": 0.09344023706640411,
+        "user_macro": {
+          "recall@10": 0.09257630434191733,
+          "ndcg@10": 0.046667744070073625,
+          "recall@20": 0.14754104327404863,
+          "ndcg@20": 0.06043272514368043,
+          "recall@100": 0.3457448679914443,
+          "ndcg@100": 0.09680915964567216,
+          "mrr@100": 0.041452159255491505
+        },
+        "mrr@100": 0.03946378122681443,
+        "retrieval_miss_queries": 36436,
+        "conditional_hit_metrics": {
+          "queries": 18492,
+          "users": 10721,
+          "recall@10": 0.25870646766169153,
+          "ndcg@10": 0.13050774843032148,
+          "recall@20": 0.42153363616699113,
+          "ndcg@20": 0.17131725914209933,
+          "mrr": 0.11722185676111091,
+          "user_macro": {
+            "recall@10": 0.25609757420216,
+            "ndcg@10": 0.1289044748789238,
+            "recall@20": 0.41623777388425665,
+            "ndcg@20": 0.16900805669884972,
+            "mrr": 0.11578893387221183
+          }
+        }
+      },
+      "best_epoch_after_update": 0,
+      "selected_baseline": true,
+      "elapsed_seconds": 139.53366820001975
+    },
+    {
+      "stage": "固定骨干后续",
+      "variant": "gated",
+      "best_after_update": {
+        "queries": 54928,
+        "users": 17964,
+        "recall@10": 0.0874781532187591,
+        "ndcg@10": 0.044371747030966004,
+        "recall@20": 0.14218613457617243,
+        "ndcg@20": 0.058104885778093654,
+        "recall@100": 0.33665889892222545,
+        "ndcg@100": 0.09376596211294873,
+        "user_macro": {
+          "recall@10": 0.09301653942198805,
+          "ndcg@10": 0.04701120875009999,
+          "recall@20": 0.14796543039249044,
+          "ndcg@20": 0.060807123264558886,
+          "recall@100": 0.3457448679914443,
+          "ndcg@100": 0.0970506120188977,
+          "mrr@100": 0.041743462680417544
+        },
+        "mrr@100": 0.03989276803337067,
+        "retrieval_miss_queries": 36436,
+        "conditional_hit_metrics": {
+          "queries": 18492,
+          "users": 10721,
+          "recall@10": 0.25984209387843393,
+          "ndcg@10": 0.1318003093725341,
+          "recall@20": 0.42234479775037853,
+          "ndcg@20": 0.17259275178558992,
+          "mrr": 0.1184961043984958,
+          "user_macro": {
+            "recall@10": 0.25778691958612343,
+            "ndcg@10": 0.1300042440065146,
+            "recall@20": 0.4169472699937236,
+            "ndcg@20": 0.16993930006962663,
+            "mrr": 0.11658162441771415
+          }
+        }
+      },
+      "best_epoch_after_update": 0,
+      "selected_baseline": false,
+      "elapsed_seconds": 115.07169409992639
+    },
+    {
+      "stage": "固定骨干后续",
+      "variant": "gated_copy_safe",
+      "best_after_update": {
+        "queries": 54928,
+        "users": 17964,
+        "recall@10": 0.08745994756772502,
+        "ndcg@10": 0.0443696822706754,
+        "recall@20": 0.14218613457617243,
+        "ndcg@20": 0.05810787923949442,
+        "recall@100": 0.33665889892222545,
+        "ndcg@100": 0.09376905680139389,
+        "user_macro": {
+          "recall@10": 0.09300370511139157,
+          "ndcg@10": 0.04700895623429355,
+          "recall@20": 0.14793594019516457,
+          "ndcg@20": 0.06080132745256993,
+          "recall@100": 0.3457448679914443,
+          "ndcg@100": 0.09705124485105537,
+          "mrr@100": 0.04174521318219442
+        },
+        "mrr@100": 0.03989732972655139,
+        "retrieval_miss_queries": 36436,
+        "conditional_hit_metrics": {
+          "queries": 18492,
+          "users": 10721,
+          "recall@10": 0.2597880164395414,
+          "ndcg@10": 0.13179417627967005,
+          "recall@20": 0.42234479775037853,
+          "ndcg@20": 0.1726016434602503,
+          "mrr": 0.11850965429483099,
+          "user_macro": {
+            "recall@10": 0.2577962470742309,
+            "ndcg@10": 0.13000705049785544,
+            "recall@20": 0.416885086739674,
+            "ndcg@20": 0.16992471259244282,
+            "mrr": 0.11658299531283649
+          }
+        }
+      },
+      "best_epoch_after_update": 0,
+      "selected_baseline": false,
+      "elapsed_seconds": 113.88773610000499
+    }
+  ],
+  "validation_continuation_seed_mean": {
+    "ndcg@20": 0.058252459168599675,
+    "recall@20": 0.14258665889892222
+  },
+  "paired_user_bootstrap": {
+    "standard/validation": {
+      "recall@20": {
+        "difference": 0.00018205651034080978,
+        "ci95_low": -0.0002451059709724945,
+        "ci95_high": 0.0006305202092688023
+      },
+      "ndcg@20": {
+        "difference": 3.0069514894574923e-05,
+        "ci95_low": -0.00010170758794391096,
+        "ci95_high": 0.00015486928824802847
+      },
+      "mrr": {
+        "difference": -1.703854208980497e-05,
+        "ci95_low": -0.00010775388621760512,
+        "ci95_high": 6.636568993184736e-05
+      }
+    },
+    "standard/test": {
+      "recall@20": {
+        "difference": 6.628662335940607e-05,
+        "ci95_low": -0.00027716808306511566,
+        "ci95_high": 0.00044943112228769123
+      },
+      "ndcg@20": {
+        "difference": 9.649845137721731e-05,
+        "ci95_low": -2.3721939197119384e-06,
+        "ci95_high": 0.00019712636351629218
+      },
+      "mrr": {
+        "difference": 0.00010546542819474001,
+        "ci95_low": 1.7362557658084082e-05,
+        "ci95_high": 0.00018149670385292138
+      }
+    },
+    "random/validation": {
+      "recall@20": {
+        "difference": 8.29892736363825e-05,
+        "ci95_low": -2.0222540361065183e-05,
+        "ci95_high": 0.00018536177152231274
+      },
+      "ndcg@20": {
+        "difference": 1.8454642594478716e-05,
+        "ci95_low": -3.796959038674691e-06,
+        "ci95_high": 4.333085552844092e-05
+      },
+      "mrr": {
+        "difference": -2.2145885508243423e-07,
+        "ci95_low": -1.1635763412625776e-05,
+        "ci95_high": 1.0307024812664118e-05
+      }
+    },
+    "random/test": {
+      "recall@20": {
+        "difference": 4.354994245186176e-05,
+        "ci95_low": -2.8014018833070228e-05,
+        "ci95_high": 0.00011779319131213901
+      },
+      "ndcg@20": {
+        "difference": 1.204229608972469e-05,
+        "ci95_low": -4.199688332385847e-06,
+        "ci95_high": 3.021426720925753e-05
+      },
+      "mrr": {
+        "difference": 2.955242074984305e-06,
+        "ci95_low": -3.924299839587349e-06,
+        "ci95_high": 9.531226871005635e-06
+      }
+    }
+  },
+  "test_is_iterative_reassessment": true,
+  "shared_initial_backbone_seed42": true,
+  "continuation_seed_variation": "new branch initialization, query/competitor sampling, dropout; original DIN backbone fixed",
+  "test": {
+    "standard/test": {
+      "original": {
+        "ranking": {
+          "queries": 75430,
+          "users": 19630,
+          "recall@10": 0.08265941932917938,
+          "ndcg@10": 0.04184139533570524,
+          "recall@20": 0.13448230147156304,
+          "ndcg@20": 0.05484046739000875,
+          "recall@100": 0.32510937292854303,
+          "ndcg@100": 0.08977317270585529,
+          "user_macro": {
+            "recall@10": 0.08746462450547794,
+            "ndcg@10": 0.04405017793081011,
+            "recall@20": 0.14015473123318106,
+            "ndcg@20": 0.05727660158475624,
+            "recall@100": 0.3346494735156576,
+            "ndcg@100": 0.09287978114895915,
+            "mrr@100": 0.03929674234113941
+          },
+          "mrr@100": 0.03772160541944631,
+          "retrieval_miss_queries": 50907,
+          "conditional_hit_metrics": {
+            "queries": 24523,
+            "users": 12286,
+            "recall@10": 0.254251111201729,
+            "ndcg@10": 0.12869944338670825,
+            "recall@20": 0.4136524894996534,
+            "ndcg@20": 0.1686831323748465,
+            "mrr": 0.11602743125999408,
+            "user_macro": {
+              "recall@10": 0.25511922498476264,
+              "ndcg@10": 0.1287296221611399,
+              "recall@20": 0.41383173491725145,
+              "ndcg@20": 0.16854375744267847,
+              "mrr": 0.11565511130637202
+            }
+          }
+        },
+        "pointwise": {
+          "queries": 166618,
+          "positives": 75430,
+          "positive_rate": 0.45271219196005236,
+          "auc": 0.7193744203482377,
+          "logloss": 0.6091204354513009
+        },
+        "rank_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v2\\artifacts\\ranks\\din_seed42\\standard_test.npz",
+        "prediction_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v2\\artifacts\\predictions\\din_seed42\\standard_test.npz",
+        "checkpoint_sha256": "35d73ef88c162d6c30ae7bedceabbf765944f43465c0aced4d3ca9275a1a72de",
+        "scores_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v2\\artifacts\\scores\\standard_test.npy"
+      },
+      "runs": {
+        "seed42": {
+          "ranking": {
+            "queries": 75430,
+            "users": 19630,
+            "recall@10": 0.08251358875778868,
+            "ndcg@10": 0.04187900048593529,
+            "recall@20": 0.13454858809492246,
+            "ndcg@20": 0.05493696584138597,
+            "recall@100": 0.32510937292854303,
+            "ndcg@100": 0.08986334040997984,
+            "user_macro": {
+              "recall@10": 0.08752544016867976,
+              "ndcg@10": 0.04418902239535106,
+              "recall@20": 0.14032121699641484,
+              "ndcg@20": 0.05744057447951564,
+              "recall@100": 0.3346494735156576,
+              "ndcg@100": 0.09301433945688783,
+              "mrr@100": 0.03946113764142801
+            },
+            "mrr@100": 0.037827070847641045,
+            "retrieval_miss_queries": 50907,
+            "conditional_hit_metrics": {
+              "queries": 24523,
+              "users": 12286,
+              "recall@10": 0.2538025527056233,
+              "ndcg@10": 0.1288151126148554,
+              "recall@20": 0.413856379725156,
+              "ndcg@20": 0.1689799507978528,
+              "mrr": 0.11635183109886899,
+              "user_macro": {
+                "recall@10": 0.2553152769205997,
+                "ndcg@10": 0.12913432247157475,
+                "recall@20": 0.4138323485980702,
+                "ndcg@20": 0.16890451628479597,
+                "mrr": 0.11612039711018844
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 166618,
+            "positives": 75430,
+            "positive_rate": 0.45271219196005236,
+            "auc": 0.7193744203482377,
+            "logloss": 0.6091204354513009
+          },
+          "rank_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v3_frozen_top20\\artifacts\\ranks\\seed42\\standard_test.npz",
+          "prediction_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v3_frozen_top20\\artifacts\\predictions\\seed42\\standard_test.npz",
+          "rank_sha256": "95252bc94c3ab06de8cf23b2c4d4b71255376a516a53b6a4d06d036620d9b783",
+          "prediction_sha256": "fd9cd1bc0e36895ae6ef10bc1d2b52bb39f1e2af4014a0227ea1955ceb11d916",
+          "scores_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v3_frozen_top20\\artifacts\\scores\\standard_test.npy",
+          "scores_sha256": "ca571e0b40f1552dcedfc79f7cb9a2694980dec95a8813e8fa7e64428027d33a"
+        },
+        "seed43": {
+          "ranking": {
+            "queries": 75430,
+            "users": 19630,
+            "recall@10": 0.08330902823810155,
+            "ndcg@10": 0.04217536720300509,
+            "recall@20": 0.13594060718546996,
+            "ndcg@20": 0.05537983771566371,
+            "recall@100": 0.32510937292854303,
+            "ndcg@100": 0.09005939148404392,
+            "user_macro": {
+              "recall@10": 0.08816355031186655,
+              "ndcg@10": 0.04445943380504155,
+              "recall@20": 0.1421384226373702,
+              "ndcg@20": 0.05800730047561231,
+              "recall@100": 0.3346494735156576,
+              "ndcg@100": 0.09325172853434208,
+              "mrr@100": 0.039671752197774246
+            },
+            "mrr@100": 0.03798553682205547,
+            "retrieval_miss_queries": 50907,
+            "conditional_hit_metrics": {
+              "queries": 24523,
+              "users": 12286,
+              "recall@10": 0.25624923541165434,
+              "ndcg@10": 0.1297267034262804,
+              "recall@20": 0.41813807446071033,
+              "ndcg@20": 0.17034217505576454,
+              "mrr": 0.11683925467877679,
+              "user_macro": {
+                "recall@10": 0.2572018385926896,
+                "ndcg@10": 0.12975373124825784,
+                "recall@20": 0.41808920725933224,
+                "ndcg@20": 0.170141568589892,
+                "mrr": 0.11647917288020856
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 166618,
+            "positives": 75430,
+            "positive_rate": 0.45271219196005236,
+            "auc": 0.7193744203482377,
+            "logloss": 0.6091204354513009
+          },
+          "rank_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v3_frozen_top20\\artifacts\\ranks\\seed43\\standard_test.npz",
+          "prediction_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v3_frozen_top20\\artifacts\\predictions\\seed43\\standard_test.npz",
+          "rank_sha256": "f3c05da92e721d6037a76e27c02e8cf39942d200594af54f39cbeddda5bcddbf",
+          "prediction_sha256": "fd9cd1bc0e36895ae6ef10bc1d2b52bb39f1e2af4014a0227ea1955ceb11d916"
+        },
+        "seed44": {
+          "ranking": {
+            "queries": 75430,
+            "users": 19630,
+            "recall@10": 0.08265941932917938,
+            "ndcg@10": 0.04192177151866596,
+            "recall@20": 0.13474744796500066,
+            "ndcg@20": 0.054986188887534294,
+            "recall@100": 0.32510937292854303,
+            "ndcg@100": 0.08987727564796956,
+            "user_macro": {
+              "recall@10": 0.08790603122965197,
+              "ndcg@10": 0.04430868921672643,
+              "recall@20": 0.14054892522001808,
+              "ndcg@20": 0.05750958636456179,
+              "recall@100": 0.3346494735156576,
+              "ndcg@100": 0.09304548873349368,
+              "mrr@100": 0.03948290299419533
+            },
+            "mrr@100": 0.03783184492785079,
+            "retrieval_miss_queries": 50907,
+            "conditional_hit_metrics": {
+              "queries": 24523,
+              "users": 12286,
+              "recall@10": 0.254251111201729,
+              "ndcg@10": 0.12894667151869563,
+              "recall@20": 0.41446805040166373,
+              "ndcg@20": 0.1691313553719656,
+              "mrr": 0.11636651563461996,
+              "user_macro": {
+                "recall@10": 0.25606241716798406,
+                "ndcg@10": 0.12933363971508047,
+                "recall@20": 0.4148826148709476,
+                "ndcg@20": 0.16914618443411975,
+                "mrr": 0.11612028309874758
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 166618,
+            "positives": 75430,
+            "positive_rate": 0.45271219196005236,
+            "auc": 0.7193744203482377,
+            "logloss": 0.6091204354513009
+          },
+          "rank_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v3_frozen_top20\\artifacts\\ranks\\seed44\\standard_test.npz",
+          "prediction_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v3_frozen_top20\\artifacts\\predictions\\seed44\\standard_test.npz",
+          "rank_sha256": "913305bd101260072422d9e9091322d452eeb8f6c3c1691c5cfee25e053d0830",
+          "prediction_sha256": "fd9cd1bc0e36895ae6ef10bc1d2b52bb39f1e2af4014a0227ea1955ceb11d916"
+        }
+      },
+      "mean": {
+        "recall@20": {
+          "mean": 0.1350788810817977,
+          "sample_std": 0.0007528713172212942
+        },
+        "ndcg@20": {
+          "mean": 0.05510099748152799,
+          "sample_std": 0.00024273366927082127
+        }
+      }
+    },
+    "random/test": {
+      "original": {
+        "ranking": {
+          "queries": 160735,
+          "users": 21299,
+          "recall@10": 0.0026005537064111737,
+          "ndcg@10": 0.001213446904017276,
+          "recall@20": 0.0051637788907207514,
+          "ndcg@20": 0.0018557501353775538,
+          "recall@100": 0.022297570535353223,
+          "ndcg@100": 0.004918719717475093,
+          "user_macro": {
+            "recall@10": 0.0029342896024051788,
+            "ndcg@10": 0.0013720131497892128,
+            "recall@20": 0.005679339438996519,
+            "ndcg@20": 0.0020640425567652206,
+            "recall@100": 0.024949428387570128,
+            "ndcg@100": 0.005481047243139679,
+            "mrr@100": 0.0015120392117076652
+          },
+          "mrr@100": 0.0013545308981713243,
+          "retrieval_miss_queries": 157151,
+          "conditional_hit_metrics": {
+            "queries": 3584,
+            "users": 3014,
+            "recall@10": 0.11662946428571429,
+            "ndcg@10": 0.054420588202348456,
+            "recall@20": 0.23158482142857142,
+            "ndcg@20": 0.08322656194472966,
+            "mrr": 0.06074791403949994,
+            "user_macro": {
+              "recall@10": 0.11823237589660947,
+              "ndcg@10": 0.056183852300353346,
+              "recall@20": 0.2326816127911018,
+              "ndcg@20": 0.08485363133566452,
+              "mrr": 0.06242128705988286
+            }
+          }
+        },
+        "pointwise": {
+          "queries": 897427,
+          "positives": 160735,
+          "positive_rate": 0.1791064899986294,
+          "auc": 0.6602786311754264,
+          "logloss": 0.5757842247132372
+        },
+        "rank_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v2\\artifacts\\ranks\\din_seed42\\random_test.npz",
+        "prediction_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v2\\artifacts\\predictions\\din_seed42\\random_test.npz",
+        "checkpoint_sha256": "35d73ef88c162d6c30ae7bedceabbf765944f43465c0aced4d3ca9275a1a72de",
+        "scores_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v2\\artifacts\\scores\\random_test.npy"
+      },
+      "runs": {
+        "seed42": {
+          "ranking": {
+            "queries": 160735,
+            "users": 21299,
+            "recall@10": 0.0026005537064111737,
+            "ndcg@10": 0.0012155127804873126,
+            "recall@20": 0.005207328833172613,
+            "ndcg@20": 0.0018677924314672793,
+            "recall@100": 0.022297570535353223,
+            "ndcg@100": 0.0049214481180456255,
+            "user_macro": {
+              "recall@10": 0.002950647544996921,
+              "ndcg@10": 0.0013874150647932208,
+              "recall@20": 0.005796745219419704,
+              "ndcg@20": 0.002102205120563544,
+              "recall@100": 0.024949428387570128,
+              "ndcg@100": 0.00549374008403933,
+              "mrr@100": 0.0015269215109692965
+            },
+            "mrr@100": 0.0013574861402463085,
+            "retrieval_miss_queries": 157151,
+            "conditional_hit_metrics": {
+              "queries": 3584,
+              "users": 3014,
+              "recall@10": 0.11662946428571429,
+              "ndcg@10": 0.05451323849654805,
+              "recall@20": 0.23353794642857142,
+              "ndcg@20": 0.08376663406023802,
+              "mrr": 0.06088045054477969,
+              "user_macro": {
+                "recall@10": 0.11834297089771541,
+                "ndcg@10": 0.05630018189039076,
+                "recall@20": 0.23497645906405026,
+                "ndcg@20": 0.08546868485128185,
+                "mrr": 0.06254614512020652
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 897427,
+            "positives": 160735,
+            "positive_rate": 0.1791064899986294,
+            "auc": 0.6602786311754264,
+            "logloss": 0.5757842247132372
+          },
+          "rank_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v3_frozen_top20\\artifacts\\ranks\\seed42\\random_test.npz",
+          "prediction_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v3_frozen_top20\\artifacts\\predictions\\seed42\\random_test.npz",
+          "rank_sha256": "f29f2f3001ef4d92ecba37cf1cf0e30e6f18a9c4b8a496703494d474ff91c901",
+          "prediction_sha256": "5da9211357db0f2c525092f502e0c5901cc7a6f5354e1a21a56703b0e63ff26e",
+          "scores_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v3_frozen_top20\\artifacts\\scores\\random_test.npy",
+          "scores_sha256": "22d8562ebd278cabfe363d6007afb49844ad1df235ca1f83b3f16fa412e817c1"
+        },
+        "seed43": {
+          "ranking": {
+            "queries": 160735,
+            "users": 21299,
+            "recall@10": 0.0026067751267614394,
+            "ndcg@10": 0.0012137223469346826,
+            "recall@20": 0.005294428718076337,
+            "ndcg@20": 0.001885662713974647,
+            "recall@100": 0.022297570535353223,
+            "ndcg@100": 0.0049224487117629796,
+            "user_macro": {
+              "recall@10": 0.002944702060709875,
+              "ndcg@10": 0.0013671230081848498,
+              "recall@20": 0.005910805944418983,
+              "ndcg@20": 0.0021080823718652155,
+              "recall@100": 0.024949428387570128,
+              "ndcg@100": 0.0054809086205876,
+              "mrr@100": 0.0015058062762722342
+            },
+            "mrr@100": 0.0013552892824493347,
+            "retrieval_miss_queries": 157151,
+            "conditional_hit_metrics": {
+              "queries": 3584,
+              "users": 3014,
+              "recall@10": 0.11690848214285714,
+              "ndcg@10": 0.05443294124847827,
+              "recall@20": 0.23744419642857142,
+              "ndcg@20": 0.08456807933334679,
+              "mrr": 0.060781926008508305,
+              "user_macro": {
+                "recall@10": 0.11837061964799189,
+                "ndcg@10": 0.055938481892317975,
+                "recall@20": 0.238590545707334,
+                "ndcg@20": 0.08599089175266232,
+                "mrr": 0.06219178171579656
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 897427,
+            "positives": 160735,
+            "positive_rate": 0.1791064899986294,
+            "auc": 0.6602786311754264,
+            "logloss": 0.5757842247132372
+          },
+          "rank_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v3_frozen_top20\\artifacts\\ranks\\seed43\\random_test.npz",
+          "prediction_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v3_frozen_top20\\artifacts\\predictions\\seed43\\random_test.npz",
+          "rank_sha256": "1fcac311cde9fd31be5e0a9e23adad93878e72e1686957d5d412bceb156d93b9",
+          "prediction_sha256": "5da9211357db0f2c525092f502e0c5901cc7a6f5354e1a21a56703b0e63ff26e"
+        },
+        "seed44": {
+          "ranking": {
+            "queries": 160735,
+            "users": 21299,
+            "recall@10": 0.0025943322860609076,
+            "ndcg@10": 0.00121545500971393,
+            "recall@20": 0.0052197716738731454,
+            "ndcg@20": 0.0018718511946363007,
+            "recall@100": 0.022297570535353223,
+            "ndcg@100": 0.004923771771823156,
+            "user_macro": {
+              "recall@10": 0.0029581431012714,
+              "ndcg@10": 0.00138992726989701,
+              "recall@20": 0.005775425825774434,
+              "ndcg@20": 0.002097025182715631,
+              "recall@100": 0.024949428387570128,
+              "ndcg@100": 0.005493969870114614,
+              "mrr@100": 0.0015268222699246325
+            },
+            "mrr@100": 0.0013594041353617713,
+            "retrieval_miss_queries": 157151,
+            "conditional_hit_metrics": {
+              "queries": 3584,
+              "users": 3014,
+              "recall@10": 0.11635044642857142,
+              "ndcg@10": 0.05451064759664302,
+              "recall@20": 0.23409598214285715,
+              "ndcg@20": 0.08394866120810987,
+              "mrr": 0.060966468665562046,
+              "user_macro": {
+                "recall@10": 0.11817707839605648,
+                "ndcg@10": 0.05628278303981875,
+                "recall@20": 0.2353635415679211,
+                "ndcg@20": 0.08556819097465573,
+                "mrr": 0.06257293771530101
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 897427,
+            "positives": 160735,
+            "positive_rate": 0.1791064899986294,
+            "auc": 0.6602786311754264,
+            "logloss": 0.5757842247132372
+          },
+          "rank_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v3_frozen_top20\\artifacts\\ranks\\seed44\\random_test.npz",
+          "prediction_artifact": "D:\\面向曝光偏差的多阶段短视频推荐与离线策略优化\\experiments\\ranking_v3_frozen_top20\\artifacts\\predictions\\seed44\\random_test.npz",
+          "rank_sha256": "22deed516771c5ecc8573bf0364fce4b8f11f7925ca0ecffc5139b59110c1f34",
+          "prediction_sha256": "5da9211357db0f2c525092f502e0c5901cc7a6f5354e1a21a56703b0e63ff26e"
+        }
+      },
+      "mean": {
+        "recall@20": {
+          "mean": 0.005240509741707366,
+          "sample_std": 4.7107834599809274e-05
+        },
+        "ndcg@20": {
+          "mean": 0.001875102113359409,
+          "sample_std": 9.368196391593996e-06
+        }
+      }
+    }
+  }
+}

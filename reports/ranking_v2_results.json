@@ -1,0 +1,3052 @@
+{
+  "status": "VERIFIED",
+  "selected_trial": "choice_residual",
+  "config": {
+    "prepared_directory": "data/processed/kuairand_pure",
+    "cache_directory": ".runtime/retrieval_cache",
+    "output_directory": "experiments/ranking_v2",
+    "device": "cuda",
+    "embedding_dim": 32,
+    "hidden_sizes": [
+      64,
+      32
+    ],
+    "history_length": 50,
+    "dropout": 0.1,
+    "user_features": true,
+    "attention": true,
+    "repeat_feature": true,
+    "neural_rank": true,
+    "residual": true,
+    "teacher_features": true,
+    "pretrained": true,
+    "objective": "choice",
+    "select_metric": "ndcg@20",
+    "learning_rate": 0.001,
+    "repeat_lr_multiplier": 10,
+    "weight_decay": 1e-05,
+    "batch_size": 8192,
+    "query_batch_size": 512,
+    "competitors": 15,
+    "aux_batch_size": 1024,
+    "aux_weight": 0.1,
+    "delta_reg": 0.01,
+    "queries_per_epoch": 64000,
+    "mask_past": false,
+    "eval_batch_size": 8192,
+    "candidate_batch_size": 256,
+    "epochs": 8,
+    "patience": 2,
+    "primary_seed": 42,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "trial_limit": 6,
+    "bootstrap_repeats": 500,
+    "bootstrap_seed": 20261028
+  },
+  "test_is_iterative_reassessment": true,
+  "v2_checkpoint_sha256": "742ea704ed744fdc9bb595f4d376359ea66aba369a6ed6b494b423fdc6930103",
+  "quality_assessment": {
+    "standard_ndcg20_improved": true,
+    "standard_ndcg20_relative_gain": 0.420053914827917,
+    "paired_ci_vs_v2_positive": true,
+    "paired_ci_vs_rule_positive": true,
+    "attention_contribution_ci_positive": false
+  },
+  "three_seed_summary": {
+    "standard/validation": {
+      "ndcg@20": {
+        "values": [
+          0.05807780972459983,
+          0.0582924824849164,
+          0.05886358423632491
+        ],
+        "mean": 0.05841129214861371,
+        "sample_sd": 0.00040613692021299513
+      },
+      "recall@20": {
+        "values": [
+          0.14200407806583162,
+          0.1431874453830469,
+          0.14382464316923974
+        ],
+        "mean": 0.14300538887270609,
+        "sample_sd": 0.0009238358910839914
+      },
+      "mrr@100": {
+        "values": [
+          0.039914368268641184,
+          0.039875799274171495,
+          0.04035796291402997
+        ],
+        "mean": 0.040049376818947546,
+        "sample_sd": 0.0002679382865367737
+      }
+    },
+    "standard/test": {
+      "ndcg@20": {
+        "values": [
+          0.05484046739000875,
+          0.05432463766013621,
+          0.05616043468586557
+        ],
+        "mean": 0.05510851324533684,
+        "sample_sd": 0.000946796765593395
+      },
+      "recall@20": {
+        "values": [
+          0.13448230147156304,
+          0.13437624287418798,
+          0.13787617658756463
+        ],
+        "mean": 0.1355782403111052,
+        "sample_sd": 0.0019907776004668126
+      },
+      "mrr@100": {
+        "values": [
+          0.03772160541944631,
+          0.0371700433883914,
+          0.03844301143641626
+        ],
+        "mean": 0.03777822008141799,
+        "sample_sd": 0.0006383696638983421
+      }
+    },
+    "random/validation": {
+      "ndcg@20": {
+        "values": [
+          0.0016710566939885322,
+          0.0017981098148826193,
+          0.0017235845282831922
+        ],
+        "mean": 0.0017309170123847811,
+        "sample_sd": 6.384315056885052e-05
+      },
+      "recall@20": {
+        "values": [
+          0.004771883234091993,
+          0.005000103736592046,
+          0.004958609099773854
+        ],
+        "mean": 0.004910198690152631,
+        "sample_sd": 0.00012156819181066671
+      },
+      "mrr@100": {
+        "values": [
+          0.0012160420510234679,
+          0.0013042760879227978,
+          0.0012332736492168326
+        ],
+        "mean": 0.0012511972627210328,
+        "sample_sd": 4.6768079473868035e-05
+      }
+    },
+    "random/test": {
+      "ndcg@20": {
+        "values": [
+          0.0018557501353775538,
+          0.0019115729269575568,
+          0.0018309312680777226
+        ],
+        "mean": 0.0018660847768042776,
+        "sample_sd": 4.13022141874634e-05
+      },
+      "recall@20": {
+        "values": [
+          0.0051637788907207514,
+          0.005362864341929263,
+          0.005138893209319688
+        ],
+        "mean": 0.005221845480656567,
+        "sample_sd": 0.00012275815130037036
+      },
+      "mrr@100": {
+        "values": [
+          0.0013545308981713243,
+          0.0013604015932745898,
+          0.0013278209911082844
+        ],
+        "mean": 0.0013475844941847328,
+        "sample_sd": 1.7365578183247086e-05
+      }
+    }
+  },
+  "paired_user_bootstrap": {
+    "standard/test": {
+      "v2": {
+        "recall@20": {
+          "difference": 0.03090282381015511,
+          "ci95_low": 0.029206174751917946,
+          "ci95_high": 0.03285654188777523
+        },
+        "ndcg@20": {
+          "difference": 0.01622188620983268,
+          "ci95_low": 0.015497292194432069,
+          "ci95_high": 0.016982667753142413
+        },
+        "mrr@100": {
+          "difference": 0.01175030964497199,
+          "ci95_low": 0.0110720435140461,
+          "ci95_high": 0.012351836754398812
+        }
+      },
+      "history_rule_penalty4": {
+        "recall@20": {
+          "difference": 0.006270714569799814,
+          "ci95_low": 0.00461950377918245,
+          "ci95_high": 0.007973115622460279
+        },
+        "ndcg@20": {
+          "difference": 0.0033469026015453917,
+          "ci95_low": 0.002612936171389414,
+          "ci95_high": 0.0040478987216954095
+        },
+        "mrr@100": {
+          "difference": 0.002448770360360838,
+          "ci95_low": 0.0017761181165467856,
+          "ci95_high": 0.003051666314650567
+        }
+      },
+      "no_attention": {
+        "recall@20": {
+          "difference": 0.0003579477661407928,
+          "ci95_low": -0.0008221553786597772,
+          "ci95_high": 0.0014896260365377828
+        },
+        "ndcg@20": {
+          "difference": 9.812142368089473e-05,
+          "ci95_low": -0.00034104441914000464,
+          "ci95_high": 0.0005428493978008516
+        },
+        "mrr@100": {
+          "difference": 5.492390162595572e-05,
+          "ci95_low": -0.00036131566090163574,
+          "ci95_high": 0.0004913233598160556
+        }
+      },
+      "linear_only": {
+        "recall@20": {
+          "difference": 0.006257457245127933,
+          "ci95_low": 0.004597684533977776,
+          "ci95_high": 0.007974008674027278
+        },
+        "ndcg@20": {
+          "difference": 0.003342250981965356,
+          "ci95_low": 0.0025984320926081533,
+          "ci95_high": 0.004044133449833698
+        },
+        "mrr@100": {
+          "difference": 0.0024487768379301248,
+          "ci95_low": 0.0017774127340984098,
+          "ci95_high": 0.0030573898067987023
+        }
+      },
+      "no_repeat_feature": {
+        "recall@20": {
+          "difference": 0.020920058332228555,
+          "ci95_low": 0.019611748371975865,
+          "ci95_high": 0.02240845865751165
+        },
+        "ndcg@20": {
+          "difference": 0.010675773097479675,
+          "ci95_low": 0.01010654577042343,
+          "ci95_high": 0.011219434168446465
+        },
+        "mrr@100": {
+          "difference": 0.007593381204151047,
+          "ci95_low": 0.007013693479532232,
+          "ci95_high": 0.008138072459928387
+        }
+      },
+      "old_pure_din": {
+        "recall@20": {
+          "difference": 0.07498342834416015,
+          "ci95_low": 0.07246376415765812,
+          "ci95_high": 0.07778321547242929
+        },
+        "ndcg@20": {
+          "difference": 0.03432251165744874,
+          "ci95_low": 0.0330868742579199,
+          "ci95_high": 0.03570240376375975
+        },
+        "mrr@100": {
+          "difference": 0.02217872082468814,
+          "ci95_low": 0.021142891601347587,
+          "ci95_high": 0.023153222015596463
+        }
+      }
+    },
+    "random/test": {
+      "v2": {
+        "recall@20": {
+          "difference": 0.0013376053753071826,
+          "ci95_low": 0.0010704075403844468,
+          "ci95_high": 0.0016126045122539356
+        },
+        "ndcg@20": {
+          "difference": 0.000575336082165232,
+          "ci95_low": 0.000481428286094961,
+          "ci95_high": 0.0006701353426862628
+        },
+        "mrr@100": {
+          "difference": 0.0003830934899913138,
+          "ci95_low": 0.00030593496215030615,
+          "ci95_high": 0.0004582308370370224
+        }
+      },
+      "history_rule_penalty4": {
+        "recall@20": {
+          "difference": -3.7328522101595795e-05,
+          "ci95_low": -0.000318835608213097,
+          "ci95_high": 0.00026697686056934196
+        },
+        "ndcg@20": {
+          "difference": -2.2183639093733883e-06,
+          "ci95_low": -9.814704706931983e-05,
+          "ci95_high": 8.861604889211476e-05
+        },
+        "mrr@100": {
+          "difference": 1.4179970636405231e-05,
+          "ci95_low": -5.955334726202285e-05,
+          "ci95_high": 8.95462048733752e-05
+        }
+      },
+      "no_attention": {
+        "recall@20": {
+          "difference": -9.954272560425545e-05,
+          "ci95_low": -0.0003151945154196084,
+          "ci95_high": 0.00010934914684985905
+        },
+        "ndcg@20": {
+          "difference": -3.431884635051999e-05,
+          "ci95_low": -9.902102060618711e-05,
+          "ci95_high": 3.7770356526174305e-05
+        },
+        "mrr@100": {
+          "difference": -1.6493518284163477e-05,
+          "ci95_low": -6.6593129797266e-05,
+          "ci95_high": 3.857172680581617e-05
+        }
+      },
+      "linear_only": {
+        "recall@20": {
+          "difference": -3.7328522101595795e-05,
+          "ci95_low": -0.000318835608213097,
+          "ci95_high": 0.00026697686056934196
+        },
+        "ndcg@20": {
+          "difference": -1.8416454610155356e-06,
+          "ci95_low": -9.769085370723546e-05,
+          "ci95_high": 8.881494451463757e-05
+        },
+        "mrr@100": {
+          "difference": 1.4944938117883058e-05,
+          "ci95_low": -5.895563379793037e-05,
+          "ci95_high": 9.033558858857748e-05
+        }
+      },
+      "no_repeat_feature": {
+        "recall@20": {
+          "difference": 0.0010451986188446823,
+          "ci95_low": 0.0008325850191215777,
+          "ci95_high": 0.0012646201327019587
+        },
+        "ndcg@20": {
+          "difference": 0.0004283935577424147,
+          "ci95_low": 0.00035851105450251117,
+          "ci95_high": 0.0005000747942701161
+        },
+        "mrr@100": {
+          "difference": 0.00027708851613689054,
+          "ci95_low": 0.00021402958601602682,
+          "ci95_high": 0.0003442573042454103
+        }
+      },
+      "old_pure_din": {
+        "recall@20": {
+          "difference": 0.0001990854512085109,
+          "ci95_low": -0.00021490765497299676,
+          "ci95_high": 0.0006435680863107839
+        },
+        "ndcg@20": {
+          "difference": 0.00012374378518678768,
+          "ci95_low": -4.096509210770034e-05,
+          "ci95_high": 0.0003024761721621616
+        },
+        "mrr@100": {
+          "difference": 0.00012811149110526364,
+          "ci95_low": -6.620465318166779e-07,
+          "ci95_high": 0.00025021142388265914
+        }
+      }
+    }
+  },
+  "results": {
+    "status": "EVALUATED",
+    "results": {
+      "din_seed42": {
+        "standard/validation": {
+          "ranking": {
+            "queries": 54928,
+            "users": 17964,
+            "recall@10": 0.08751456452082726,
+            "ndcg@10": 0.04440086938945353,
+            "recall@20": 0.14200407806583162,
+            "ndcg@20": 0.05807780972459983,
+            "recall@100": 0.33665889892222545,
+            "ndcg@100": 0.09377813467708467,
+            "user_macro": {
+              "recall@10": 0.0931881649889218,
+              "ndcg@10": 0.047064718813917,
+              "recall@20": 0.14790495820338836,
+              "ndcg@20": 0.0607974414566589,
+              "recall@100": 0.3457448679914443,
+              "ndcg@100": 0.09705362127037473,
+              "mrr@100": 0.04174622508214241
+            },
+            "mrr@100": 0.039914368268641184,
+            "retrieval_miss_queries": 36436,
+            "conditional_hit_metrics": {
+              "queries": 18492,
+              "users": 10721,
+              "recall@10": 0.2599502487562189,
+              "ndcg@10": 0.13188681342331296,
+              "recall@20": 0.4218040233614536,
+              "ndcg@20": 0.1725123260086967,
+              "mrr": 0.11856026499350655,
+              "user_macro": {
+                "recall@10": 0.2576742864658418,
+                "ndcg@10": 0.12998819148851387,
+                "recall@20": 0.41628183851260325,
+                "ndcg@20": 0.16978869612575712,
+                "mrr": 0.11658139620266098
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 122315,
+            "positives": 54928,
+            "positive_rate": 0.44907002411805585,
+            "auc": 0.7308193683658643,
+            "logloss": 0.5992674030541024
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\din_seed42\\standard_validation.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\din_seed42\\standard_validation.npz",
+          "checkpoint_sha256": "35d73ef88c162d6c30ae7bedceabbf765944f43465c0aced4d3ca9275a1a72de",
+          "scores_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\scores\\standard_validation.npy"
+        },
+        "standard/test": {
+          "ranking": {
+            "queries": 75430,
+            "users": 19630,
+            "recall@10": 0.08265941932917938,
+            "ndcg@10": 0.04184139533570524,
+            "recall@20": 0.13448230147156304,
+            "ndcg@20": 0.05484046739000875,
+            "recall@100": 0.32510937292854303,
+            "ndcg@100": 0.08977317270585529,
+            "user_macro": {
+              "recall@10": 0.08746462450547794,
+              "ndcg@10": 0.04405017793081011,
+              "recall@20": 0.14015473123318106,
+              "ndcg@20": 0.05727660158475624,
+              "recall@100": 0.3346494735156576,
+              "ndcg@100": 0.09287978114895915,
+              "mrr@100": 0.03929674234113941
+            },
+            "mrr@100": 0.03772160541944631,
+            "retrieval_miss_queries": 50907,
+            "conditional_hit_metrics": {
+              "queries": 24523,
+              "users": 12286,
+              "recall@10": 0.254251111201729,
+              "ndcg@10": 0.12869944338670825,
+              "recall@20": 0.4136524894996534,
+              "ndcg@20": 0.1686831323748465,
+              "mrr": 0.11602743125999408,
+              "user_macro": {
+                "recall@10": 0.25511922498476264,
+                "ndcg@10": 0.1287296221611399,
+                "recall@20": 0.41383173491725145,
+                "ndcg@20": 0.16854375744267847,
+                "mrr": 0.11565511130637202
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 166618,
+            "positives": 75430,
+            "positive_rate": 0.45271219196005236,
+            "auc": 0.7193744203482377,
+            "logloss": 0.6091204354513009
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\din_seed42\\standard_test.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\din_seed42\\standard_test.npz",
+          "checkpoint_sha256": "35d73ef88c162d6c30ae7bedceabbf765944f43465c0aced4d3ca9275a1a72de",
+          "scores_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\scores\\standard_test.npy"
+        },
+        "random/validation": {
+          "ranking": {
+            "queries": 48199,
+            "users": 10120,
+            "recall@10": 0.0023444469802278056,
+            "ndcg@10": 0.0010588178462452623,
+            "recall@20": 0.004771883234091993,
+            "ndcg@20": 0.0016710566939885322,
+            "recall@100": 0.02186767360318679,
+            "ndcg@100": 0.004714440923815619,
+            "user_macro": {
+              "recall@10": 0.002523721533329929,
+              "ndcg@10": 0.0010815706233198276,
+              "recall@20": 0.005071450083064895,
+              "ndcg@20": 0.0017296030352827708,
+              "recall@100": 0.024130095971590042,
+              "ndcg@100": 0.005117997954989606,
+              "mrr@100": 0.0012520703737008455
+            },
+            "mrr@100": 0.0012160420510234679,
+            "retrieval_miss_queries": 47145,
+            "conditional_hit_metrics": {
+              "queries": 1054,
+              "users": 925,
+              "recall@10": 0.10721062618595825,
+              "ndcg@10": 0.04841931818897096,
+              "recall@20": 0.21821631878557876,
+              "ndcg@20": 0.07641675673012643,
+              "mrr": 0.05560911842246691,
+              "user_macro": {
+                "recall@10": 0.10423423423423422,
+                "ndcg@10": 0.04722015128318308,
+                "recall@20": 0.21639639639639638,
+                "ndcg@20": 0.07551620878961726,
+                "mrr": 0.054917635675821405
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 288622,
+            "positives": 48199,
+            "positive_rate": 0.16699697181781015,
+            "auc": 0.6822532257303909,
+            "logloss": 0.5400719074655785
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\din_seed42\\random_validation.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\din_seed42\\random_validation.npz",
+          "checkpoint_sha256": "35d73ef88c162d6c30ae7bedceabbf765944f43465c0aced4d3ca9275a1a72de",
+          "scores_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\scores\\random_validation.npy"
+        },
+        "random/test": {
+          "ranking": {
+            "queries": 160735,
+            "users": 21299,
+            "recall@10": 0.0026005537064111737,
+            "ndcg@10": 0.001213446904017276,
+            "recall@20": 0.0051637788907207514,
+            "ndcg@20": 0.0018557501353775538,
+            "recall@100": 0.022297570535353223,
+            "ndcg@100": 0.004918719717475093,
+            "user_macro": {
+              "recall@10": 0.0029342896024051788,
+              "ndcg@10": 0.0013720131497892128,
+              "recall@20": 0.005679339438996519,
+              "ndcg@20": 0.0020640425567652206,
+              "recall@100": 0.024949428387570128,
+              "ndcg@100": 0.005481047243139679,
+              "mrr@100": 0.0015120392117076652
+            },
+            "mrr@100": 0.0013545308981713243,
+            "retrieval_miss_queries": 157151,
+            "conditional_hit_metrics": {
+              "queries": 3584,
+              "users": 3014,
+              "recall@10": 0.11662946428571429,
+              "ndcg@10": 0.054420588202348456,
+              "recall@20": 0.23158482142857142,
+              "ndcg@20": 0.08322656194472966,
+              "mrr": 0.06074791403949994,
+              "user_macro": {
+                "recall@10": 0.11823237589660947,
+                "ndcg@10": 0.056183852300353346,
+                "recall@20": 0.2326816127911018,
+                "ndcg@20": 0.08485363133566452,
+                "mrr": 0.06242128705988286
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 897427,
+            "positives": 160735,
+            "positive_rate": 0.1791064899986294,
+            "auc": 0.6602786311754264,
+            "logloss": 0.5757842247132372
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\din_seed42\\random_test.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\din_seed42\\random_test.npz",
+          "checkpoint_sha256": "35d73ef88c162d6c30ae7bedceabbf765944f43465c0aced4d3ca9275a1a72de",
+          "scores_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\scores\\random_test.npy"
+        }
+      },
+      "din_seed43": {
+        "standard/validation": {
+          "ranking": {
+            "queries": 54928,
+            "users": 17964,
+            "recall@10": 0.08769662103116807,
+            "ndcg@10": 0.04438952351031058,
+            "recall@20": 0.1431874453830469,
+            "ndcg@20": 0.0582924824849164,
+            "recall@100": 0.33665889892222545,
+            "ndcg@100": 0.09374841092575273,
+            "user_macro": {
+              "recall@10": 0.09258269616073388,
+              "ndcg@10": 0.04721053139363563,
+              "recall@20": 0.1492835023188954,
+              "ndcg@20": 0.06141650702911557,
+              "recall@100": 0.3457448679914443,
+              "ndcg@100": 0.09741307861155914,
+              "mrr@100": 0.04224560319927643
+            },
+            "mrr@100": 0.039875799274171495,
+            "retrieval_miss_queries": 36436,
+            "conditional_hit_metrics": {
+              "queries": 18492,
+              "users": 10721,
+              "recall@10": 0.26049102314514383,
+              "ndcg@10": 0.13185311201461924,
+              "recall@20": 0.4253190568894657,
+              "ndcg@20": 0.1731499825833597,
+              "mrr": 0.11844570098051545,
+              "user_macro": {
+                "recall@10": 0.25835810437869616,
+                "ndcg@10": 0.13064637415687616,
+                "recall@20": 0.4206955243373598,
+                "ndcg@20": 0.17131379271444225,
+                "mrr": 0.11746860110660853
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 122315,
+            "positives": 54928,
+            "positive_rate": 0.44907002411805585,
+            "auc": 0.7292708532936201,
+            "logloss": 0.6086686585050028
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\din_seed43\\standard_validation.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\din_seed43\\standard_validation.npz",
+          "checkpoint_sha256": "3d248a93c9ba8c162f93f753744e45c07029cdd9f3934944140495ca4ee47e7b"
+        },
+        "standard/test": {
+          "ranking": {
+            "queries": 75430,
+            "users": 19630,
+            "recall@10": 0.080803393875116,
+            "ndcg@10": 0.04084906034819772,
+            "recall@20": 0.13437624287418798,
+            "ndcg@20": 0.05432463766013621,
+            "recall@100": 0.32510937292854303,
+            "ndcg@100": 0.08927283404777543,
+            "user_macro": {
+              "recall@10": 0.08515159880331351,
+              "ndcg@10": 0.043046163811900275,
+              "recall@20": 0.14077747641768615,
+              "ndcg@20": 0.057041149833539403,
+              "recall@100": 0.3346494735156576,
+              "ndcg@100": 0.09249410000105901,
+              "mrr@100": 0.03891502902376983
+            },
+            "mrr@100": 0.0371700433883914,
+            "retrieval_miss_queries": 50907,
+            "conditional_hit_metrics": {
+              "queries": 24523,
+              "users": 12286,
+              "recall@10": 0.24854218488765648,
+              "ndcg@10": 0.12564713216427653,
+              "recall@20": 0.41332626513884924,
+              "ndcg@20": 0.16709649792864145,
+              "mrr": 0.11433088825944472,
+              "user_macro": {
+                "recall@10": 0.24838272970499473,
+                "ndcg@10": 0.12581211319459398,
+                "recall@20": 0.41272157346995414,
+                "ndcg@20": 0.16716860113899498,
+                "mrr": 0.11452750188019271
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 166618,
+            "positives": 75430,
+            "positive_rate": 0.45271219196005236,
+            "auc": 0.7179752758891018,
+            "logloss": 0.6144475346864559
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\din_seed43\\standard_test.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\din_seed43\\standard_test.npz",
+          "checkpoint_sha256": "3d248a93c9ba8c162f93f753744e45c07029cdd9f3934944140495ca4ee47e7b"
+        },
+        "random/validation": {
+          "ranking": {
+            "queries": 48199,
+            "users": 10120,
+            "recall@10": 0.002759393348409718,
+            "ndcg@10": 0.001242903264215592,
+            "recall@20": 0.005000103736592046,
+            "ndcg@20": 0.0017981098148826193,
+            "recall@100": 0.02186767360318679,
+            "ndcg@100": 0.004799489968630493,
+            "user_macro": {
+              "recall@10": 0.0031660099779217926,
+              "ndcg@10": 0.001392382093737068,
+              "recall@20": 0.005018154100786093,
+              "ndcg@20": 0.001854990219570664,
+              "recall@100": 0.024130095971590042,
+              "ndcg@100": 0.005257073683311821,
+              "mrr@100": 0.0014014517503254601
+            },
+            "mrr@100": 0.0013042760879227978,
+            "retrieval_miss_queries": 47145,
+            "conditional_hit_metrics": {
+              "queries": 1054,
+              "users": 925,
+              "recall@10": 0.12618595825426945,
+              "ndcg@10": 0.05683747099803352,
+              "recall@20": 0.2286527514231499,
+              "ndcg@20": 0.08222684532023469,
+              "mrr": 0.059644025770200115,
+              "user_macro": {
+                "recall@10": 0.12756756756756754,
+                "ndcg@10": 0.05709422418984652,
+                "recall@20": 0.2287387387387387,
+                "ndcg@20": 0.08218239497787524,
+                "mrr": 0.05940959725386142
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 288622,
+            "positives": 48199,
+            "positive_rate": 0.16699697181781015,
+            "auc": 0.6746369041963622,
+            "logloss": 0.510597196251327
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\din_seed43\\random_validation.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\din_seed43\\random_validation.npz",
+          "checkpoint_sha256": "3d248a93c9ba8c162f93f753744e45c07029cdd9f3934944140495ca4ee47e7b"
+        },
+        "random/test": {
+          "ranking": {
+            "queries": 160735,
+            "users": 21299,
+            "recall@10": 0.0027809748965688867,
+            "ndcg@10": 0.0012710800771312863,
+            "recall@20": 0.005362864341929263,
+            "ndcg@20": 0.0019115729269575568,
+            "recall@100": 0.022297570535353223,
+            "ndcg@100": 0.004925426625494716,
+            "user_macro": {
+              "recall@10": 0.003128451012444894,
+              "ndcg@10": 0.0014449088456901424,
+              "recall@20": 0.005974812605371264,
+              "ndcg@20": 0.002152268048564746,
+              "recall@100": 0.024949428387570128,
+              "ndcg@100": 0.005489784209128246,
+              "mrr@100": 0.0015278935623311127
+            },
+            "mrr@100": 0.0013604015932745898,
+            "retrieval_miss_queries": 157151,
+            "conditional_hit_metrics": {
+              "queries": 3584,
+              "users": 3014,
+              "recall@10": 0.12472098214285714,
+              "ndcg@10": 0.05700531701944679,
+              "recall@20": 0.24051339285714285,
+              "ndcg@20": 0.08573009888798075,
+              "mrr": 0.06101120259346853,
+              "user_macro": {
+                "recall@10": 0.1266684045881126,
+                "ndcg@10": 0.058348537142081554,
+                "recall@20": 0.23924068632097828,
+                "ndcg@20": 0.0862714466939946,
+                "mrr": 0.06194885630258045
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 897427,
+            "positives": 160735,
+            "positive_rate": 0.1791064899986294,
+            "auc": 0.6559854202448235,
+            "logloss": 0.5422964470703315
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\din_seed43\\random_test.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\din_seed43\\random_test.npz",
+          "checkpoint_sha256": "3d248a93c9ba8c162f93f753744e45c07029cdd9f3934944140495ca4ee47e7b"
+        }
+      },
+      "din_seed44": {
+        "standard/validation": {
+          "ranking": {
+            "queries": 54928,
+            "users": 17964,
+            "recall@10": 0.08811535100495194,
+            "ndcg@10": 0.04487723457194661,
+            "recall@20": 0.14382464316923974,
+            "ndcg@20": 0.05886358423632491,
+            "recall@100": 0.33665889892222545,
+            "ndcg@100": 0.09418623691308994,
+            "user_macro": {
+              "recall@10": 0.09281443616228269,
+              "ndcg@10": 0.04724239865147296,
+              "recall@20": 0.14926946676050432,
+              "ndcg@20": 0.06140989302050235,
+              "recall@100": 0.3457448679914443,
+              "ndcg@100": 0.09735439237168336,
+              "mrr@100": 0.042141477696180506
+            },
+            "mrr@100": 0.04035796291402997,
+            "retrieval_miss_queries": 36436,
+            "conditional_hit_metrics": {
+              "queries": 18492,
+              "users": 10721,
+              "recall@10": 0.2617348042396712,
+              "ndcg@10": 0.13330179215703458,
+              "recall@20": 0.42721176725070303,
+              "ndcg@20": 0.1748463635589906,
+              "mrr": 0.11987790325231655,
+              "user_macro": {
+                "recall@10": 0.258161114733839,
+                "ndcg@10": 0.1308840627098017,
+                "recall@20": 0.42141866222477664,
+                "ndcg@20": 0.1718461391020466,
+                "mrr": 0.11769776182224367
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 122315,
+            "positives": 54928,
+            "positive_rate": 0.44907002411805585,
+            "auc": 0.7324733266504155,
+            "logloss": 0.5987982136357314
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\din_seed44\\standard_validation.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\din_seed44\\standard_validation.npz",
+          "checkpoint_sha256": "8c90267a8beb035f5dd1914b20c6d9e9f4a7c4b75618353b88b16fc841915721"
+        },
+        "standard/test": {
+          "ranking": {
+            "queries": 75430,
+            "users": 19630,
+            "recall@10": 0.0851120243934774,
+            "ndcg@10": 0.04293701501782232,
+            "recall@20": 0.13787617658756463,
+            "ndcg@20": 0.05616043468586557,
+            "recall@100": 0.32510937292854303,
+            "ndcg@100": 0.0905375380802654,
+            "user_macro": {
+              "recall@10": 0.08972951703387227,
+              "ndcg@10": 0.04529335779449057,
+              "recall@20": 0.14497895958016,
+              "ndcg@20": 0.05913940523058079,
+              "recall@100": 0.3346494735156576,
+              "ndcg@100": 0.093892555067745,
+              "mrr@100": 0.04031746619649647
+            },
+            "mrr@100": 0.03844301143641626,
+            "retrieval_miss_queries": 50907,
+            "conditional_hit_metrics": {
+              "queries": 24523,
+              "users": 12286,
+              "recall@10": 0.2617950495453248,
+              "ndcg@10": 0.13206944675587562,
+              "recall@20": 0.424091669045386,
+              "ndcg@20": 0.1727432038639171,
+              "mrr": 0.11824639532882922,
+              "user_macro": {
+                "recall@10": 0.26344153848980445,
+                "ndcg@10": 0.13242346212491937,
+                "recall@20": 0.4252128696112327,
+                "ndcg@20": 0.17294969034938096,
+                "mrr": 0.11807974816516921
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 166618,
+            "positives": 75430,
+            "positive_rate": 0.45271219196005236,
+            "auc": 0.7232095628873905,
+            "logloss": 0.606139345528378
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\din_seed44\\standard_test.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\din_seed44\\standard_test.npz",
+          "checkpoint_sha256": "8c90267a8beb035f5dd1914b20c6d9e9f4a7c4b75618353b88b16fc841915721"
+        },
+        "random/validation": {
+          "ranking": {
+            "queries": 48199,
+            "users": 10120,
+            "recall@10": 0.0026141621195460486,
+            "ndcg@10": 0.0011425397879075308,
+            "recall@20": 0.004958609099773854,
+            "ndcg@20": 0.0017235845282831922,
+            "recall@100": 0.02186767360318679,
+            "ndcg@100": 0.004732911464601228,
+            "user_macro": {
+              "recall@10": 0.002803027028960825,
+              "ndcg@10": 0.0012227015569766242,
+              "recall@20": 0.00545690091581551,
+              "ndcg@20": 0.0018874365191900717,
+              "recall@100": 0.024130095971590042,
+              "ndcg@100": 0.005194043716851146,
+              "mrr@100": 0.0013376334952976373
+            },
+            "mrr@100": 0.0012332736492168326,
+            "retrieval_miss_queries": 47145,
+            "conditional_hit_metrics": {
+              "queries": 1054,
+              "users": 925,
+              "recall@10": 0.11954459203036052,
+              "ndcg@10": 0.05224788921950198,
+              "recall@20": 0.22675521821631878,
+              "ndcg@20": 0.07881883366102617,
+              "mrr": 0.05639711254136823,
+              "user_macro": {
+                "recall@10": 0.11945945945945946,
+                "ndcg@10": 0.05208646017041964,
+                "recall@20": 0.2272072072072072,
+                "ndcg@20": 0.07883438182746345,
+                "mrr": 0.05617126060270758
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 288622,
+            "positives": 48199,
+            "positive_rate": 0.16699697181781015,
+            "auc": 0.6799609927873639,
+            "logloss": 0.5059375651675168
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\din_seed44\\random_validation.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\din_seed44\\random_validation.npz",
+          "checkpoint_sha256": "8c90267a8beb035f5dd1914b20c6d9e9f4a7c4b75618353b88b16fc841915721"
+        },
+        "random/test": {
+          "ranking": {
+            "queries": 160735,
+            "users": 21299,
+            "recall@10": 0.0026378822285127693,
+            "ndcg@10": 0.0012048406077294028,
+            "recall@20": 0.005138893209319688,
+            "ndcg@20": 0.0018309312680777226,
+            "recall@100": 0.022297570535353223,
+            "ndcg@100": 0.0048964428176686585,
+            "user_macro": {
+              "recall@10": 0.003028948129287237,
+              "ndcg@10": 0.0013570706720116765,
+              "recall@20": 0.005856795517036223,
+              "ndcg@20": 0.0020650406085560243,
+              "recall@100": 0.024949428387570128,
+              "ndcg@100": 0.0054494911465494894,
+              "mrr@100": 0.0014611922080636863
+            },
+            "mrr@100": 0.0013278209911082844,
+            "retrieval_miss_queries": 157151,
+            "conditional_hit_metrics": {
+              "queries": 3584,
+              "users": 3014,
+              "recall@10": 0.11830357142857142,
+              "ndcg@10": 0.05403461358353391,
+              "recall@20": 0.23046875,
+              "ndcg@20": 0.08211348699064533,
+              "mrr": 0.05955002985652626,
+              "user_macro": {
+                "recall@10": 0.11955714601700003,
+                "ndcg@10": 0.055569965368359286,
+                "recall@20": 0.23302208740164945,
+                "ndcg@20": 0.08393436515101468,
+                "mrr": 0.061094915946091295
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 897427,
+            "positives": 160735,
+            "positive_rate": 0.1791064899986294,
+            "auc": 0.6620219502239617,
+            "logloss": 0.53539518217749
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\din_seed44\\random_test.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\din_seed44\\random_test.npz",
+          "checkpoint_sha256": "8c90267a8beb035f5dd1914b20c6d9e9f4a7c4b75618353b88b16fc841915721"
+        }
+      },
+      "rich_bce": {
+        "standard/validation": {
+          "ranking": {
+            "queries": 54928,
+            "users": 17964,
+            "recall@10": 0.005862219632974075,
+            "ndcg@10": 0.0022389164743066145,
+            "recall@20": 0.02637998834838334,
+            "ndcg@20": 0.0072678969319459,
+            "recall@100": 0.33665889892222545,
+            "ndcg@100": 0.06112400648551285,
+            "user_macro": {
+              "recall@10": 0.006661742722739396,
+              "ndcg@10": 0.002431622105031525,
+              "recall@20": 0.030119494165105128,
+              "ndcg@20": 0.008178533311799045,
+              "recall@100": 0.3457448679914443,
+              "ndcg@100": 0.06285774763867588,
+              "mrr@100": 0.008891438536321634
+            },
+            "mrr@100": 0.008621524587387942,
+            "retrieval_miss_queries": 36436,
+            "conditional_hit_metrics": {
+              "queries": 18492,
+              "users": 10721,
+              "recall@10": 0.017412935323383085,
+              "ndcg@10": 0.0066504003948038995,
+              "recall@20": 0.07835820895522388,
+              "ndcg@20": 0.021588310765624293,
+              "mrr": 0.025609079739132862,
+              "user_macro": {
+                "recall@10": 0.018185048480729854,
+                "ndcg@10": 0.006818693068059994,
+                "recall@20": 0.0810371644683907,
+                "ndcg@20": 0.0222350194267628,
+                "mrr": 0.025585340043624474
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 122315,
+            "positives": 54928,
+            "positive_rate": 0.44907002411805585,
+            "auc": 0.7646583282762291,
+            "logloss": 0.5722610056031597
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\rich_bce\\standard_validation.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\rich_bce\\standard_validation.npz",
+          "checkpoint_sha256": "5b60dbe60b83400c27672fd4b1cacde0a3163eff2e0e12d38119338b790ecd6b"
+        },
+        "standard/test": {
+          "ranking": {
+            "queries": 75430,
+            "users": 19630,
+            "recall@10": 0.0049847540766273365,
+            "ndcg@10": 0.001880012910528485,
+            "recall@20": 0.024154845552167573,
+            "ndcg@20": 0.006592028306415394,
+            "recall@100": 0.32510937292854303,
+            "ndcg@100": 0.05878828788096479,
+            "user_macro": {
+              "recall@10": 0.006100529063861008,
+              "ndcg@10": 0.002296463491786098,
+              "recall@20": 0.02680836829903824,
+              "ndcg@20": 0.007401741601585102,
+              "recall@100": 0.3346494735156576,
+              "ndcg@100": 0.06069412992684556,
+              "mrr@100": 0.008554012790045988
+            },
+            "mrr@100": 0.008135797936017576,
+            "retrieval_miss_queries": 50907,
+            "conditional_hit_metrics": {
+              "queries": 24523,
+              "users": 12286,
+              "recall@10": 0.015332544957794724,
+              "ndcg@10": 0.005782709042171171,
+              "recall@20": 0.07429759817314358,
+              "ndcg@20": 0.020276340380577955,
+              "mrr": 0.025024802769392233,
+              "user_macro": {
+                "recall@10": 0.016483933350906456,
+                "ndcg@10": 0.006285704007640533,
+                "recall@20": 0.07765902923273894,
+                "ndcg@20": 0.02134402287269668,
+                "mrr": 0.025346560609089613
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 166618,
+            "positives": 75430,
+            "positive_rate": 0.45271219196005236,
+            "auc": 0.7502273919478754,
+            "logloss": 0.5880801948439175
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\rich_bce\\standard_test.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\rich_bce\\standard_test.npz",
+          "checkpoint_sha256": "5b60dbe60b83400c27672fd4b1cacde0a3163eff2e0e12d38119338b790ecd6b"
+        },
+        "random/validation": {
+          "ranking": {
+            "queries": 48199,
+            "users": 10120,
+            "recall@10": 0.0006224195522728687,
+            "ndcg@10": 0.00021834461898936905,
+            "recall@20": 0.0024481835722732835,
+            "ndcg@20": 0.0006711302937196447,
+            "recall@100": 0.02186767360318679,
+            "ndcg@100": 0.004032147058770421,
+            "user_macro": {
+              "recall@10": 0.0012373345253780038,
+              "ndcg@10": 0.00046942822577230876,
+              "recall@20": 0.003495012908129611,
+              "ndcg@20": 0.0010363048245739586,
+              "recall@100": 0.024130095971590042,
+              "ndcg@100": 0.004624979248174047,
+              "mrr@100": 0.0008193427775163597
+            },
+            "mrr@100": 0.0006030206064352976,
+            "retrieval_miss_queries": 47145,
+            "conditional_hit_metrics": {
+              "queries": 1054,
+              "users": 925,
+              "recall@10": 0.028462998102466792,
+              "ndcg@10": 0.009984812419989183,
+              "recall@20": 0.11195445920303605,
+              "ndcg@20": 0.030690520898475477,
+              "mrr": 0.027575892039444883,
+              "user_macro": {
+                "recall@10": 0.03027027027027027,
+                "ndcg@10": 0.010677791544752555,
+                "recall@20": 0.11846846846846847,
+                "ndcg@20": 0.03260359325122665,
+                "mrr": 0.028167436743378082
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 288622,
+            "positives": 48199,
+            "positive_rate": 0.16699697181781015,
+            "auc": 0.696369411509295,
+            "logloss": 0.6954323650059496
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\rich_bce\\random_validation.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\rich_bce\\random_validation.npz",
+          "checkpoint_sha256": "5b60dbe60b83400c27672fd4b1cacde0a3163eff2e0e12d38119338b790ecd6b"
+        },
+        "random/test": {
+          "ranking": {
+            "queries": 160735,
+            "users": 21299,
+            "recall@10": 0.0004852707873207453,
+            "ndcg@10": 0.0001686862867348364,
+            "recall@20": 0.002227268485395216,
+            "ndcg@20": 0.0005946204251234899,
+            "recall@100": 0.022297570535353223,
+            "ndcg@100": 0.004108662521470019,
+            "user_macro": {
+              "recall@10": 0.0008410615586357589,
+              "ndcg@10": 0.0002940000903756598,
+              "recall@20": 0.003202882408639631,
+              "ndcg@20": 0.0008739167596964782,
+              "recall@100": 0.024949428387570128,
+              "ndcg@100": 0.004669251868217806,
+              "mrr@100": 0.0007267213694867659
+            },
+            "mrr@100": 0.0005984681222025156,
+            "retrieval_miss_queries": 157151,
+            "conditional_hit_metrics": {
+              "queries": 3584,
+              "users": 3014,
+              "recall@10": 0.021763392857142856,
+              "ndcg@10": 0.007565231668059132,
+              "recall@20": 0.09988839285714286,
+              "ndcg@20": 0.02666749833488397,
+              "mrr": 0.026840059604414435,
+              "user_macro": {
+                "recall@10": 0.022312541473125416,
+                "ndcg@10": 0.007726173073062938,
+                "recall@20": 0.10215660252156601,
+                "ndcg@20": 0.02731143626477304,
+                "mrr": 0.02695098876352323
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 897427,
+            "positives": 160735,
+            "positive_rate": 0.1791064899986294,
+            "auc": 0.6762349883251403,
+            "logloss": 0.7283840685389762
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\rich_bce\\random_test.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\rich_bce\\random_test.npz",
+          "checkpoint_sha256": "5b60dbe60b83400c27672fd4b1cacde0a3163eff2e0e12d38119338b790ecd6b"
+        }
+      },
+      "direct_choice": {
+        "standard/validation": {
+          "ranking": {
+            "queries": 54928,
+            "users": 17964,
+            "recall@10": 0.07123871249635887,
+            "ndcg@10": 0.035413579132871256,
+            "recall@20": 0.1238530439848529,
+            "ndcg@20": 0.04859632513523467,
+            "recall@100": 0.33665889892222545,
+            "ndcg@100": 0.08727494411382047,
+            "user_macro": {
+              "recall@10": 0.07336482003189838,
+              "ndcg@10": 0.03667210113319127,
+              "recall@20": 0.1266189532902057,
+              "ndcg@20": 0.05002912461121395,
+              "recall@100": 0.3457448679914443,
+              "ndcg@100": 0.0897163154249624,
+              "mrr@100": 0.03440361143555208
+            },
+            "mrr@100": 0.03327319387895916,
+            "retrieval_miss_queries": 36436,
+            "conditional_hit_metrics": {
+              "queries": 18492,
+              "users": 10721,
+              "recall@10": 0.21160501838632922,
+              "ndcg@10": 0.10519127593609952,
+              "recall@20": 0.367888816785637,
+              "ndcg@20": 0.1443488506937146,
+              "mrr": 0.09883354928528384,
+              "user_macro": {
+                "recall@10": 0.20793149042173772,
+                "ndcg@10": 0.10323509660244096,
+                "recall@20": 0.3622542011415278,
+                "ndcg@20": 0.14189706381535178,
+                "mrr": 0.09723438665341368
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 122315,
+            "positives": 54928,
+            "positive_rate": 0.44907002411805585,
+            "auc": 0.6609934477011716,
+            "logloss": 0.6587457283724877
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\direct_choice\\standard_validation.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\direct_choice\\standard_validation.npz",
+          "checkpoint_sha256": "9fe4a88f6d5dc35f095247aa9ba197a7b88ae30711b9a9045ed72b4273dccfe0"
+        },
+        "standard/test": {
+          "ranking": {
+            "queries": 75430,
+            "users": 19630,
+            "recall@10": 0.06614079278801538,
+            "ndcg@10": 0.032699920883476376,
+            "recall@20": 0.11466260108710062,
+            "ndcg@20": 0.04486222789363562,
+            "recall@100": 0.32510937292854303,
+            "ndcg@100": 0.0832111558727798,
+            "user_macro": {
+              "recall@10": 0.06951711913422613,
+              "ndcg@10": 0.03468684001223919,
+              "recall@20": 0.11872898893327552,
+              "ndcg@20": 0.047019868828003804,
+              "recall@100": 0.3346494735156576,
+              "ndcg@100": 0.08624381727899529,
+              "mrr@100": 0.032655208865859785
+            },
+            "mrr@100": 0.0309743434523865,
+            "retrieval_miss_queries": 50907,
+            "conditional_hit_metrics": {
+              "queries": 24523,
+              "users": 12286,
+              "recall@10": 0.20344166700648372,
+              "ndcg@10": 0.10058129234761744,
+              "recall@20": 0.35268931207437915,
+              "ndcg@20": 0.1379911858262421,
+              "mrr": 0.09527360953445801,
+              "user_macro": {
+                "recall@10": 0.20489423484747393,
+                "ndcg@10": 0.1014781597078873,
+                "recall@20": 0.3531908225547131,
+                "ndcg@20": 0.13866043170424466,
+                "mrr": 0.09579509100131238
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 166618,
+            "positives": 75430,
+            "positive_rate": 0.45271219196005236,
+            "auc": 0.6536535063018466,
+            "logloss": 0.6637802602940173
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\direct_choice\\standard_test.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\direct_choice\\standard_test.npz",
+          "checkpoint_sha256": "9fe4a88f6d5dc35f095247aa9ba197a7b88ae30711b9a9045ed72b4273dccfe0"
+        },
+        "random/validation": {
+          "ranking": {
+            "queries": 48199,
+            "users": 10120,
+            "recall@10": 0.00232369966181871,
+            "ndcg@10": 0.0010474509923091887,
+            "recall@20": 0.005062345691819332,
+            "ndcg@20": 0.0017332670268678072,
+            "recall@100": 0.02186767360318679,
+            "ndcg@100": 0.0047143374983322295,
+            "user_macro": {
+              "recall@10": 0.002744142678176722,
+              "ndcg@10": 0.0011503601849174089,
+              "recall@20": 0.005447289268035707,
+              "ndcg@20": 0.0018294732353849744,
+              "recall@100": 0.024130095971590042,
+              "ndcg@100": 0.005164969748024124,
+              "mrr@100": 0.001277496919860376
+            },
+            "mrr@100": 0.0012168927276162368,
+            "retrieval_miss_queries": 47145,
+            "conditional_hit_metrics": {
+              "queries": 1054,
+              "users": 925,
+              "recall@10": 0.1062618595825427,
+              "ndcg@10": 0.04789951648796071,
+              "recall@20": 0.2314990512333966,
+              "ndcg@20": 0.07926161046299947,
+              "mrr": 0.05564801952407495,
+              "user_macro": {
+                "recall@10": 0.10693693693693693,
+                "ndcg@10": 0.048335657281052935,
+                "recall@20": 0.23018018018018016,
+                "ndcg@20": 0.07923269221435124,
+                "mrr": 0.05585696573447313
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 288622,
+            "positives": 48199,
+            "positive_rate": 0.16699697181781015,
+            "auc": 0.6051512525891305,
+            "logloss": 0.5853506043663502
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\direct_choice\\random_validation.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\direct_choice\\random_validation.npz",
+          "checkpoint_sha256": "9fe4a88f6d5dc35f095247aa9ba197a7b88ae30711b9a9045ed72b4273dccfe0"
+        },
+        "random/test": {
+          "ranking": {
+            "queries": 160735,
+            "users": 21299,
+            "recall@10": 0.0026067751267614394,
+            "ndcg@10": 0.0012304693178099505,
+            "recall@20": 0.005288207297726071,
+            "ndcg@20": 0.0018995972434040834,
+            "recall@100": 0.022297570535353223,
+            "ndcg@100": 0.004928486335567847,
+            "user_macro": {
+              "recall@10": 0.002745859087399656,
+              "ndcg@10": 0.0014227281747252118,
+              "recall@20": 0.0056414295323738515,
+              "ndcg@20": 0.00214678213187509,
+              "recall@100": 0.024949428387570128,
+              "ndcg@100": 0.005556476236971122,
+              "mrr@100": 0.0016284405381812998
+            },
+            "mrr@100": 0.001372910215552473,
+            "retrieval_miss_queries": 157151,
+            "conditional_hit_metrics": {
+              "queries": 3584,
+              "users": 3014,
+              "recall@10": 0.11690848214285714,
+              "ndcg@10": 0.055184008314225,
+              "recall@20": 0.23716517857142858,
+              "ndcg@20": 0.0851930142071862,
+              "mrr": 0.0615721884756771,
+              "user_macro": {
+                "recall@10": 0.1166121591304073,
+                "ndcg@10": 0.05585729629864256,
+                "recall@20": 0.23938682971529687,
+                "ndcg@20": 0.08645660215857094,
+                "mrr": 0.06257296508535339
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 897427,
+            "positives": 160735,
+            "positive_rate": 0.1791064899986294,
+            "auc": 0.5892115808821032,
+            "logloss": 0.6163469587698817
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\direct_choice\\random_test.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\direct_choice\\random_test.npz",
+          "checkpoint_sha256": "9fe4a88f6d5dc35f095247aa9ba197a7b88ae30711b9a9045ed72b4273dccfe0"
+        }
+      },
+      "no_attention": {
+        "standard/validation": {
+          "ranking": {
+            "queries": 54928,
+            "users": 17964,
+            "recall@10": 0.08649504806291873,
+            "ndcg@10": 0.044081948971801475,
+            "recall@20": 0.13967375473346927,
+            "ndcg@20": 0.05744201285370389,
+            "recall@100": 0.33665889892222545,
+            "ndcg@100": 0.0934834715979041,
+            "user_macro": {
+              "recall@10": 0.09214815345627851,
+              "ndcg@10": 0.046701753568863906,
+              "recall@20": 0.1459876724802548,
+              "ndcg@20": 0.06025200573913753,
+              "recall@100": 0.3457448679914443,
+              "ndcg@100": 0.09678561382775114,
+              "mrr@100": 0.04158086750902227
+            },
+            "mrr@100": 0.039751058592410626,
+            "retrieval_miss_queries": 36436,
+            "conditional_hit_metrics": {
+              "queries": 18492,
+              "users": 10721,
+              "recall@10": 0.25692191217823923,
+              "ndcg@10": 0.13093950319722644,
+              "recall@20": 0.4148821111832144,
+              "ndcg@20": 0.17062377687801467,
+              "mrr": 0.1180751755550471,
+              "user_macro": {
+                "recall@10": 0.2547942114889475,
+                "ndcg@10": 0.12891517828152654,
+                "recall@20": 0.4093424460692933,
+                "ndcg@20": 0.16776145830660652,
+                "mrr": 0.11591472039283507
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 122315,
+            "positives": 54928,
+            "positive_rate": 0.44907002411805585,
+            "auc": 0.7321390971899485,
+            "logloss": 0.598137812212969
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\no_attention\\standard_validation.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\no_attention\\standard_validation.npz",
+          "checkpoint_sha256": "b8aff6ee21617e80d2e20bb08cb8dd2da94681ac9c96dbb0773d6868ddaa6313"
+        },
+        "standard/test": {
+          "ranking": {
+            "queries": 75430,
+            "users": 19630,
+            "recall@10": 0.08285827919925759,
+            "ndcg@10": 0.04188838678944377,
+            "recall@20": 0.13412435370542225,
+            "ndcg@20": 0.05474234596632787,
+            "recall@100": 0.32510937292854303,
+            "ndcg@100": 0.0896396912852823,
+            "user_macro": {
+              "recall@10": 0.08831084599265694,
+              "ndcg@10": 0.044564277959118714,
+              "recall@20": 0.14135049390134466,
+              "ndcg@20": 0.05786504590166192,
+              "recall@100": 0.3346494735156576,
+              "ndcg@100": 0.0931161153793933,
+              "mrr@100": 0.03966762886735862
+            },
+            "mrr@100": 0.03766668151782035,
+            "retrieval_miss_queries": 50907,
+            "conditional_hit_metrics": {
+              "queries": 24523,
+              "users": 12286,
+              "recall@10": 0.25486278187823674,
+              "ndcg@10": 0.12884398383263646,
+              "recall@20": 0.4125514822819394,
+              "ndcg@20": 0.1683813218709012,
+              "mrr": 0.11585849149325894,
+              "user_macro": {
+                "recall@10": 0.2577971622499387,
+                "ndcg@10": 0.12981218927780824,
+                "recall@20": 0.4151614610486882,
+                "ndcg@20": 0.16927344170239736,
+                "mrr": 0.1160522928141849
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 166618,
+            "positives": 75430,
+            "positive_rate": 0.45271219196005236,
+            "auc": 0.7206108487676315,
+            "logloss": 0.6079561511020063
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\no_attention\\standard_test.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\no_attention\\standard_test.npz",
+          "checkpoint_sha256": "b8aff6ee21617e80d2e20bb08cb8dd2da94681ac9c96dbb0773d6868ddaa6313"
+        },
+        "random/validation": {
+          "ranking": {
+            "queries": 48199,
+            "users": 10120,
+            "recall@10": 0.0024689308906823792,
+            "ndcg@10": 0.001131361116638596,
+            "recall@20": 0.004834125189319281,
+            "ndcg@20": 0.0017181836748342639,
+            "recall@100": 0.02186767360318679,
+            "ndcg@100": 0.004740581160439933,
+            "user_macro": {
+              "recall@10": 0.0029212139875028666,
+              "ndcg@10": 0.001283900489276132,
+              "recall@20": 0.005497644358971566,
+              "ndcg@20": 0.0019235131225435467,
+              "recall@100": 0.024130095971590042,
+              "ndcg@100": 0.0052091945720247855,
+              "mrr@100": 0.0013644826778608464
+            },
+            "mrr@100": 0.001254067924126602,
+            "retrieval_miss_queries": 47145,
+            "conditional_hit_metrics": {
+              "queries": 1054,
+              "users": 925,
+              "recall@10": 0.11290322580645161,
+              "ndcg@10": 0.05173669303687256,
+              "recall@20": 0.22106261859582543,
+              "ndcg@20": 0.07857185478494941,
+              "mrr": 0.05734802644684827,
+              "user_macro": {
+                "recall@10": 0.11567567567567567,
+                "ndcg@10": 0.05231453534279636,
+                "recall@20": 0.2209009009009009,
+                "ndcg@20": 0.07838211143515642,
+                "mrr": 0.05697983150810836
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 288622,
+            "positives": 48199,
+            "positive_rate": 0.16699697181781015,
+            "auc": 0.6802957561974227,
+            "logloss": 0.540418094868397
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\no_attention\\random_validation.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\no_attention\\random_validation.npz",
+          "checkpoint_sha256": "b8aff6ee21617e80d2e20bb08cb8dd2da94681ac9c96dbb0773d6868ddaa6313"
+        },
+        "random/test": {
+          "ranking": {
+            "queries": 160735,
+            "users": 21299,
+            "recall@10": 0.002525896662207982,
+            "ndcg@10": 0.0012041594458386314,
+            "recall@20": 0.005263321616325007,
+            "ndcg@20": 0.0018900689817280742,
+            "recall@100": 0.022297570535353223,
+            "ndcg@100": 0.004930849259500574,
+            "user_macro": {
+              "recall@10": 0.002710108403708044,
+              "ndcg@10": 0.0012650422211144142,
+              "recall@20": 0.005697440915331612,
+              "ndcg@20": 0.0020160649194606688,
+              "recall@100": 0.024949428387570128,
+              "ndcg@100": 0.005424726784633102,
+              "mrr@100": 0.0014494525723285343
+            },
+            "mrr@100": 0.0013710244164554875,
+            "retrieval_miss_queries": 157151,
+            "conditional_hit_metrics": {
+              "queries": 3584,
+              "users": 3014,
+              "recall@10": 0.11328125,
+              "ndcg@10": 0.054004064879149674,
+              "recall@20": 0.23604910714285715,
+              "ndcg@20": 0.08476569134432532,
+              "mrr": 0.06148761427984733,
+              "user_macro": {
+                "recall@10": 0.11377855720921415,
+                "ndcg@10": 0.055363574398289414,
+                "recall@20": 0.23775318355610328,
+                "ndcg@20": 0.08639388599463274,
+                "mrr": 0.06307063238349701
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 897427,
+            "positives": 160735,
+            "positive_rate": 0.1791064899986294,
+            "auc": 0.6582438453707892,
+            "logloss": 0.5771474230802623
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\no_attention\\random_test.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\no_attention\\random_test.npz",
+          "checkpoint_sha256": "b8aff6ee21617e80d2e20bb08cb8dd2da94681ac9c96dbb0773d6868ddaa6313"
+        }
+      },
+      "linear_only": {
+        "standard/validation": {
+          "ranking": {
+            "queries": 54928,
+            "users": 17964,
+            "recall@10": 0.0823077483250801,
+            "ndcg@10": 0.04160225643264756,
+            "recall@20": 0.1356138945528692,
+            "ndcg@20": 0.054953585108377334,
+            "recall@100": 0.33665889892222545,
+            "ndcg@100": 0.09151778582505343,
+            "user_macro": {
+              "recall@10": 0.08706731322062873,
+              "ndcg@10": 0.04414359196260074,
+              "recall@20": 0.14248499267722606,
+              "ndcg@20": 0.05802391239180323,
+              "recall@100": 0.3457448679914443,
+              "ndcg@100": 0.09496673323580054,
+              "mrr@100": 0.039817818323046664
+            },
+            "mrr@100": 0.03775210978525103,
+            "retrieval_miss_queries": 36436,
+            "conditional_hit_metrics": {
+              "queries": 18492,
+              "users": 10721,
+              "recall@10": 0.2444841012329656,
+              "ndcg@10": 0.12357390987088825,
+              "recall@20": 0.40282284231018817,
+              "ndcg@20": 0.1632322367960713,
+              "mrr": 0.11213756685508702,
+              "user_macro": {
+                "recall@10": 0.24046769622584271,
+                "ndcg@10": 0.12149162633583944,
+                "recall@20": 0.4004015565529664,
+                "ndcg@20": 0.16154573209749531,
+                "mrr": 0.11072450570916924
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 122315,
+            "positives": 54928,
+            "positive_rate": 0.44907002411805585,
+            "auc": 0.7519244513512131,
+            "logloss": 0.5877214569747162
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\linear_only\\standard_validation.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\linear_only\\standard_validation.npz",
+          "checkpoint_sha256": "4e4f63ddb3bef809aa8cbfef042e22927d55b892745ed35eaea9c20def2f5b32"
+        },
+        "standard/test": {
+          "ranking": {
+            "queries": 75430,
+            "users": 19630,
+            "recall@10": 0.07718414423969243,
+            "ndcg@10": 0.03867533999296836,
+            "recall@20": 0.1282248442264351,
+            "ndcg@20": 0.05149821640804339,
+            "recall@100": 0.32510937292854303,
+            "ndcg@100": 0.08733696304647676,
+            "user_macro": {
+              "recall@10": 0.0811702855712172,
+              "ndcg@10": 0.040889453520841966,
+              "recall@20": 0.13387446675917208,
+              "ndcg@20": 0.054132500846654226,
+              "recall@100": 0.3346494735156576,
+              "ndcg@100": 0.09064750764330806,
+              "mrr@100": 0.03714009000230565
+            },
+            "mrr@100": 0.03527282858151619,
+            "retrieval_miss_queries": 50907,
+            "conditional_hit_metrics": {
+              "queries": 24523,
+              "users": 12286,
+              "recall@10": 0.2374097785752151,
+              "ndcg@10": 0.11896101193449428,
+              "recall@20": 0.39440525221220896,
+              "ndcg@20": 0.15840274288050865,
+              "mrr": 0.10849526811172229,
+              "user_macro": {
+                "recall@10": 0.23946846156677226,
+                "ndcg@10": 0.12020041412631038,
+                "recall@20": 0.3962129296798587,
+                "ndcg@20": 0.1595647910435925,
+                "mrr": 0.10935548847495413
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 166618,
+            "positives": 75430,
+            "positive_rate": 0.45271219196005236,
+            "auc": 0.7403997033521678,
+            "logloss": 0.5981989759767377
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\linear_only\\standard_test.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\linear_only\\standard_test.npz",
+          "checkpoint_sha256": "4e4f63ddb3bef809aa8cbfef042e22927d55b892745ed35eaea9c20def2f5b32"
+        },
+        "random/validation": {
+          "ranking": {
+            "queries": 48199,
+            "users": 10120,
+            "recall@10": 0.0024066889354550924,
+            "ndcg@10": 0.0010907969017225488,
+            "recall@20": 0.0049378617813647585,
+            "ndcg@20": 0.0017218430495360934,
+            "recall@100": 0.02186767360318679,
+            "ndcg@100": 0.004732636521454158,
+            "user_macro": {
+              "recall@10": 0.002728709156668728,
+              "ndcg@10": 0.001284307548104074,
+              "recall@20": 0.005366430886488805,
+              "ndcg@20": 0.0019495898733721153,
+              "recall@100": 0.024130095971590042,
+              "ndcg@100": 0.005263512793015297,
+              "mrr@100": 0.0014376070301208217
+            },
+            "mrr@100": 0.0012387005304529703,
+            "retrieval_miss_queries": 47145,
+            "conditional_hit_metrics": {
+              "queries": 1054,
+              "users": 925,
+              "recall@10": 0.11005692599620494,
+              "ndcg@10": 0.04988170765287014,
+              "recall@20": 0.22580645161290322,
+              "ndcg@20": 0.07873919653186924,
+              "mrr": 0.05664528165778246,
+              "user_macro": {
+                "recall@10": 0.11351351351351352,
+                "ndcg@10": 0.05130211362592356,
+                "recall@20": 0.22585585585585585,
+                "ndcg@20": 0.07935336068194614,
+                "mrr": 0.05729410799275542
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 288622,
+            "positives": 48199,
+            "positive_rate": 0.16699697181781015,
+            "auc": 0.6936986595023931,
+            "logloss": 0.523824904863382
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\linear_only\\random_validation.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\linear_only\\random_validation.npz",
+          "checkpoint_sha256": "4e4f63ddb3bef809aa8cbfef042e22927d55b892745ed35eaea9c20def2f5b32"
+        },
+        "random/test": {
+          "ranking": {
+            "queries": 160735,
+            "users": 21299,
+            "recall@10": 0.0026316608081625036,
+            "ndcg@10": 0.001215540552363955,
+            "recall@20": 0.0052011074128223474,
+            "ndcg@20": 0.0018575917808385698,
+            "recall@100": 0.022297570535353223,
+            "ndcg@100": 0.0049025012957971265,
+            "user_macro": {
+              "recall@10": 0.0029489642879112054,
+              "ndcg@10": 0.0013369116575224172,
+              "recall@20": 0.005842541879539348,
+              "ndcg@20": 0.0020589309922495794,
+              "recall@100": 0.024949428387570128,
+              "ndcg@100": 0.005433250642908325,
+              "mrr@100": 0.0014561278848392086
+            },
+            "mrr@100": 0.001339585960053441,
+            "retrieval_miss_queries": 157151,
+            "conditional_hit_metrics": {
+              "queries": 3584,
+              "users": 3014,
+              "recall@10": 0.11802455357142858,
+              "ndcg@10": 0.05451448400787397,
+              "recall@20": 0.23325892857142858,
+              "ndcg@20": 0.08330915594115164,
+              "mrr": 0.06007766442220699,
+              "user_macro": {
+                "recall@10": 0.12051695263374096,
+                "ndcg@10": 0.05588066393333024,
+                "recall@20": 0.23517079028027932,
+                "ndcg@20": 0.08452139440450965,
+                "mrr": 0.06099018057180194
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 897427,
+            "positives": 160735,
+            "positive_rate": 0.1791064899986294,
+            "auc": 0.6753326084202902,
+            "logloss": 0.5593837198420152
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\linear_only\\random_test.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\linear_only\\random_test.npz",
+          "checkpoint_sha256": "4e4f63ddb3bef809aa8cbfef042e22927d55b892745ed35eaea9c20def2f5b32"
+        }
+      },
+      "no_repeat_feature": {
+        "standard/validation": {
+          "ranking": {
+            "queries": 54928,
+            "users": 17964,
+            "recall@10": 0.06963661520535974,
+            "ndcg@10": 0.03459051732782013,
+            "recall@20": 0.12024832508010487,
+            "ndcg@20": 0.04728488710866259,
+            "recall@100": 0.33665889892222545,
+            "ndcg@100": 0.08614624830930716,
+            "user_macro": {
+              "recall@10": 0.0755577584192372,
+              "ndcg@10": 0.03756433388602796,
+              "recall@20": 0.1280128367235505,
+              "ndcg@20": 0.05073170010569778,
+              "recall@100": 0.3457448679914443,
+              "ndcg@100": 0.0899267833357944,
+              "mrr@100": 0.03472409130191485
+            },
+            "mrr@100": 0.032432873755339105,
+            "retrieval_miss_queries": 36436,
+            "conditional_hit_metrics": {
+              "queries": 18492,
+              "users": 10721,
+              "recall@10": 0.20684620376378976,
+              "ndcg@10": 0.10274648149375429,
+              "recall@20": 0.3571814838849232,
+              "ndcg@20": 0.14045340034093765,
+              "mrr": 0.09633749132777775,
+              "user_macro": {
+                "recall@10": 0.2086750822098436,
+                "ndcg@10": 0.10316583581152783,
+                "recall@20": 0.35676180406567987,
+                "ndcg@20": 0.14032626460912173,
+                "mrr": 0.09618156106997569
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 122315,
+            "positives": 54928,
+            "positive_rate": 0.44907002411805585,
+            "auc": 0.7334243665235292,
+            "logloss": 0.5972463433130326
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\no_repeat_feature\\standard_validation.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\no_repeat_feature\\standard_validation.npz",
+          "checkpoint_sha256": "151299da742bcf9837650c8332fe896a938ba897a5ef291a3483e52e9c5b72d4"
+        },
+        "standard/test": {
+          "ranking": {
+            "queries": 75430,
+            "users": 19630,
+            "recall@10": 0.06656502717751557,
+            "ndcg@10": 0.03238221238932645,
+            "recall@20": 0.11356224313933448,
+            "ndcg@20": 0.044164694292529075,
+            "recall@100": 0.32510937292854303,
+            "ndcg@100": 0.08211509528203081,
+            "user_macro": {
+              "recall@10": 0.07170039754548031,
+              "ndcg@10": 0.034580305723334766,
+              "recall@20": 0.1223839073054577,
+              "ndcg@20": 0.04731926308929893,
+              "recall@100": 0.3346494735156576,
+              "ndcg@100": 0.08545974740926193,
+              "mrr@100": 0.03179381688424329
+            },
+            "mrr@100": 0.030128224215295266,
+            "retrieval_miss_queries": 50907,
+            "conditional_hit_metrics": {
+              "queries": 24523,
+              "users": 12286,
+              "recall@10": 0.20474656444970027,
+              "ndcg@10": 0.09960405662141232,
+              "recall@20": 0.34930473433103615,
+              "ndcg@20": 0.13584565063350604,
+              "mrr": 0.0926710415756523,
+              "user_macro": {
+                "recall@10": 0.20885102222727445,
+                "ndcg@10": 0.10128631721270967,
+                "recall@20": 0.35622559466700887,
+                "ndcg@20": 0.1382788640087315,
+                "mrr": 0.09373050823508483
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 166618,
+            "positives": 75430,
+            "positive_rate": 0.45271219196005236,
+            "auc": 0.7212193827663653,
+            "logloss": 0.607249244478876
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\no_repeat_feature\\standard_test.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\no_repeat_feature\\standard_test.npz",
+          "checkpoint_sha256": "151299da742bcf9837650c8332fe896a938ba897a5ef291a3483e52e9c5b72d4"
+        },
+        "random/validation": {
+          "ranking": {
+            "queries": 48199,
+            "users": 10120,
+            "recall@10": 0.0016390381543185542,
+            "ndcg@10": 0.0006853539038124698,
+            "recall@20": 0.0038590012240917863,
+            "ndcg@20": 0.001238305807069742,
+            "recall@100": 0.02186767360318679,
+            "ndcg@100": 0.0043682622273341675,
+            "user_macro": {
+              "recall@10": 0.0015753860362105558,
+              "ndcg@10": 0.0005891919178665621,
+              "recall@20": 0.004109847028033335,
+              "ndcg@20": 0.0012319312013673316,
+              "recall@100": 0.024130095971590042,
+              "ndcg@100": 0.004722063867589477,
+              "mrr@100": 0.0008854955324598078
+            },
+            "mrr@100": 0.0009123647635825272,
+            "retrieval_miss_queries": 47145,
+            "conditional_hit_metrics": {
+              "queries": 1054,
+              "users": 925,
+              "recall@10": 0.07495256166982922,
+              "ndcg@10": 0.03134096092016815,
+              "recall@20": 0.17647058823529413,
+              "ndcg@20": 0.056627231114757606,
+              "mrr": 0.04172207707771749,
+              "user_macro": {
+                "recall@10": 0.07693693693693693,
+                "ndcg@10": 0.03159434717304554,
+                "recall@20": 0.1761261261261261,
+                "ndcg@20": 0.05632956072686401,
+                "mrr": 0.04130640363704191
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 288622,
+            "positives": 48199,
+            "positive_rate": 0.16699697181781015,
+            "auc": 0.681252505785938,
+            "logloss": 0.5121341410508679
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\no_repeat_feature\\random_validation.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\no_repeat_feature\\random_validation.npz",
+          "checkpoint_sha256": "151299da742bcf9837650c8332fe896a938ba897a5ef291a3483e52e9c5b72d4"
+        },
+        "random/test": {
+          "ranking": {
+            "queries": 160735,
+            "users": 21299,
+            "recall@10": 0.001978411671384577,
+            "ndcg@10": 0.0008921524801791951,
+            "recall@20": 0.0041185802718760696,
+            "ndcg@20": 0.0014273565776351392,
+            "recall@100": 0.022297570535353223,
+            "ndcg@100": 0.004591641664756069,
+            "user_macro": {
+              "recall@10": 0.0023102661758617046,
+              "ndcg@10": 0.0010504401711705976,
+              "recall@20": 0.004780103292390423,
+              "ndcg@20": 0.0016656343244434687,
+              "recall@100": 0.024949428387570128,
+              "ndcg@100": 0.005164939092937606,
+              "mrr@100": 0.0012395735382453232
+            },
+            "mrr@100": 0.0010774423820344339,
+            "retrieval_miss_queries": 157151,
+            "conditional_hit_metrics": {
+              "queries": 3584,
+              "users": 3014,
+              "recall@10": 0.08872767857142858,
+              "ndcg@10": 0.04001119668013475,
+              "recall@20": 0.18470982142857142,
+              "ndcg@20": 0.06401399539793083,
+              "mrr": 0.048321066204326094,
+              "user_macro": {
+                "recall@10": 0.09113660062565172,
+                "ndcg@10": 0.04132599933452978,
+                "recall@20": 0.18761730969760165,
+                "ndcg@20": 0.06543105320128638,
+                "mrr": 0.049309543850086804
+              }
+            }
+          },
+          "pointwise": {
+            "queries": 897427,
+            "positives": 160735,
+            "positive_rate": 0.1791064899986294,
+            "auc": 0.6624462203061678,
+            "logloss": 0.5421518692523586
+          },
+          "rank_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\no_repeat_feature\\random_test.npz",
+          "prediction_artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\predictions\\no_repeat_feature\\random_test.npz",
+          "checkpoint_sha256": "151299da742bcf9837650c8332fe896a938ba897a5ef291a3483e52e9c5b72d4"
+        }
+      }
+    },
+    "baseline": {
+      "standard/validation": {
+        "queries": 54928,
+        "users": 17964,
+        "recall@10": 0.06171715700553452,
+        "ndcg@10": 0.029197368709222755,
+        "recall@20": 0.10970725313137197,
+        "ndcg@20": 0.04121616938987233,
+        "recall@100": 0.33665889892222545,
+        "ndcg@100": 0.08170410681695299,
+        "user_macro": {
+          "recall@10": 0.0671557231419234,
+          "ndcg@10": 0.031804941756216974,
+          "recall@20": 0.11801801004139066,
+          "ndcg@20": 0.044560836714498765,
+          "recall@100": 0.3457448679914443,
+          "ndcg@100": 0.08529610563327059,
+          "mrr@100": 0.029799380284384013
+        },
+        "mrr@100": 0.027767961049324063,
+        "retrieval_miss_queries": 36436,
+        "conditional_hit_metrics": {
+          "queries": 18492,
+          "users": 10721,
+          "recall@10": 0.18332251784555484,
+          "ndcg@10": 0.08672685855830561,
+          "recall@20": 0.32587064676616917,
+          "ndcg@20": 0.12242709021452022,
+          "mrr": 0.08248099526915813,
+          "user_macro": {
+            "recall@10": 0.18338572012278648,
+            "ndcg@10": 0.08666413797545,
+            "recall@20": 0.3267908757601197,
+            "ndcg@20": 0.12260181374249829,
+            "mrr": 0.08241407767199578
+          }
+        },
+        "artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\v2\\standard_validation.npz"
+      },
+      "standard/test": {
+        "queries": 75430,
+        "users": 19630,
+        "recall@10": 0.05792125149144903,
+        "ndcg@10": 0.02718049074493397,
+        "recall@20": 0.10357947766140793,
+        "ndcg@20": 0.038618581180176074,
+        "recall@100": 0.32510937292854303,
+        "ndcg@100": 0.07807607616676311,
+        "user_macro": {
+          "recall@10": 0.06287790166852754,
+          "ndcg@10": 0.029483803358470412,
+          "recall@20": 0.11139746712149082,
+          "ndcg@20": 0.0416375155141097,
+          "recall@100": 0.3346494735156576,
+          "ndcg@100": 0.08149765606555268,
+          "mrr@100": 0.027763671432802124
+        },
+        "mrr@100": 0.02597129577447432,
+        "retrieval_miss_queries": 50907,
+        "conditional_hit_metrics": {
+          "queries": 24523,
+          "users": 12286,
+          "recall@10": 0.17815927904416262,
+          "ndcg@10": 0.08360414373813846,
+          "recall@20": 0.3185988663703462,
+          "ndcg@20": 0.11878642818662813,
+          "mrr": 0.07988479550905671,
+          "user_macro": {
+            "recall@10": 0.1828493791150511,
+            "ndcg@10": 0.08624061461024664,
+            "recall@20": 0.3263740903266076,
+            "ndcg@20": 0.122176300475577,
+            "mrr": 0.08194171661131845
+          }
+        },
+        "artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\v2\\standard_test.npz"
+      },
+      "random/validation": {
+        "queries": 48199,
+        "users": 10120,
+        "recall@10": 0.0016182908359094587,
+        "ndcg@10": 0.0006702990535675326,
+        "recall@20": 0.0034648021743189693,
+        "ndcg@20": 0.001129872521855324,
+        "recall@100": 0.02186767360318679,
+        "ndcg@100": 0.004333526681001733,
+        "user_macro": {
+          "recall@10": 0.0019959725759547344,
+          "ndcg@10": 0.0008145806047589389,
+          "recall@20": 0.004185786099082618,
+          "ndcg@20": 0.0013590130359539087,
+          "recall@100": 0.024130095971590042,
+          "ndcg@100": 0.004810259909592111,
+          "mrr@100": 0.0010009293591628908
+        },
+        "mrr@100": 0.0008824689513080102,
+        "retrieval_miss_queries": 47145,
+        "conditional_hit_metrics": {
+          "queries": 1054,
+          "users": 925,
+          "recall@10": 0.07400379506641366,
+          "ndcg@10": 0.030652508617553604,
+          "recall@20": 0.15844402277039848,
+          "ndcg@20": 0.051668620190611726,
+          "mrr": 0.040354953495346096,
+          "user_macro": {
+            "recall@10": 0.07675675675675675,
+            "ndcg@10": 0.03131734032388458,
+            "recall@20": 0.16243243243243244,
+            "ndcg@20": 0.052696961753084,
+            "mrr": 0.04048362487676431
+          }
+        },
+        "artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\v2\\random_validation.npz"
+      },
+      "random/test": {
+        "queries": 160735,
+        "users": 21299,
+        "recall@10": 0.0018353190033284599,
+        "ndcg@10": 0.0007832443067854837,
+        "recall@20": 0.003826173515413569,
+        "ndcg@20": 0.0012804140532123218,
+        "recall@100": 0.022297570535353223,
+        "ndcg@100": 0.004487267465154795,
+        "user_macro": {
+          "recall@10": 0.0020343155060421553,
+          "ndcg@10": 0.0008856824635648245,
+          "recall@20": 0.004377450389029142,
+          "ndcg@20": 0.0014716477525461326,
+          "recall@100": 0.024949428387570128,
+          "ndcg@100": 0.0050392573567247445,
+          "mrr@100": 0.0011078183206888507
+        },
+        "mrr@100": 0.0009714374081800102,
+        "retrieval_miss_queries": 157151,
+        "conditional_hit_metrics": {
+          "queries": 3584,
+          "users": 3014,
+          "recall@10": 0.08231026785714286,
+          "ndcg@10": 0.035126889969633014,
+          "recall@20": 0.17159598214285715,
+          "ndcg@20": 0.05742392657452079,
+          "mrr": 0.04356696199883203,
+          "user_macro": {
+            "recall@10": 0.08386023951717382,
+            "ndcg@10": 0.03604733951674566,
+            "recall@20": 0.17314358391000725,
+            "ndcg@20": 0.058380101306249564,
+            "mrr": 0.044307348981045346
+          }
+        },
+        "artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\v2\\random_test.npz"
+      }
+    },
+    "history_rule": {
+      "standard/validation": {
+        "queries": 54928,
+        "users": 17964,
+        "recall@10": 0.0823077483250801,
+        "ndcg@10": 0.04160570389120116,
+        "recall@20": 0.1356138945528692,
+        "ndcg@20": 0.05495643811146194,
+        "recall@100": 0.33665889892222545,
+        "ndcg@100": 0.09152417157762499,
+        "user_macro": {
+          "recall@10": 0.08713689683229651,
+          "ndcg@10": 0.04417120103028801,
+          "recall@20": 0.14251282612189317,
+          "ndcg@20": 0.05804118134959833,
+          "recall@100": 0.3457448679914443,
+          "ndcg@100": 0.09498574619461307,
+          "mrr@100": 0.03983276431455087
+        },
+        "mrr@100": 0.03775724305777164,
+        "retrieval_miss_queries": 36436,
+        "conditional_hit_metrics": {
+          "queries": 18492,
+          "users": 10721,
+          "recall@10": 0.2444841012329656,
+          "ndcg@10": 0.1235841500830574,
+          "recall@20": 0.40282284231018817,
+          "ndcg@20": 0.1632407112581863,
+          "mrr": 0.1121528145510102,
+          "user_macro": {
+            "recall@10": 0.2406231543609669,
+            "ndcg@10": 0.12155085984801296,
+            "recall@20": 0.4004715127137723,
+            "ndcg@20": 0.16158302000113992,
+            "mrr": 0.11075522706913377
+          }
+        },
+        "artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\history_rule\\standard_validation.npz"
+      },
+      "standard/test": {
+        "queries": 75430,
+        "users": 19630,
+        "recall@10": 0.07718414423969243,
+        "ndcg@10": 0.0386736588367629,
+        "recall@20": 0.12821158690176324,
+        "ndcg@20": 0.051493564788463356,
+        "recall@100": 0.32510937292854303,
+        "ndcg@100": 0.08733921835783798,
+        "user_macro": {
+          "recall@10": 0.0811322128039705,
+          "ndcg@10": 0.040877174520809655,
+          "recall@20": 0.13383371281113335,
+          "ndcg@20": 0.054122310694647145,
+          "recall@100": 0.3346494735156576,
+          "ndcg@100": 0.09065296917517376,
+          "mrr@100": 0.037142066780775994
+        },
+        "mrr@100": 0.03527283505908547,
+        "retrieval_miss_queries": 50907,
+        "conditional_hit_metrics": {
+          "queries": 24523,
+          "users": 12286,
+          "recall@10": 0.2374097785752151,
+          "ndcg@10": 0.1189558408863934,
+          "recall@20": 0.3943644741671084,
+          "ndcg@20": 0.15838843501993197,
+          "mrr": 0.10849528803599953,
+          "user_macro": {
+            "recall@10": 0.239296953927415,
+            "ndcg@10": 0.12013152903084325,
+            "recall@20": 0.39609083949590945,
+            "ndcg@20": 0.1595114440004184,
+            "mrr": 0.10933387632819903
+          }
+        },
+        "artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\history_rule\\standard_test.npz"
+      },
+      "random/validation": {
+        "queries": 48199,
+        "users": 10120,
+        "recall@10": 0.002427436253864188,
+        "ndcg@10": 0.0010995106630016073,
+        "recall@20": 0.004958609099773854,
+        "ndcg@20": 0.0017294930398457507,
+        "recall@100": 0.02186767360318679,
+        "ndcg@100": 0.0047364992428459655,
+        "user_macro": {
+          "recall@10": 0.00274847200251853,
+          "ndcg@10": 0.0012914578164499638,
+          "recall@20": 0.005391134443801058,
+          "ndcg@20": 0.001956851700319192,
+          "recall@100": 0.024130095971590042,
+          "ndcg@100": 0.0052665692026602415,
+          "mrr@100": 0.0014403176775189808
+        },
+        "mrr@100": 0.0012427764100839205,
+        "retrieval_miss_queries": 47145,
+        "conditional_hit_metrics": {
+          "queries": 1054,
+          "users": 925,
+          "recall@10": 0.1110056925996205,
+          "ndcg@10": 0.050280184483884695,
+          "recall@20": 0.22675521821631878,
+          "ndcg@20": 0.07908902754034662,
+          "mrr": 0.05683167000914125,
+          "user_macro": {
+            "recall@10": 0.11459459459459459,
+            "ndcg@10": 0.05175616182039852,
+            "recall@20": 0.22693693693693692,
+            "ndcg@20": 0.07975197893376794,
+            "mrr": 0.05750471937616315
+          }
+        },
+        "artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\history_rule\\random_validation.npz"
+      },
+      "random/test": {
+        "queries": 160735,
+        "users": 21299,
+        "recall@10": 0.0026378822285127693,
+        "ndcg@10": 0.0012176194109048213,
+        "recall@20": 0.0052011074128223474,
+        "ndcg@20": 0.0018579684992869278,
+        "recall@100": 0.022297570535353223,
+        "ndcg@100": 0.004903780407266289,
+        "user_macro": {
+          "recall@10": 0.0029607019281760066,
+          "ndcg@10": 0.0013405691658202484,
+          "recall@20": 0.005842541879539348,
+          "ndcg@20": 0.00205943994862141,
+          "recall@100": 0.024949428387570128,
+          "ndcg@100": 0.005435057930392221,
+          "mrr@100": 0.0014571692405287021
+        },
+        "mrr@100": 0.0013403509275349188,
+        "retrieval_miss_queries": 157151,
+        "conditional_hit_metrics": {
+          "queries": 3584,
+          "users": 3014,
+          "recall@10": 0.11830357142857142,
+          "ndcg@10": 0.05460771652114578,
+          "recall@20": 0.23325892857142858,
+          "ndcg@20": 0.0833260509857378,
+          "mrr": 0.06011197163429833,
+          "user_macro": {
+            "recall@10": 0.1208487376370588,
+            "ndcg@10": 0.055984049824817306,
+            "recall@20": 0.23517079028027932,
+            "ndcg@20": 0.08453400607974942,
+            "mrr": 0.06102067691698096
+          }
+        },
+        "artifact": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranks\\history_rule\\random_test.npz"
+      }
+    },
+    "exports": {
+      "standard/validation": {
+        "path": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranked_candidates\\standard_validation.parquet",
+        "rows": 54928,
+        "topk": 100,
+        "sha256": "0341bf1f059acbc10c2548c9f6d4d02297c0e5c9de28280a57fbf8f0e62a9567"
+      },
+      "standard/test": {
+        "path": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranked_candidates\\standard_test.parquet",
+        "rows": 75430,
+        "topk": 100,
+        "sha256": "76343981de3007919e3ea9fc78944aa3fd05b79b8b93bfb03924dd0b4ce71471"
+      },
+      "random/validation": {
+        "path": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranked_candidates\\random_validation.parquet",
+        "rows": 48199,
+        "topk": 100,
+        "sha256": "7a08cf6fb1dc85ae8e7cffe5d222d8b6573d9103f26d5a73e9469ea664edf9fe"
+      },
+      "random/test": {
+        "path": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\ranked_candidates\\random_test.parquet",
+        "rows": 160735,
+        "topk": 100,
+        "sha256": "a675978844e87de5979aed5979bd70755b2f5291343a619c4f9ae85b65782e97"
+      }
+    },
+    "selection_sha256": "609cc3c0f08e79cbe7cf500312a035a863a73ee41106b58c7f0ebd7aef00d0be",
+    "replication_sha256": "1d612421e220613dfa7993ce323dfb740fe2c7246a4ba2d60d2903f67e88a879",
+    "test_is_iterative_reassessment": true
+  },
+  "validation_trials": {
+    "rich_bce": {
+      "config": {
+        "prepared_directory": "data/processed/kuairand_pure",
+        "cache_directory": ".runtime/retrieval_cache",
+        "output_directory": "experiments/ranking_v2",
+        "device": "cuda",
+        "embedding_dim": 32,
+        "hidden_sizes": [
+          64,
+          32
+        ],
+        "history_length": 50,
+        "dropout": 0.3,
+        "user_features": true,
+        "attention": true,
+        "repeat_feature": true,
+        "neural_rank": true,
+        "residual": false,
+        "teacher_features": false,
+        "pretrained": false,
+        "objective": "bce",
+        "select_metric": "logloss",
+        "learning_rate": 0.003,
+        "repeat_lr_multiplier": 10,
+        "weight_decay": 1e-05,
+        "batch_size": 8192,
+        "query_batch_size": 512,
+        "competitors": 15,
+        "aux_batch_size": 1024,
+        "aux_weight": 0.1,
+        "delta_reg": 0.01,
+        "queries_per_epoch": 64000,
+        "mask_past": false,
+        "eval_batch_size": 8192,
+        "candidate_batch_size": 256,
+        "epochs": 8,
+        "patience": 2,
+        "primary_seed": 42,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "trial_limit": 6,
+        "bootstrap_repeats": 500,
+        "bootstrap_seed": 20261028
+      },
+      "training_result_path": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\trials\\rich_bce\\training.json",
+      "best_validation": {
+        "pointwise": {
+          "queries": 122315,
+          "positives": 54928,
+          "positive_rate": 0.44907002411805585,
+          "auc": 0.7646583282762291,
+          "logloss": 0.5722610056031597
+        },
+        "ranking": {
+          "queries": 54928,
+          "users": 17964,
+          "recall@10": 0.005862219632974075,
+          "ndcg@10": 0.0022389164743066145,
+          "recall@20": 0.02637998834838334,
+          "ndcg@20": 0.0072678969319459,
+          "recall@100": 0.33665889892222545,
+          "ndcg@100": 0.06112400648551285,
+          "user_macro": {
+            "recall@10": 0.006661742722739396,
+            "ndcg@10": 0.002431622105031525,
+            "recall@20": 0.030119494165105128,
+            "ndcg@20": 0.008178533311799045,
+            "recall@100": 0.3457448679914443,
+            "ndcg@100": 0.06285774763867588,
+            "mrr@100": 0.008891438536321634
+          },
+          "mrr@100": 0.008621524587387942,
+          "retrieval_miss_queries": 36436,
+          "conditional_hit_metrics": {
+            "queries": 18492,
+            "users": 10721,
+            "recall@10": 0.017412935323383085,
+            "ndcg@10": 0.0066504003948038995,
+            "recall@20": 0.07835820895522388,
+            "ndcg@20": 0.021588310765624293,
+            "mrr": 0.025609079739132862,
+            "user_macro": {
+              "recall@10": 0.018185048480729854,
+              "ndcg@10": 0.006818693068059994,
+              "recall@20": 0.0810371644683907,
+              "ndcg@20": 0.0222350194267628,
+              "mrr": 0.025585340043624474
+            }
+          }
+        },
+        "seconds": 7.096667999983765,
+        "mean_abs_score_correction": 5.287731275772375,
+        "max_abs_score_correction": 12.422647476196289,
+        "top20_order_changed_fraction": 1.0,
+        "top20_set_changed_fraction": 1.0
+      },
+      "best_epoch": 1,
+      "checkpoint_sha256": "5b60dbe60b83400c27672fd4b1cacde0a3163eff2e0e12d38119338b790ecd6b"
+    },
+    "choice_residual": {
+      "config": {
+        "prepared_directory": "data/processed/kuairand_pure",
+        "cache_directory": ".runtime/retrieval_cache",
+        "output_directory": "experiments/ranking_v2",
+        "device": "cuda",
+        "embedding_dim": 32,
+        "hidden_sizes": [
+          64,
+          32
+        ],
+        "history_length": 50,
+        "dropout": 0.1,
+        "user_features": true,
+        "attention": true,
+        "repeat_feature": true,
+        "neural_rank": true,
+        "residual": true,
+        "teacher_features": true,
+        "pretrained": true,
+        "objective": "choice",
+        "select_metric": "ndcg@20",
+        "learning_rate": 0.001,
+        "repeat_lr_multiplier": 10,
+        "weight_decay": 1e-05,
+        "batch_size": 8192,
+        "query_batch_size": 512,
+        "competitors": 15,
+        "aux_batch_size": 1024,
+        "aux_weight": 0.1,
+        "delta_reg": 0.01,
+        "queries_per_epoch": 64000,
+        "mask_past": false,
+        "eval_batch_size": 8192,
+        "candidate_batch_size": 256,
+        "epochs": 8,
+        "patience": 2,
+        "primary_seed": 42,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "trial_limit": 6,
+        "bootstrap_repeats": 500,
+        "bootstrap_seed": 20261028
+      },
+      "training_result_path": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\trials\\choice_residual\\training.json",
+      "best_validation": {
+        "pointwise": {
+          "queries": 122315,
+          "positives": 54928,
+          "positive_rate": 0.44907002411805585,
+          "auc": 0.7308193683658643,
+          "logloss": 0.5992674030541024
+        },
+        "ranking": {
+          "queries": 54928,
+          "users": 17964,
+          "recall@10": 0.08751456452082726,
+          "ndcg@10": 0.04440086938945353,
+          "recall@20": 0.14200407806583162,
+          "ndcg@20": 0.05807780972459983,
+          "recall@100": 0.33665889892222545,
+          "ndcg@100": 0.09377813467708467,
+          "user_macro": {
+            "recall@10": 0.0931881649889218,
+            "ndcg@10": 0.047064718813917,
+            "recall@20": 0.14790495820338836,
+            "ndcg@20": 0.0607974414566589,
+            "recall@100": 0.3457448679914443,
+            "ndcg@100": 0.09705362127037473,
+            "mrr@100": 0.04174622508214241
+          },
+          "mrr@100": 0.039914368268641184,
+          "retrieval_miss_queries": 36436,
+          "conditional_hit_metrics": {
+            "queries": 18492,
+            "users": 10721,
+            "recall@10": 0.2599502487562189,
+            "ndcg@10": 0.13188681342331296,
+            "recall@20": 0.4218040233614536,
+            "ndcg@20": 0.1725123260086967,
+            "mrr": 0.11856026499350655,
+            "user_macro": {
+              "recall@10": 0.2576742864658418,
+              "ndcg@10": 0.12998819148851387,
+              "recall@20": 0.41628183851260325,
+              "ndcg@20": 0.16978869612575712,
+              "mrr": 0.11658139620266098
+            }
+          }
+        },
+        "seconds": 9.833983500022441,
+        "mean_abs_score_correction": 0.6496129178125797,
+        "max_abs_score_correction": 5.1345977783203125,
+        "top20_order_changed_fraction": 1.0,
+        "top20_set_changed_fraction": 0.999981794348966
+      },
+      "best_epoch": 3,
+      "checkpoint_sha256": "35d73ef88c162d6c30ae7bedceabbf765944f43465c0aced4d3ca9275a1a72de"
+    },
+    "direct_choice": {
+      "config": {
+        "prepared_directory": "data/processed/kuairand_pure",
+        "cache_directory": ".runtime/retrieval_cache",
+        "output_directory": "experiments/ranking_v2",
+        "device": "cuda",
+        "embedding_dim": 32,
+        "hidden_sizes": [
+          64,
+          32
+        ],
+        "history_length": 50,
+        "dropout": 0.1,
+        "user_features": true,
+        "attention": true,
+        "repeat_feature": true,
+        "neural_rank": true,
+        "residual": false,
+        "teacher_features": false,
+        "pretrained": true,
+        "objective": "choice",
+        "select_metric": "ndcg@20",
+        "learning_rate": 0.001,
+        "repeat_lr_multiplier": 10,
+        "weight_decay": 1e-05,
+        "batch_size": 8192,
+        "query_batch_size": 512,
+        "competitors": 15,
+        "aux_batch_size": 1024,
+        "aux_weight": 0.1,
+        "delta_reg": 0.01,
+        "queries_per_epoch": 64000,
+        "mask_past": false,
+        "eval_batch_size": 8192,
+        "candidate_batch_size": 256,
+        "epochs": 8,
+        "patience": 2,
+        "primary_seed": 42,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "trial_limit": 6,
+        "bootstrap_repeats": 500,
+        "bootstrap_seed": 20261028
+      },
+      "training_result_path": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\trials\\direct_choice\\training.json",
+      "best_validation": {
+        "pointwise": {
+          "queries": 122315,
+          "positives": 54928,
+          "positive_rate": 0.44907002411805585,
+          "auc": 0.6609934477011716,
+          "logloss": 0.6587457283724877
+        },
+        "ranking": {
+          "queries": 54928,
+          "users": 17964,
+          "recall@10": 0.07123871249635887,
+          "ndcg@10": 0.035413579132871256,
+          "recall@20": 0.1238530439848529,
+          "ndcg@20": 0.04859632513523467,
+          "recall@100": 0.33665889892222545,
+          "ndcg@100": 0.08727494411382047,
+          "user_macro": {
+            "recall@10": 0.07336482003189838,
+            "ndcg@10": 0.03667210113319127,
+            "recall@20": 0.1266189532902057,
+            "ndcg@20": 0.05002912461121395,
+            "recall@100": 0.3457448679914443,
+            "ndcg@100": 0.0897163154249624,
+            "mrr@100": 0.03440361143555208
+          },
+          "mrr@100": 0.03327319387895916,
+          "retrieval_miss_queries": 36436,
+          "conditional_hit_metrics": {
+            "queries": 18492,
+            "users": 10721,
+            "recall@10": 0.21160501838632922,
+            "ndcg@10": 0.10519127593609952,
+            "recall@20": 0.367888816785637,
+            "ndcg@20": 0.1443488506937146,
+            "mrr": 0.09883354928528384,
+            "user_macro": {
+              "recall@10": 0.20793149042173772,
+              "ndcg@10": 0.10323509660244096,
+              "recall@20": 0.3622542011415278,
+              "ndcg@20": 0.14189706381535178,
+              "mrr": 0.09723438665341368
+            }
+          }
+        },
+        "seconds": 9.434706500032917,
+        "mean_abs_score_correction": 6.119492444939284,
+        "max_abs_score_correction": 14.418619155883789,
+        "top20_order_changed_fraction": 1.0,
+        "top20_set_changed_fraction": 1.0
+      },
+      "best_epoch": 3,
+      "checkpoint_sha256": "9fe4a88f6d5dc35f095247aa9ba197a7b88ae30711b9a9045ed72b4273dccfe0"
+    },
+    "no_attention": {
+      "config": {
+        "prepared_directory": "data/processed/kuairand_pure",
+        "cache_directory": ".runtime/retrieval_cache",
+        "output_directory": "experiments/ranking_v2",
+        "device": "cuda",
+        "embedding_dim": 32,
+        "hidden_sizes": [
+          64,
+          32
+        ],
+        "history_length": 50,
+        "dropout": 0.1,
+        "user_features": true,
+        "attention": false,
+        "repeat_feature": true,
+        "neural_rank": true,
+        "residual": true,
+        "teacher_features": true,
+        "pretrained": true,
+        "objective": "choice",
+        "select_metric": "ndcg@20",
+        "learning_rate": 0.001,
+        "repeat_lr_multiplier": 10,
+        "weight_decay": 1e-05,
+        "batch_size": 8192,
+        "query_batch_size": 512,
+        "competitors": 15,
+        "aux_batch_size": 1024,
+        "aux_weight": 0.1,
+        "delta_reg": 0.01,
+        "queries_per_epoch": 64000,
+        "mask_past": false,
+        "eval_batch_size": 8192,
+        "candidate_batch_size": 256,
+        "epochs": 8,
+        "patience": 2,
+        "primary_seed": 42,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "trial_limit": 6,
+        "bootstrap_repeats": 500,
+        "bootstrap_seed": 20261028
+      },
+      "training_result_path": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\trials\\no_attention\\training.json",
+      "best_validation": {
+        "pointwise": {
+          "queries": 122315,
+          "positives": 54928,
+          "positive_rate": 0.44907002411805585,
+          "auc": 0.7321390971899485,
+          "logloss": 0.598137812212969
+        },
+        "ranking": {
+          "queries": 54928,
+          "users": 17964,
+          "recall@10": 0.08649504806291873,
+          "ndcg@10": 0.044081948971801475,
+          "recall@20": 0.13967375473346927,
+          "ndcg@20": 0.05744201285370389,
+          "recall@100": 0.33665889892222545,
+          "ndcg@100": 0.0934834715979041,
+          "user_macro": {
+            "recall@10": 0.09214815345627851,
+            "ndcg@10": 0.046701753568863906,
+            "recall@20": 0.1459876724802548,
+            "ndcg@20": 0.06025200573913753,
+            "recall@100": 0.3457448679914443,
+            "ndcg@100": 0.09678561382775114,
+            "mrr@100": 0.04158086750902227
+          },
+          "mrr@100": 0.039751058592410626,
+          "retrieval_miss_queries": 36436,
+          "conditional_hit_metrics": {
+            "queries": 18492,
+            "users": 10721,
+            "recall@10": 0.25692191217823923,
+            "ndcg@10": 0.13093950319722644,
+            "recall@20": 0.4148821111832144,
+            "ndcg@20": 0.17062377687801467,
+            "mrr": 0.1180751755550471,
+            "user_macro": {
+              "recall@10": 0.2547942114889475,
+              "ndcg@10": 0.12891517828152654,
+              "recall@20": 0.4093424460692933,
+              "ndcg@20": 0.16776145830660652,
+              "mrr": 0.11591472039283507
+            }
+          }
+        },
+        "seconds": 4.306241899961606,
+        "mean_abs_score_correction": 0.6317302800086022,
+        "max_abs_score_correction": 4.675387859344482,
+        "top20_order_changed_fraction": 1.0,
+        "top20_set_changed_fraction": 0.9999635886979319
+      },
+      "best_epoch": 3,
+      "checkpoint_sha256": "b8aff6ee21617e80d2e20bb08cb8dd2da94681ac9c96dbb0773d6868ddaa6313"
+    },
+    "linear_only": {
+      "config": {
+        "prepared_directory": "data/processed/kuairand_pure",
+        "cache_directory": ".runtime/retrieval_cache",
+        "output_directory": "experiments/ranking_v2",
+        "device": "cuda",
+        "embedding_dim": 32,
+        "hidden_sizes": [
+          64,
+          32
+        ],
+        "history_length": 50,
+        "dropout": 0.1,
+        "user_features": true,
+        "attention": true,
+        "repeat_feature": true,
+        "neural_rank": false,
+        "residual": true,
+        "teacher_features": true,
+        "pretrained": true,
+        "objective": "choice",
+        "select_metric": "ndcg@20",
+        "learning_rate": 0.001,
+        "repeat_lr_multiplier": 10,
+        "weight_decay": 1e-05,
+        "batch_size": 8192,
+        "query_batch_size": 512,
+        "competitors": 15,
+        "aux_batch_size": 1024,
+        "aux_weight": 0.1,
+        "delta_reg": 0.01,
+        "queries_per_epoch": 64000,
+        "mask_past": false,
+        "eval_batch_size": 8192,
+        "candidate_batch_size": 256,
+        "epochs": 8,
+        "patience": 2,
+        "primary_seed": 42,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "trial_limit": 6,
+        "bootstrap_repeats": 500,
+        "bootstrap_seed": 20261028
+      },
+      "training_result_path": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\trials\\linear_only\\training.json",
+      "best_validation": {
+        "pointwise": {
+          "queries": 122315,
+          "positives": 54928,
+          "positive_rate": 0.44907002411805585,
+          "auc": 0.7519244513512131,
+          "logloss": 0.5877214569747162
+        },
+        "ranking": {
+          "queries": 54928,
+          "users": 17964,
+          "recall@10": 0.0823077483250801,
+          "ndcg@10": 0.04160225643264756,
+          "recall@20": 0.1356138945528692,
+          "ndcg@20": 0.054953585108377334,
+          "recall@100": 0.33665889892222545,
+          "ndcg@100": 0.09151778582505343,
+          "user_macro": {
+            "recall@10": 0.08706731322062873,
+            "ndcg@10": 0.04414359196260074,
+            "recall@20": 0.14248499267722606,
+            "ndcg@20": 0.05802391239180323,
+            "recall@100": 0.3457448679914443,
+            "ndcg@100": 0.09496673323580054,
+            "mrr@100": 0.039817818323046664
+          },
+          "mrr@100": 0.03775210978525103,
+          "retrieval_miss_queries": 36436,
+          "conditional_hit_metrics": {
+            "queries": 18492,
+            "users": 10721,
+            "recall@10": 0.2444841012329656,
+            "ndcg@10": 0.12357390987088825,
+            "recall@20": 0.40282284231018817,
+            "ndcg@20": 0.1632322367960713,
+            "mrr": 0.11213756685508702,
+            "user_macro": {
+              "recall@10": 0.24046769622584271,
+              "ndcg@10": 0.12149162633583944,
+              "recall@20": 0.4004015565529664,
+              "ndcg@20": 0.16154573209749531,
+              "mrr": 0.11072450570916924
+            }
+          }
+        },
+        "seconds": 9.436546899960376,
+        "mean_abs_score_correction": 0.3594805643296679,
+        "max_abs_score_correction": 2.819854259490967,
+        "top20_order_changed_fraction": 0.9768242062336149,
+        "top20_set_changed_fraction": 0.968740897174483
+      },
+      "best_epoch": 7,
+      "checkpoint_sha256": "4e4f63ddb3bef809aa8cbfef042e22927d55b892745ed35eaea9c20def2f5b32"
+    },
+    "no_repeat_feature": {
+      "config": {
+        "prepared_directory": "data/processed/kuairand_pure",
+        "cache_directory": ".runtime/retrieval_cache",
+        "output_directory": "experiments/ranking_v2",
+        "device": "cuda",
+        "embedding_dim": 32,
+        "hidden_sizes": [
+          64,
+          32
+        ],
+        "history_length": 50,
+        "dropout": 0.1,
+        "user_features": true,
+        "attention": true,
+        "repeat_feature": false,
+        "neural_rank": true,
+        "residual": true,
+        "teacher_features": true,
+        "pretrained": true,
+        "objective": "choice",
+        "select_metric": "ndcg@20",
+        "learning_rate": 0.001,
+        "repeat_lr_multiplier": 10,
+        "weight_decay": 1e-05,
+        "batch_size": 8192,
+        "query_batch_size": 512,
+        "competitors": 15,
+        "aux_batch_size": 1024,
+        "aux_weight": 0.1,
+        "delta_reg": 0.01,
+        "queries_per_epoch": 64000,
+        "mask_past": false,
+        "eval_batch_size": 8192,
+        "candidate_batch_size": 256,
+        "epochs": 8,
+        "patience": 2,
+        "primary_seed": 42,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "trial_limit": 6,
+        "bootstrap_repeats": 500,
+        "bootstrap_seed": 20261028
+      },
+      "training_result_path": "D:\\\u9762\u5411\u66dd\u5149\u504f\u5dee\u7684\u591a\u9636\u6bb5\u77ed\u89c6\u9891\u63a8\u8350\u4e0e\u79bb\u7ebf\u7b56\u7565\u4f18\u5316\\experiments\\ranking_v2\\artifacts\\trials\\no_repeat_feature\\training.json",
+      "best_validation": {
+        "pointwise": {
+          "queries": 122315,
+          "positives": 54928,
+          "positive_rate": 0.44907002411805585,
+          "auc": 0.7334243665235292,
+          "logloss": 0.5972463433130326
+        },
+        "ranking": {
+          "queries": 54928,
+          "users": 17964,
+          "recall@10": 0.06963661520535974,
+          "ndcg@10": 0.03459051732782013,
+          "recall@20": 0.12024832508010487,
+          "ndcg@20": 0.04728488710866259,
+          "recall@100": 0.33665889892222545,
+          "ndcg@100": 0.08614624830930716,
+          "user_macro": {
+            "recall@10": 0.0755577584192372,
+            "ndcg@10": 0.03756433388602796,
+            "recall@20": 0.1280128367235505,
+            "ndcg@20": 0.05073170010569778,
+            "recall@100": 0.3457448679914443,
+            "ndcg@100": 0.0899267833357944,
+            "mrr@100": 0.03472409130191485
+          },
+          "mrr@100": 0.032432873755339105,
+          "retrieval_miss_queries": 36436,
+          "conditional_hit_metrics": {
+            "queries": 18492,
+            "users": 10721,
+            "recall@10": 0.20684620376378976,
+            "ndcg@10": 0.10274648149375429,
+            "recall@20": 0.3571814838849232,
+            "ndcg@20": 0.14045340034093765,
+            "mrr": 0.09633749132777775,
+            "user_macro": {
+              "recall@10": 0.2086750822098436,
+              "ndcg@10": 0.10316583581152783,
+              "recall@20": 0.35676180406567987,
+              "ndcg@20": 0.14032626460912173,
+              "mrr": 0.09618156106997569
+            }
+          }
+        },
+        "seconds": 9.23021950002294,
+        "mean_abs_score_correction": 0.41384147575149516,
+        "max_abs_score_correction": 5.043627738952637,
+        "top20_order_changed_fraction": 1.0,
+        "top20_set_changed_fraction": 0.999763326536557
+      },
+      "best_epoch": 4,
+      "checkpoint_sha256": "151299da742bcf9837650c8332fe896a938ba897a5ef291a3483e52e9c5b72d4"
+    }
+  },
+  "artifact_validation": {
+    "status": "PASS",
+    "checks": {
+      "standard/validation": {
+        "all_candidate_rows": 54928,
+        "all_primary_predictions_rescored": true,
+        "all_exports_equal_checkpoint_scores": true,
+        "target_label_mutation_invariant_rows": 256,
+        "recall100_unchanged": true
+      },
+      "standard/test": {
+        "all_candidate_rows": 75430,
+        "all_primary_predictions_rescored": true,
+        "all_exports_equal_checkpoint_scores": true,
+        "target_label_mutation_invariant_rows": 256,
+        "recall100_unchanged": true
+      },
+      "random/validation": {
+        "all_candidate_rows": 48199,
+        "all_primary_predictions_rescored": true,
+        "all_exports_equal_checkpoint_scores": true,
+        "target_label_mutation_invariant_rows": 256,
+        "recall100_unchanged": true
+      },
+      "random/test": {
+        "all_candidate_rows": 160735,
+        "all_primary_predictions_rescored": true,
+        "all_exports_equal_checkpoint_scores": true,
+        "target_label_mutation_invariant_rows": 256,
+        "recall100_unchanged": true
+      }
+    },
+    "artifact_hashes": {
+      "experiments/ranking_v2/selection.json": "609cc3c0f08e79cbe7cf500312a035a863a73ee41106b58c7f0ebd7aef00d0be",
+      "experiments/ranking_v2/replication.json": "1d612421e220613dfa7993ce323dfb740fe2c7246a4ba2d60d2903f67e88a879",
+      "experiments/ranking_v2/evaluation.json": "773a724b8dcd179da9345d45d72cd18f97e1e1e5fd9b2a61d88efcbdd3b0fe4a",
+      "experiments/ranking_v2/artifacts/ranks/v2/standard_validation.npz": "f90dc21cd6c650567ae9bb8ee58745e8f42072deafdbca82aa625e0fd56cc3d7",
+      "experiments/ranking_v2/artifacts/ranks/history_rule/standard_validation.npz": "48081731b14b344b2c859ab8e129623d2decc831efb02f38344d77fa3b8a6629",
+      "experiments/ranking_v2/artifacts/ranks/din_seed42/standard_validation.npz": "eadf34e6f2e04249d9cd7672e7c3fd4f82950ac1871ea9625af557a8de2ff79b",
+      "experiments/ranking_v2/artifacts/predictions/din_seed42/standard_validation.npz": "67bb033dbf1d7064bb80ea3fd4fec572bfff71e6fae764124092aa130ccf389d",
+      "experiments/ranking_v2/artifacts/ranks/din_seed43/standard_validation.npz": "f2433f5052954f8adfe177736bbc223ce9735e729d3f2bc47eaa433626b89084",
+      "experiments/ranking_v2/artifacts/predictions/din_seed43/standard_validation.npz": "7ce8380f0a32c76cd971b9c3d38287afe900d7f46af06cd249b2edca995026b0",
+      "experiments/ranking_v2/artifacts/ranks/din_seed44/standard_validation.npz": "b0e0fa517b99c2831a3fface09a6ae130a69efec85d2ee803370a76a91d25bfc",
+      "experiments/ranking_v2/artifacts/predictions/din_seed44/standard_validation.npz": "63e7be0fa06835cb556dfd63d4eab5d0ea1752810c01f6324a36f5aa73823cd7",
+      "experiments/ranking_v2/artifacts/ranks/rich_bce/standard_validation.npz": "17da7a07e3c0e474fb203427abffc0a9fabc07e0f0eb5c338250f8135964d6f4",
+      "experiments/ranking_v2/artifacts/predictions/rich_bce/standard_validation.npz": "00b357c9ef9a0de6825d1735e89a03e18ebda4898ad5a44192424b7af61e1746",
+      "experiments/ranking_v2/artifacts/ranks/direct_choice/standard_validation.npz": "b9e602b3c31bd1c54566380dca90c8484636d3d7a5a0e6645136ca38fe831cf1",
+      "experiments/ranking_v2/artifacts/predictions/direct_choice/standard_validation.npz": "1c7d877c51e3a63e7cf2870fd5cc09ce899264acb74e6e894dfad10b7d46b77d",
+      "experiments/ranking_v2/artifacts/ranks/no_attention/standard_validation.npz": "cfc000b4d10ddaa431cacf3ededd14b166f5d21b098222e22bdfc6968b0633b9",
+      "experiments/ranking_v2/artifacts/predictions/no_attention/standard_validation.npz": "18c240b874b87d934884620f25d0ef2a9b3b8860a3cd6c07777ebe534b36079c",
+      "experiments/ranking_v2/artifacts/ranks/linear_only/standard_validation.npz": "1fda2148b4db75a1dfb5ce8c1faad56c167e0d38ac23e8039188dda671b6d357",
+      "experiments/ranking_v2/artifacts/predictions/linear_only/standard_validation.npz": "95aba643b2c2c33223869024dfcdd5043688b69afe034cf457785fc5b722dd32",
+      "experiments/ranking_v2/artifacts/ranks/no_repeat_feature/standard_validation.npz": "f662d47adbd573363a58c8f155c39bc88d207e1c66b85febbeb602b6d1cc1b15",
+      "experiments/ranking_v2/artifacts/predictions/no_repeat_feature/standard_validation.npz": "f3e99028d14020ea8d784c25551cc5c3a8bae25b3d4388979fe0418ea9c5d086",
+      "experiments/ranking_v2/artifacts/scores/standard_validation.npy": "d7504f275244604e63d748cfb387f3663ed3f65ca70971a3fc8a45af2b0b40b0",
+      "experiments/ranking_v2/artifacts/ranked_candidates/standard_validation.parquet": "0341bf1f059acbc10c2548c9f6d4d02297c0e5c9de28280a57fbf8f0e62a9567",
+      "experiments/ranking_v2/artifacts/ranks/v2/standard_test.npz": "a5abb55bd8f15af796c315a43a2d10deb32f89a0c56ab74d759a34941d52e75a",
+      "experiments/ranking_v2/artifacts/ranks/history_rule/standard_test.npz": "94d1744e6697645f2b534426a74853fbb01db140b78112337a60d7f6e20c539e",
+      "experiments/ranking_v2/artifacts/ranks/din_seed42/standard_test.npz": "a2d1a6850f324c1d4e71b6e1fa8f41f8321ee35f96ffae0e70976d6c9915e3ec",
+      "experiments/ranking_v2/artifacts/predictions/din_seed42/standard_test.npz": "fd9cd1bc0e36895ae6ef10bc1d2b52bb39f1e2af4014a0227ea1955ceb11d916",
+      "experiments/ranking_v2/artifacts/ranks/din_seed43/standard_test.npz": "72cfff7c4c6ed340845ce9dfc5a4fa0709be17f4b8f1e464e19c2f9204d1e089",
+      "experiments/ranking_v2/artifacts/predictions/din_seed43/standard_test.npz": "d035730a2bb9aa210a120dd616b1bdb412811bb5efee1712e1b9dcfc5e6ac3fc",
+      "experiments/ranking_v2/artifacts/ranks/din_seed44/standard_test.npz": "47163c42cb8b4a8f6e5e24df17d62d61c8d67bc2ff32eb08cedc5286280a9fd1",
+      "experiments/ranking_v2/artifacts/predictions/din_seed44/standard_test.npz": "79cf0835bcca2b6ddb6e7d9e379286105111ae04aa97a76c9cf481a980745589",
+      "experiments/ranking_v2/artifacts/ranks/rich_bce/standard_test.npz": "bd6c7cf9ded1f16e394ac77048f9665b690b46788d6d2e47392992bd1815ec30",
+      "experiments/ranking_v2/artifacts/predictions/rich_bce/standard_test.npz": "430d8677bc95b9a6e054ff5a7c3225f74c0b98210f9b87148d37ea3913a10a31",
+      "experiments/ranking_v2/artifacts/ranks/direct_choice/standard_test.npz": "20ee8b4eef0b5cc681a1447ff6f86b54b129dd9cc18efbf6301445d5736c3cf1",
+      "experiments/ranking_v2/artifacts/predictions/direct_choice/standard_test.npz": "ca7ab7a8ffb608b7d52a6c897a73f1827043159306bd6d53b48c7a85d71a53e0",
+      "experiments/ranking_v2/artifacts/ranks/no_attention/standard_test.npz": "71ff9dfd84d3ca9b6bc650aad792f8c8af1b826e09a8e95841bd9fd0ce8e350b",
+      "experiments/ranking_v2/artifacts/predictions/no_attention/standard_test.npz": "4c7222510a5b29eaeeac087b6ce25bf5fdf7377dcaf98ccad0bc4543a6bf0ba2",
+      "experiments/ranking_v2/artifacts/ranks/linear_only/standard_test.npz": "4f630ccdbb4cbaf8589b009b42325c8ad761d5edbaa08f16e7fd32063d9eca28",
+      "experiments/ranking_v2/artifacts/predictions/linear_only/standard_test.npz": "55131b43be2a6779538920ef5772c148d7137cc95fc62e3d55badc929bd0632d",
+      "experiments/ranking_v2/artifacts/ranks/no_repeat_feature/standard_test.npz": "499c2735cf931e6ea808d1b0445e6eb20c0ec06490158ba8e420fd8415103d7e",
+      "experiments/ranking_v2/artifacts/predictions/no_repeat_feature/standard_test.npz": "04a329fdc990c10776b9f0640a52f63291fe7c4e1ec0a5d57c5bc71aab042c75",
+      "experiments/ranking_v2/artifacts/scores/standard_test.npy": "e68948b6faa0782b1ba6b3f8146c95a67b8a1daa7c06c326d00cf050519a479f",
+      "experiments/ranking_v2/artifacts/ranked_candidates/standard_test.parquet": "76343981de3007919e3ea9fc78944aa3fd05b79b8b93bfb03924dd0b4ce71471",
+      "experiments/ranking_v2/artifacts/ranks/v2/random_validation.npz": "649a7a053d55845e9eda59a1bae13ba14d7567805501590bbced4699744486d6",
+      "experiments/ranking_v2/artifacts/ranks/history_rule/random_validation.npz": "a847e2a0af6888297e49d5722298c04fa241996de201d7c26b1ff4f203b34929",
+      "experiments/ranking_v2/artifacts/ranks/din_seed42/random_validation.npz": "4e58b7824d8e837a811a8b9d64680acb13946bdd2354264b110f300f56da94db",
+      "experiments/ranking_v2/artifacts/predictions/din_seed42/random_validation.npz": "a89c33ec7f7bd5da7251648966c92ae15d0e4239294827bbffa512812fb07e48",
+      "experiments/ranking_v2/artifacts/ranks/din_seed43/random_validation.npz": "0e5cc4e4b1f2c1564ea132be1d78c3795e539119168b6495a5828f4bb192369e",
+      "experiments/ranking_v2/artifacts/predictions/din_seed43/random_validation.npz": "9c9c8c33dbbb4df94afe0c5fdf15a359955aafcabde92afdc7019545d2f2c059",
+      "experiments/ranking_v2/artifacts/ranks/din_seed44/random_validation.npz": "d078996ad7d37099a9348d3fbdda422baf50bfc9a45029756f857e25f7a33a0e",
+      "experiments/ranking_v2/artifacts/predictions/din_seed44/random_validation.npz": "642b8e28563a34b38742cb11b7d2ac7e0622710cc8d2c1d9df4810ce7e1c8f04",
+      "experiments/ranking_v2/artifacts/ranks/rich_bce/random_validation.npz": "8ede667e0849420e46af2ee7c015900e4cc8c759d9326b7c4cd25dca67d92dde",
+      "experiments/ranking_v2/artifacts/predictions/rich_bce/random_validation.npz": "929b2bfdf539bd954b30c97d9c3cdb6dc25f0cda887a832e5dd63db97b6b69bb",
+      "experiments/ranking_v2/artifacts/ranks/direct_choice/random_validation.npz": "d0c71b505a53a936664b61e206ac690717d35b7d14bd2f0c9c27cc5cea3e8e9c",
+      "experiments/ranking_v2/artifacts/predictions/direct_choice/random_validation.npz": "5b30754d39d07ba7cada6bec26f1cb929cffd04c309d64b5c7eff1d201e46060",
+      "experiments/ranking_v2/artifacts/ranks/no_attention/random_validation.npz": "e121d45c17ee80ee6964dea44832881b8f15d35753e0cc74872afd924f150d6b",
+      "experiments/ranking_v2/artifacts/predictions/no_attention/random_validation.npz": "a4dc6a9d8ed17dcc131bcd4046c6a44a1783bea259ec30a0c7a33b3af68ecbd9",
+      "experiments/ranking_v2/artifacts/ranks/linear_only/random_validation.npz": "305b362d24846a3252e3509e1198b06a57993d8db1e23f0a54e623c3ab2f9c7d",
+      "experiments/ranking_v2/artifacts/predictions/linear_only/random_validation.npz": "0398f33655c0c99a6409ff8056be60de5401563bdcd52c333b42dd76fe517f76",
+      "experiments/ranking_v2/artifacts/ranks/no_repeat_feature/random_validation.npz": "bb8b84f8bc1e05004109b296a66b529c63e815093a312eb110c821fbd578c8f2",
+      "experiments/ranking_v2/artifacts/predictions/no_repeat_feature/random_validation.npz": "4525ee462647d8f451adb2619bc5c68a6215813bffaa91889dbd7f81525245d1",
+      "experiments/ranking_v2/artifacts/scores/random_validation.npy": "00bb38de526aef0ef70edc5cf0ded1a78d00f08dcc69e5e5e5750c696ec90da9",
+      "experiments/ranking_v2/artifacts/ranked_candidates/random_validation.parquet": "7a08cf6fb1dc85ae8e7cffe5d222d8b6573d9103f26d5a73e9469ea664edf9fe",
+      "experiments/ranking_v2/artifacts/ranks/v2/random_test.npz": "6cf3be32b0b222100b4d6fc12df04fc2f33b23b642f469271d4344a164529d43",
+      "experiments/ranking_v2/artifacts/ranks/history_rule/random_test.npz": "12e4bc24386d40994be376b021affa01ed7d55a0bb816bf683d07a271504ca7c",
+      "experiments/ranking_v2/artifacts/ranks/din_seed42/random_test.npz": "fa8bbc0aaa91b2efccc2ab0ad14231c8cd93c83be68f2fcb7c7b50f3ca265011",
+      "experiments/ranking_v2/artifacts/predictions/din_seed42/random_test.npz": "5da9211357db0f2c525092f502e0c5901cc7a6f5354e1a21a56703b0e63ff26e",
+      "experiments/ranking_v2/artifacts/ranks/din_seed43/random_test.npz": "790731e5337445c3e6d9cf03cc223c5426d1595ba489c1e555f9bf39abc04fd2",
+      "experiments/ranking_v2/artifacts/predictions/din_seed43/random_test.npz": "0040b8c769b65b54c3d7e882c635d9f5ed679606da1736dc2d40d7e711baf9d6",
+      "experiments/ranking_v2/artifacts/ranks/din_seed44/random_test.npz": "da651009488ad70a4e897a6333d7b5cd54b941f2492756fbf270e3547eaceaff",
+      "experiments/ranking_v2/artifacts/predictions/din_seed44/random_test.npz": "203dfccf6b81d3c9a13c9d839d2ae500681c91282507edfcbad89ff553464f2f",
+      "experiments/ranking_v2/artifacts/ranks/rich_bce/random_test.npz": "9d8285e8e84aeadc4e6d1ecd24a785bd362ff7918744d23d0f9441e633acab34",
+      "experiments/ranking_v2/artifacts/predictions/rich_bce/random_test.npz": "87d7ad5ab97b558ff0fa82846578ba98c273f05a3c4ec0a508ca7d81f1af288e",
+      "experiments/ranking_v2/artifacts/ranks/direct_choice/random_test.npz": "32835aa98fdca0c55ef486cc77e58874993cb75b8254df340aba44bee31c7100",
+      "experiments/ranking_v2/artifacts/predictions/direct_choice/random_test.npz": "e79862376b20c316a4a6d45caa69ee01a6276a02ecd004e34d88dc98775dbd74",
+      "experiments/ranking_v2/artifacts/ranks/no_attention/random_test.npz": "71ee9bf1dd814bfb4858eeadf8abb21a7943e6cb7fb80ea8b5c29960aacc1c9e",
+      "experiments/ranking_v2/artifacts/predictions/no_attention/random_test.npz": "cdf7f12095db8d897b34f53c91243e16421066b1fe47da1078db1816b00cc0de",
+      "experiments/ranking_v2/artifacts/ranks/linear_only/random_test.npz": "bc7ad58d4201f04558bf21ad8ba7a48682074650b3a56db6263af63883ac0ad2",
+      "experiments/ranking_v2/artifacts/predictions/linear_only/random_test.npz": "fc19838c686acb5875ed9ef7b8ae68e7da78aa24385d5aedb89b411e13f41120",
+      "experiments/ranking_v2/artifacts/ranks/no_repeat_feature/random_test.npz": "8ac110a3badcd33cfdc66933a607042e8c2553386980f09b8387b38a6d47b8f9",
+      "experiments/ranking_v2/artifacts/predictions/no_repeat_feature/random_test.npz": "1b2dbb7f1bef33be21c30e311a82ab3b426d16088a770f8c8c6bcc448a8b443e",
+      "experiments/ranking_v2/artifacts/scores/random_test.npy": "07ac3cfcae89a4c0ccda3d1e043cb94b20bba988341648ec9b084f8c79034e13",
+      "experiments/ranking_v2/artifacts/ranked_candidates/random_test.parquet": "a675978844e87de5979aed5979bd70755b2f5291343a619c4f9ae85b65782e97"
+    },
+    "verifier_sha256": "50c7b0ec5fa59f8fafbf1fe61cead4ec13ff6ff2eaecca8957674b6e6d9ee20c"
+  },
+  "tests_passed": 59,
+  "test_log_sha256": "6c86c2b9e4782394bc1de1129f1fd5c7668b723327f59867f61b01a1cae8f84e"
+}

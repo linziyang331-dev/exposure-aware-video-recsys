@@ -1,0 +1,15 @@
+# Observed core runtime for public v0.1.0 on Windows/Python 3.12.
+# Reference only: existing PyTorch/CUDA and project additions were reused.
+# Not a full lockfile or a supported clean-install recipe; see requirements/README.md.
+torch==2.6.0+cu124
+numpy==2.2.6
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+PyYAML==6.0.3
+psutil==7.2.2
+requests==2.34.2
+packaging==26.3
+matplotlib==3.11.2
+pyarrow==19.0.1
+recbole==1.2.1

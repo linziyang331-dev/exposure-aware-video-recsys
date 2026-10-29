@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-10-29T05:06:28.939735+00:00",
+  "formal_output": "experiments/offline_rl_cql",
+  "tests": 127,
+  "new_module_tests": 22,
+  "experiment_fingerprint": "5faf015befbc5914807ac43c1767f04ae8beaa2fe64345609c94864989296580",
+  "manifest_sha256": "63652e7fc496be2495cafc1205daa38f9844003d5dbde8cdfad01c14b4bd61b6",
+  "conditions": 12,
+  "trained_models": 36,
+  "policy_results": 96,
+  "curve_rows": 396,
+  "report_and_summary_match_canonical_output": true,
+  "verification_bound_to_input_and_output_manifest": true,
+  "same_machine_independent_full_reproduction": "PASS",
+  "identical_reproduction_files": 389,
+  "completed_component_reuse_without_rewrite": true,
+  "original_exposure_components_unchanged": true,
+  "frozen_original_evidence_files_checked": {
+    "v2": 89,
+    "din": 310
+  },
+  "environment": "PASS",
+  "new_dependencies_installed": false,
+  "real_rl_value_claimed": false,
+  "real_top20_changed": false,
+  "figures_visual_qa": "reward and loss PNG inspected",
+  "figure_sha256": {
+    "loss_curves.png": "86ac9718c1552bb06dce1601814c71d48c99c023b40580f806dc021461a18da3",
+    "loss_curves.svg": "fa5bc88bcd1f3dd5ef3108863eef615529209488b7371233e2529d639ba352eb",
+    "reward_curves.png": "d32081d955d23546e2a69a886a52167c9dc5ebe667f89d6579de99195e2378f6",
+    "reward_curves.svg": "035215bee6f1d301e85e0b15c8f0df24c977c99aff70950da5196f3e64319f55"
+  },
+  "limits": [
+    "Synthetic finite MDP only; real Pure transitions not established",
+    "Same-machine reproduction, not a fresh environment",
+    "Three training runs do not establish universal superiority or neural lower-bound guarantees"
+  ]
+}

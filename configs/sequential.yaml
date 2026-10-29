@@ -1,0 +1,22 @@
+prepared_directory: data/processed/kuairand_pure
+cache_directory: .runtime/retrieval_cache
+output_directory: experiments/sequential
+device: cuda
+history_length: 50
+hidden_size: 32
+n_layers: 2
+n_heads: 2
+inner_size: 128
+dropout: 0.2
+position_embeddings: true
+learning_rate: 0.001
+weight_decay: 0.00001
+batch_size: 8192
+eval_batch_size: 512
+epochs: 8
+patience: 2
+primary_seed: 42
+seeds: [42, 43, 44]
+trial_limit: 3
+bootstrap_repeats: 500
+bootstrap_seed: 20261028

@@ -1,0 +1,37 @@
+prepared_directory: data/processed/kuairand_pure
+cache_directory: .runtime/retrieval_cache
+output_directory: experiments/ranking_v2
+device: cuda
+embedding_dim: 32
+hidden_sizes: [64, 32]
+history_length: 50
+dropout: 0.1
+user_features: true
+attention: true
+repeat_feature: true
+neural_rank: true
+residual: true
+teacher_features: true
+pretrained: true
+objective: choice
+select_metric: ndcg@20
+learning_rate: 0.001
+repeat_lr_multiplier: 10
+weight_decay: 0.00001
+batch_size: 8192
+query_batch_size: 512
+competitors: 15
+aux_batch_size: 1024
+aux_weight: 0.1
+delta_reg: 0.01
+queries_per_epoch: 64000
+mask_past: false
+eval_batch_size: 8192
+candidate_batch_size: 256
+epochs: 8
+patience: 2
+primary_seed: 42
+seeds: [42, 43, 44]
+trial_limit: 6
+bootstrap_repeats: 500
+bootstrap_seed: 20261028

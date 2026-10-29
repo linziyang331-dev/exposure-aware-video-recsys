@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scope": "same-machine independent unified analysis and fixed-batch response replay; no retraining",
+  "directories": [
+    "experiments/system_evaluation_main",
+    "experiments/system_evaluation_reproduction"
+  ],
+  "deterministic_files_compared": 9,
+  "deterministic_output_sha256_identical": true,
+  "analysis_numeric_comparison": "PASS",
+  "pipeline_non_timing_comparison": "PASS",
+  "latency_observations_expected_to_differ": true,
+  "reports_and_figures_not_required_byte_identical": true,
+  "canonical_report_mirrors_preserved": true,
+  "new_environment_verified": false
+}

@@ -1,0 +1,946 @@
+{
+  "raw_rows": 2622668,
+  "columns": [
+    "user_id",
+    "video_id",
+    "date",
+    "hourmin",
+    "time_ms",
+    "is_click",
+    "is_like",
+    "is_follow",
+    "is_comment",
+    "is_forward",
+    "is_hate",
+    "long_view",
+    "play_time_ms",
+    "duration_ms",
+    "profile_stay_time",
+    "comment_stay_time",
+    "is_profile_enter",
+    "is_rand",
+    "tab"
+  ],
+  "files": [
+    {
+      "file": "log_random_4_22_to_5_08_pure.csv",
+      "source": "random",
+      "rows": 1186059,
+      "missing": {
+        "user_id": 0,
+        "video_id": 0,
+        "date": 0,
+        "hourmin": 0,
+        "time_ms": 0,
+        "is_click": 0,
+        "is_like": 0,
+        "is_follow": 0,
+        "is_comment": 0,
+        "is_forward": 0,
+        "is_hate": 0,
+        "long_view": 0,
+        "play_time_ms": 0,
+        "duration_ms": 0,
+        "profile_stay_time": 0,
+        "comment_stay_time": 0,
+        "is_profile_enter": 0,
+        "is_rand": 0,
+        "tab": 0
+      },
+      "feedback": {
+        "is_click": {
+          "0": 977125,
+          "1": 208934
+        },
+        "is_like": {
+          "0": 1180368,
+          "1": 5691
+        },
+        "is_follow": {
+          "0": 1185749,
+          "1": 310
+        },
+        "is_comment": {
+          "0": 1185648,
+          "1": 411
+        },
+        "is_forward": {
+          "0": 1185657,
+          "1": 402
+        },
+        "is_hate": {
+          "0": 1184708,
+          "1": 1351
+        },
+        "long_view": {
+          "0": 1085290,
+          "1": 100769
+        },
+        "is_profile_enter": {
+          "0": 1179462,
+          "1": 6597
+        },
+        "is_rand": {
+          "1": 1186059
+        }
+      },
+      "negative_duration_rows": 0,
+      "negative_play_time_rows": 0,
+      "zero_duration_rows": 36920,
+      "play_longer_than_video_rows": 74841,
+      "time_min_ms": 1650595332831,
+      "time_max_ms": 1652025128763,
+      "dates": {
+        "20220508": 114925,
+        "20220506": 103245,
+        "20220507": 103982,
+        "20220503": 109627,
+        "20220504": 108543,
+        "20220505": 97170,
+        "20220502": 85874,
+        "20220430": 62716,
+        "20220501": 62044,
+        "20220423": 52359,
+        "20220429": 49595,
+        "20220424": 44441,
+        "20220427": 41737,
+        "20220425": 41837,
+        "20220426": 42367,
+        "20220428": 40748,
+        "20220422": 24849
+      },
+      "tabs": {
+        "1": 1178025,
+        "11": 6755,
+        "2": 764,
+        "14": 515
+      },
+      "users": 27285,
+      "videos": 7583
+    },
+    {
+      "file": "log_standard_4_08_to_4_21_pure.csv",
+      "source": "standard",
+      "rows": 1141112,
+      "missing": {
+        "user_id": 0,
+        "video_id": 0,
+        "date": 0,
+        "hourmin": 0,
+        "time_ms": 0,
+        "is_click": 0,
+        "is_like": 0,
+        "is_follow": 0,
+        "is_comment": 0,
+        "is_forward": 0,
+        "is_hate": 0,
+        "long_view": 0,
+        "play_time_ms": 0,
+        "duration_ms": 0,
+        "profile_stay_time": 0,
+        "comment_stay_time": 0,
+        "is_profile_enter": 0,
+        "is_rand": 0,
+        "tab": 0
+      },
+      "feedback": {
+        "is_click": {
+          "0": 612267,
+          "1": 528845
+        },
+        "is_like": {
+          "0": 1119800,
+          "1": 21312
+        },
+        "is_follow": {
+          "0": 1139963,
+          "1": 1149
+        },
+        "is_comment": {
+          "0": 1138182,
+          "1": 2930
+        },
+        "is_forward": {
+          "0": 1139976,
+          "1": 1136
+        },
+        "is_hate": {
+          "0": 1140632,
+          "1": 480
+        },
+        "long_view": {
+          "0": 756991,
+          "1": 384121
+        },
+        "is_profile_enter": {
+          "0": 1112138,
+          "1": 28974
+        },
+        "is_rand": {
+          "0": 1141112
+        }
+      },
+      "negative_duration_rows": 0,
+      "negative_play_time_rows": 0,
+      "zero_duration_rows": 24076,
+      "play_longer_than_video_rows": 193736,
+      "time_min_ms": 1649475963278,
+      "time_max_ms": 1650556328855,
+      "dates": {
+        "20220411": 278835,
+        "20220410": 227808,
+        "20220412": 166076,
+        "20220413": 94711,
+        "20220409": 52736,
+        "20220414": 71252,
+        "20220415": 58892,
+        "20220416": 60904,
+        "20220417": 44023,
+        "20220421": 20021,
+        "20220419": 20443,
+        "20220420": 20851,
+        "20220418": 24560
+      },
+      "tabs": {
+        "1": 834876,
+        "0": 150013,
+        "4": 75524,
+        "2": 39291,
+        "6": 29671,
+        "3": 3574,
+        "5": 3402,
+        "8": 2551,
+        "11": 417,
+        "12": 834,
+        "7": 333,
+        "9": 252,
+        "10": 80,
+        "13": 283,
+        "14": 11
+      },
+      "users": 26210,
+      "videos": 7538
+    },
+    {
+      "file": "log_standard_4_22_to_5_08_pure.csv",
+      "source": "standard",
+      "rows": 295497,
+      "missing": {
+        "user_id": 0,
+        "video_id": 0,
+        "date": 0,
+        "hourmin": 0,
+        "time_ms": 0,
+        "is_click": 0,
+        "is_like": 0,
+        "is_follow": 0,
+        "is_comment": 0,
+        "is_forward": 0,
+        "is_hate": 0,
+        "long_view": 0,
+        "play_time_ms": 0,
+        "duration_ms": 0,
+        "profile_stay_time": 0,
+        "comment_stay_time": 0,
+        "is_profile_enter": 0,
+        "is_rand": 0,
+        "tab": 0
+      },
+      "feedback": {
+        "is_click": {
+          "0": 164000,
+          "1": 131497
+        },
+        "is_like": {
+          "0": 290263,
+          "1": 5234
+        },
+        "is_follow": {
+          "0": 295103,
+          "1": 394
+        },
+        "is_comment": {
+          "0": 294770,
+          "1": 727
+        },
+        "is_forward": {
+          "0": 295251,
+          "1": 246
+        },
+        "is_hate": {
+          "0": 295267,
+          "1": 230
+        },
+        "long_view": {
+          "0": 202894,
+          "1": 92603
+        },
+        "is_profile_enter": {
+          "0": 289975,
+          "1": 5522
+        },
+        "is_rand": {
+          "0": 295497
+        }
+      },
+      "negative_duration_rows": 0,
+      "negative_play_time_rows": 0,
+      "zero_duration_rows": 4798,
+      "play_longer_than_video_rows": 44874,
+      "time_min_ms": 1650552767170,
+      "time_max_ms": 1652025130564,
+      "dates": {
+        "20220423": 26645,
+        "20220430": 21204,
+        "20220422": 22283,
+        "20220424": 18240,
+        "20220429": 15839,
+        "20220426": 14530,
+        "20220427": 14328,
+        "20220428": 13972,
+        "20220425": 14911,
+        "20220501": 20790,
+        "20220502": 19554,
+        "20220503": 18943,
+        "20220504": 17600,
+        "20220508": 15747,
+        "20220506": 13834,
+        "20220505": 13390,
+        "20220507": 13687
+      },
+      "tabs": {
+        "1": 223513,
+        "0": 28074,
+        "4": 17641,
+        "6": 13114,
+        "2": 9073,
+        "8": 1358,
+        "5": 767,
+        "12": 638,
+        "3": 440,
+        "11": 308,
+        "9": 192,
+        "7": 171,
+        "13": 116,
+        "10": 72,
+        "14": 20
+      },
+      "users": 25877,
+      "videos": 6618
+    }
+  ],
+  "invalid_core_rows": 0,
+  "source_flag_mismatches": 0,
+  "date_timestamp_mismatches": 20553,
+  "raw_files": {
+    "log_random_4_22_to_5_08_pure.csv": "60b80994da969cd53da4d50c37ba3dafd6fb185df804c92c8410df34845a9d2c",
+    "log_standard_4_08_to_4_21_pure.csv": "5bb6eb0b3d9f47e5436cb5dc82ee1899b845ebf9750a5560b801e929e18bd41c",
+    "log_standard_4_22_to_5_08_pure.csv": "429e3b948828942e572f2c3a5be5a25799ffe75591d22d18cf417b9b534d31fd"
+  },
+  "staging_code_sha256": "255961d5b3ed9839557a779022945a6154b8b796b8d929a4548396d062ef5203",
+  "unique_rows": 2600671,
+  "exact_duplicates_removed": 21997,
+  "source_summary": [
+    {
+      "source": "random",
+      "rows": 1186049,
+      "users": 27285,
+      "videos": 7583,
+      "positives": 208934,
+      "positive_rate": 0.1761596696257912,
+      "long_view_rate": 0.08496191978577614,
+      "min_time_ms": 1650595332831,
+      "max_time_ms": 1652025128763
+    },
+    {
+      "source": "standard",
+      "rows": 1414622,
+      "users": 27077,
+      "videos": 7551,
+      "positives": 656358,
+      "positive_rate": 0.4639811907350515,
+      "long_view_rate": 0.3355723295693125,
+      "min_time_ms": 1649475963278,
+      "max_time_ms": 1652025130564
+    }
+  ],
+  "source_tab_summary": [
+    {
+      "source": "random",
+      "tab": 1,
+      "rows": 1178025,
+      "positive_rate": 0.17728571125400563
+    },
+    {
+      "source": "random",
+      "tab": 2,
+      "rows": 764,
+      "positive_rate": 0.11387434554973822
+    },
+    {
+      "source": "random",
+      "tab": 11,
+      "rows": 6745,
+      "positive_rate": 0.0
+    },
+    {
+      "source": "random",
+      "tab": 14,
+      "rows": 515,
+      "positive_rate": 0.0
+    },
+    {
+      "source": "standard",
+      "tab": 0,
+      "rows": 177852,
+      "positive_rate": 0.09083395182511302
+    },
+    {
+      "source": "standard",
+      "tab": 1,
+      "rows": 1058388,
+      "positive_rate": 0.5230066856389151
+    },
+    {
+      "source": "standard",
+      "tab": 2,
+      "rows": 48364,
+      "positive_rate": 0.48006781903895457
+    },
+    {
+      "source": "standard",
+      "tab": 3,
+      "rows": 4008,
+      "positive_rate": 0.02245508982035928
+    },
+    {
+      "source": "standard",
+      "tab": 4,
+      "rows": 93165,
+      "positive_rate": 0.6154993828154349
+    },
+    {
+      "source": "standard",
+      "tab": 5,
+      "rows": 2269,
+      "positive_rate": 0.28029969149405026
+    },
+    {
+      "source": "standard",
+      "tab": 6,
+      "rows": 22940,
+      "positive_rate": 0.17772449869224063
+    },
+    {
+      "source": "standard",
+      "tab": 7,
+      "rows": 504,
+      "positive_rate": 0.4027777777777778
+    },
+    {
+      "source": "standard",
+      "tab": 8,
+      "rows": 3909,
+      "positive_rate": 0.04093118444614991
+    },
+    {
+      "source": "standard",
+      "tab": 9,
+      "rows": 444,
+      "positive_rate": 0.9932432432432432
+    },
+    {
+      "source": "standard",
+      "tab": 10,
+      "rows": 152,
+      "positive_rate": 1.0
+    },
+    {
+      "source": "standard",
+      "tab": 11,
+      "rows": 725,
+      "positive_rate": 0.0
+    },
+    {
+      "source": "standard",
+      "tab": 12,
+      "rows": 1472,
+      "positive_rate": 0.1358695652173913
+    },
+    {
+      "source": "standard",
+      "tab": 13,
+      "rows": 399,
+      "positive_rate": 0.3483709273182957
+    },
+    {
+      "source": "standard",
+      "tab": 14,
+      "rows": 31,
+      "positive_rate": 0.0
+    }
+  ],
+  "same_identity_extra_rows": 1486,
+  "elapsed_seconds": 35.56784650008194,
+  "total_users": 27285,
+  "total_videos": 7583,
+  "date_mismatch_hours": [
+    {
+      "source": "random",
+      "local_hour": "21",
+      "rows": 16
+    },
+    {
+      "source": "random",
+      "local_hour": "22",
+      "rows": 21
+    },
+    {
+      "source": "random",
+      "local_hour": "23",
+      "rows": 8590
+    },
+    {
+      "source": "standard",
+      "local_hour": "21",
+      "rows": 4
+    },
+    {
+      "source": "standard",
+      "local_hour": "22",
+      "rows": 81
+    },
+    {
+      "source": "standard",
+      "local_hour": "23",
+      "rows": 11841
+    }
+  ],
+  "date_mismatch_interpretation": {
+    "stored_date_is_next_calendar_day_rows": 20553,
+    "clock_or_bucket_mechanism_verified": false,
+    "canonical_field": "time_ms",
+    "handling": "Preserve rows; date/hourmin are audit-only, not split keys or input features"
+  },
+  "user_interaction_quantiles": {
+    "0": 10.0,
+    "0.25": 42.0,
+    "0.5": 72.0,
+    "0.75": 120.0,
+    "0.9": 188.0,
+    "0.95": 246.0,
+    "0.99": 411.0,
+    "1": 1765.0
+  },
+  "video_exposure_quantiles": {
+    "0": 2.0,
+    "0.25": 183.0,
+    "0.5": 218.0,
+    "0.75": 335.0,
+    "0.9": 619.0,
+    "0.95": 903.7999999999993,
+    "0.99": 2040.0800000000017,
+    "1": 10515.0
+  },
+  "top_10_percent_video_exposure_share": 0.35613885801010586,
+  "feature_tables": [
+    {
+      "file": "user_features_pure.csv",
+      "rows": 27285,
+      "columns": [
+        "user_id",
+        "user_active_degree",
+        "is_lowactive_period",
+        "is_live_streamer",
+        "is_video_author",
+        "follow_user_num",
+        "follow_user_num_range",
+        "fans_user_num",
+        "fans_user_num_range",
+        "friend_user_num",
+        "friend_user_num_range",
+        "register_days",
+        "register_days_range",
+        "onehot_feat0",
+        "onehot_feat1",
+        "onehot_feat2",
+        "onehot_feat3",
+        "onehot_feat4",
+        "onehot_feat5",
+        "onehot_feat6",
+        "onehot_feat7",
+        "onehot_feat8",
+        "onehot_feat9",
+        "onehot_feat10",
+        "onehot_feat11",
+        "onehot_feat12",
+        "onehot_feat13",
+        "onehot_feat14",
+        "onehot_feat15",
+        "onehot_feat16",
+        "onehot_feat17"
+      ],
+      "dtypes": {
+        "user_id": "int64",
+        "user_active_degree": "str",
+        "is_lowactive_period": "int64",
+        "is_live_streamer": "int64",
+        "is_video_author": "int64",
+        "follow_user_num": "int64",
+        "follow_user_num_range": "str",
+        "fans_user_num": "int64",
+        "fans_user_num_range": "str",
+        "friend_user_num": "int64",
+        "friend_user_num_range": "str",
+        "register_days": "int64",
+        "register_days_range": "str",
+        "onehot_feat0": "int64",
+        "onehot_feat1": "int64",
+        "onehot_feat2": "int64",
+        "onehot_feat3": "int64",
+        "onehot_feat4": "float64",
+        "onehot_feat5": "int64",
+        "onehot_feat6": "int64",
+        "onehot_feat7": "int64",
+        "onehot_feat8": "int64",
+        "onehot_feat9": "int64",
+        "onehot_feat10": "int64",
+        "onehot_feat11": "int64",
+        "onehot_feat12": "float64",
+        "onehot_feat13": "float64",
+        "onehot_feat14": "float64",
+        "onehot_feat15": "float64",
+        "onehot_feat16": "float64",
+        "onehot_feat17": "float64"
+      },
+      "missing": {
+        "user_id": 0,
+        "user_active_degree": 0,
+        "is_lowactive_period": 0,
+        "is_live_streamer": 0,
+        "is_video_author": 0,
+        "follow_user_num": 0,
+        "follow_user_num_range": 0,
+        "fans_user_num": 0,
+        "fans_user_num_range": 0,
+        "friend_user_num": 0,
+        "friend_user_num_range": 0,
+        "register_days": 0,
+        "register_days_range": 0,
+        "onehot_feat0": 0,
+        "onehot_feat1": 0,
+        "onehot_feat2": 0,
+        "onehot_feat3": 0,
+        "onehot_feat4": 874,
+        "onehot_feat5": 0,
+        "onehot_feat6": 0,
+        "onehot_feat7": 0,
+        "onehot_feat8": 0,
+        "onehot_feat9": 0,
+        "onehot_feat10": 0,
+        "onehot_feat11": 0,
+        "onehot_feat12": 714,
+        "onehot_feat13": 714,
+        "onehot_feat14": 714,
+        "onehot_feat15": 714,
+        "onehot_feat16": 714,
+        "onehot_feat17": 714
+      },
+      "duplicate_key_rows": 0,
+      "log_entities_missing_metadata": 0,
+      "enabled_as_model_inputs": false,
+      "reason": "Snapshot availability not established; initial protocol uses IDs/tab/history only"
+    },
+    {
+      "file": "video_features_basic_pure.csv",
+      "rows": 7583,
+      "columns": [
+        "video_id",
+        "author_id",
+        "video_type",
+        "upload_dt",
+        "upload_type",
+        "visible_status",
+        "video_duration",
+        "server_width",
+        "server_height",
+        "music_id",
+        "music_type",
+        "tag"
+      ],
+      "dtypes": {
+        "video_id": "int64",
+        "author_id": "int64",
+        "video_type": "str",
+        "upload_dt": "str",
+        "upload_type": "str",
+        "visible_status": "float64",
+        "video_duration": "float64",
+        "server_width": "float64",
+        "server_height": "float64",
+        "music_id": "int64",
+        "music_type": "float64",
+        "tag": "string"
+      },
+      "missing": {
+        "video_id": 0,
+        "author_id": 0,
+        "video_type": 0,
+        "upload_dt": 0,
+        "upload_type": 0,
+        "visible_status": 0,
+        "video_duration": 239,
+        "server_width": 0,
+        "server_height": 0,
+        "music_id": 0,
+        "music_type": 203,
+        "tag": 96
+      },
+      "duplicate_key_rows": 0,
+      "log_entities_missing_metadata": 0,
+      "enabled_as_model_inputs": false,
+      "reason": "Snapshot availability not established; initial protocol uses IDs/tab/history only"
+    },
+    {
+      "file": "video_features_statistic_pure.csv",
+      "rows": 7583,
+      "columns": [
+        "video_id",
+        "counts",
+        "show_cnt",
+        "show_user_num",
+        "play_cnt",
+        "play_user_num",
+        "play_duration",
+        "complete_play_cnt",
+        "complete_play_user_num",
+        "valid_play_cnt",
+        "valid_play_user_num",
+        "long_time_play_cnt",
+        "long_time_play_user_num",
+        "short_time_play_cnt",
+        "short_time_play_user_num",
+        "play_progress",
+        "comment_stay_duration",
+        "like_cnt",
+        "like_user_num",
+        "click_like_cnt",
+        "double_click_cnt",
+        "cancel_like_cnt",
+        "cancel_like_user_num",
+        "comment_cnt",
+        "comment_user_num",
+        "direct_comment_cnt",
+        "reply_comment_cnt",
+        "delete_comment_cnt",
+        "delete_comment_user_num",
+        "comment_like_cnt",
+        "comment_like_user_num",
+        "follow_cnt",
+        "follow_user_num",
+        "cancel_follow_cnt",
+        "cancel_follow_user_num",
+        "share_cnt",
+        "share_user_num",
+        "download_cnt",
+        "download_user_num",
+        "report_cnt",
+        "report_user_num",
+        "reduce_similar_cnt",
+        "reduce_similar_user_num",
+        "collect_cnt",
+        "collect_user_num",
+        "cancel_collect_cnt",
+        "cancel_collect_user_num",
+        "direct_comment_user_num",
+        "reply_comment_user_num",
+        "share_all_cnt",
+        "share_all_user_num",
+        "outsite_share_all_cnt"
+      ],
+      "dtypes": {
+        "video_id": "int64",
+        "counts": "int64",
+        "show_cnt": "float64",
+        "show_user_num": "float64",
+        "play_cnt": "float64",
+        "play_user_num": "float64",
+        "play_duration": "float64",
+        "complete_play_cnt": "float64",
+        "complete_play_user_num": "float64",
+        "valid_play_cnt": "float64",
+        "valid_play_user_num": "float64",
+        "long_time_play_cnt": "float64",
+        "long_time_play_user_num": "float64",
+        "short_time_play_cnt": "float64",
+        "short_time_play_user_num": "float64",
+        "play_progress": "float64",
+        "comment_stay_duration": "float64",
+        "like_cnt": "float64",
+        "like_user_num": "float64",
+        "click_like_cnt": "float64",
+        "double_click_cnt": "float64",
+        "cancel_like_cnt": "float64",
+        "cancel_like_user_num": "float64",
+        "comment_cnt": "float64",
+        "comment_user_num": "float64",
+        "direct_comment_cnt": "float64",
+        "reply_comment_cnt": "float64",
+        "delete_comment_cnt": "float64",
+        "delete_comment_user_num": "float64",
+        "comment_like_cnt": "float64",
+        "comment_like_user_num": "float64",
+        "follow_cnt": "float64",
+        "follow_user_num": "float64",
+        "cancel_follow_cnt": "float64",
+        "cancel_follow_user_num": "float64",
+        "share_cnt": "float64",
+        "share_user_num": "float64",
+        "download_cnt": "float64",
+        "download_user_num": "float64",
+        "report_cnt": "float64",
+        "report_user_num": "float64",
+        "reduce_similar_cnt": "float64",
+        "reduce_similar_user_num": "float64",
+        "collect_cnt": "float64",
+        "collect_user_num": "float64",
+        "cancel_collect_cnt": "float64",
+        "cancel_collect_user_num": "float64",
+        "direct_comment_user_num": "float64",
+        "reply_comment_user_num": "float64",
+        "share_all_cnt": "float64",
+        "share_all_user_num": "float64",
+        "outsite_share_all_cnt": "float64"
+      },
+      "missing": {
+        "video_id": 0,
+        "counts": 0,
+        "show_cnt": 0,
+        "show_user_num": 0,
+        "play_cnt": 0,
+        "play_user_num": 0,
+        "play_duration": 0,
+        "complete_play_cnt": 0,
+        "complete_play_user_num": 0,
+        "valid_play_cnt": 0,
+        "valid_play_user_num": 0,
+        "long_time_play_cnt": 0,
+        "long_time_play_user_num": 0,
+        "short_time_play_cnt": 0,
+        "short_time_play_user_num": 0,
+        "play_progress": 0,
+        "comment_stay_duration": 0,
+        "like_cnt": 0,
+        "like_user_num": 0,
+        "click_like_cnt": 0,
+        "double_click_cnt": 0,
+        "cancel_like_cnt": 0,
+        "cancel_like_user_num": 0,
+        "comment_cnt": 0,
+        "comment_user_num": 0,
+        "direct_comment_cnt": 0,
+        "reply_comment_cnt": 0,
+        "delete_comment_cnt": 0,
+        "delete_comment_user_num": 0,
+        "comment_like_cnt": 0,
+        "comment_like_user_num": 0,
+        "follow_cnt": 0,
+        "follow_user_num": 0,
+        "cancel_follow_cnt": 0,
+        "cancel_follow_user_num": 0,
+        "share_cnt": 0,
+        "share_user_num": 0,
+        "download_cnt": 0,
+        "download_user_num": 0,
+        "report_cnt": 0,
+        "report_user_num": 0,
+        "reduce_similar_cnt": 0,
+        "reduce_similar_user_num": 0,
+        "collect_cnt": 0,
+        "collect_user_num": 0,
+        "cancel_collect_cnt": 0,
+        "cancel_collect_user_num": 0,
+        "direct_comment_user_num": 0,
+        "reply_comment_user_num": 0,
+        "share_all_cnt": 0,
+        "share_all_user_num": 0,
+        "outsite_share_all_cnt": 0
+      },
+      "duplicate_key_rows": 0,
+      "log_entities_missing_metadata": 0,
+      "enabled_as_model_inputs": false,
+      "reason": "Monthly aggregates include future periods"
+    }
+  ],
+  "propensity_fields": [],
+  "real_ope_supported": false,
+  "ope_reason": "No per-event behavior action probability and reconstructible action support; intervention rate is not an action propensity.",
+  "full_rl_transitions_supported": false,
+  "rl_reason": "Pure removes out-of-pool interactions; observed subsequences are not verified complete state transitions.",
+  "license": {
+    "zenodo_record": "cc-by-4.0",
+    "archive_license_first_line": "Attribution-ShareAlike 4.0 International",
+    "metadata_conflict": true,
+    "raw_data_redistributed_in_repository": false
+  },
+  "download": {
+    "status": "VERIFIED",
+    "timestamp": "2026-10-27T22:31:11.342409+08:00",
+    "source": "https://zenodo.org/records/10439422/files/KuaiRand-Pure.tar.gz?download=1",
+    "metadata_record": "https://zenodo.org/records/10439422",
+    "record_license": "cc-by-4.0",
+    "archive": {
+      "bytes": 47432272,
+      "md5": "0820331067a3784d9691136f772b35a7",
+      "sha256": "c814bf6f3624c0cfae83c57de3df26b2ed206e5c57bab4c4dcbfabbabe20cbf0"
+    },
+    "files": [
+      {
+        "path": "KuaiRand-Pure\\data\\log_random_4_22_to_5_08_pure.csv",
+        "bytes": 87086116,
+        "sha256": "60b80994da969cd53da4d50c37ba3dafd6fb185df804c92c8410df34845a9d2c"
+      },
+      {
+        "path": "KuaiRand-Pure\\data\\log_standard_4_08_to_4_21_pure.csv",
+        "bytes": 83961282,
+        "sha256": "5bb6eb0b3d9f47e5436cb5dc82ee1899b845ebf9750a5560b801e929e18bd41c"
+      },
+      {
+        "path": "KuaiRand-Pure\\data\\log_standard_4_22_to_5_08_pure.csv",
+        "bytes": 21765075,
+        "sha256": "429e3b948828942e572f2c3a5be5a25799ffe75591d22d18cf417b9b534d31fd"
+      },
+      {
+        "path": "KuaiRand-Pure\\data\\user_features_pure.csv",
+        "bytes": 3519028,
+        "sha256": "dc729a656301b4c6d07f713fe41d05ec9bfaab670b90e531c70037caf033c011"
+      },
+      {
+        "path": "KuaiRand-Pure\\data\\video_features_basic_pure.csv",
+        "bytes": 626669,
+        "sha256": "a6f7ee02684c5777422306cdc416e170302288aa89aca9dfea995edbd625bcc2"
+      },
+      {
+        "path": "KuaiRand-Pure\\data\\video_features_statistic_pure.csv",
+        "bytes": 6559217,
+        "sha256": "d5c9e237ef2c6c1fc0e7f27e952f215d6626ecd934b01a6c53ecfcc72540f6b6"
+      },
+      {
+        "path": "KuaiRand-Pure\\LICENSE",
+        "bytes": 20138,
+        "sha256": "187442db4df3afd21f2f0525739fd4beac28a62daaba3ee8d3533f60e7c33ec7"
+      },
+      {
+        "path": "KuaiRand-Pure\\load_data_pure.py",
+        "bytes": 1608,
+        "sha256": "19b6117c9c82a6480af72603e66579f1e0e824e16ce826eb9e6ac98fbf1ce6af"
+      }
+    ],
+    "extracted_bytes": 203539133,
+    "elapsed_seconds": 397.4229365999345
+  },
+  "audit_timestamp": "2026-10-27T23:13:23.126961+08:00",
+  "inspection_elapsed_seconds": 7.5761795999715105,
+  "process_peak_working_set_MiB": 232.48046875,
+  "database_bytes": 372105216
+}

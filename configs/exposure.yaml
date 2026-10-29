@@ -1,0 +1,23 @@
+output_directory: experiments/exposure_evaluation
+prepared_directory: data/processed/kuairand_pure
+cache_directory: .runtime/retrieval_cache
+bootstrap_repeats: 500
+bootstrap_seed: 20261029
+calibration_bins: 15
+synthetic:
+  world_seed: 20261029
+  n_contexts: 4096
+  n_actions: 10
+  context_dim: 5
+  strengths: [0.0, 1.5, 3.0]
+  sample_sizes: [1000, 5000, 20000]
+  repeats: 40
+  clips: [null, 5.0, 20.0]
+  target_policies: [uniform, reward_softmax]
+  exploration: 0.05
+  reward_training_rows: 10000
+  coverage_rows: 5000
+  coverage_repeats: 40
+  coverage_bootstrap_repeats: 200
+  learning_rows: 10000
+  learning_seeds: [42, 43, 44, 45, 46]

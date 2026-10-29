@@ -1,0 +1,18 @@
+dataset: kuairand_pure
+raw_directory: data/raw/kuairand_pure/extracted/KuaiRand-Pure/data
+staging_database: .runtime/data/kuairand_pure.sqlite
+output_directory: data/processed/kuairand_pure
+chunk_size: 100000
+output_batch_size: 4096
+train_start: '2022-04-08T00:00:00+08:00'
+train_end: '2022-04-22T00:00:00+08:00'
+validation_end: '2022-04-29T00:00:00+08:00'
+test_end: '2022-05-09T00:00:00+08:00'
+max_history: 50
+primary_label: is_click
+history_update_source: standard
+history_update_label: is_click
+history_policy: rolling_past_standard_positives_in_train_vocabulary
+propensity_policy: absent_do_not_fabricate
+enabled_input_features: [user_index, item_index, tab, history_item_indices]
+excluded_input_features: [video_monthly_statistics, user_snapshot_aggregates, current_feedback]

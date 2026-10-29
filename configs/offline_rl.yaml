@@ -1,0 +1,24 @@
+output_directory: experiments/offline_rl_cql
+world:
+  world_seed: 20261029
+  topics: 4
+  fatigue_levels: 3
+  horizon: 10
+scenarios: [exploratory, narrow]
+training_episodes: [200, 2000]
+validation_episodes: 300
+seeds: [42, 43, 44]
+alphas: [0.0, 0.2, 1.0]
+main_alpha: 0.2
+rollout_episodes: 5000
+bootstrap_repeats: 500
+bootstrap_seed: 20261029
+model:
+  hidden: [64, 64]
+  steps: 2500
+  batch_size: 256
+  learning_rate: 0.001
+  gamma: 0.95
+  target_update: 100
+  trace_interval: 250
+  gradient_clip: 10.0

@@ -1,0 +1,24 @@
+prepared_directory: data/processed/kuairand_pure
+cache_directory: .runtime/retrieval_cache
+output_directory: experiments/retrieval
+max_history: 50
+device: cuda
+batch_size: 1024
+eval_batch_size: 512
+epochs: 6
+patience: 2
+learning_rate: 0.001
+weight_decay: 0.00001
+embedding_dim: 32
+output_dim: 32
+hidden_dim: 64
+temperature: 0.1
+contrastive_weight: 0.2
+contrastive_max_queries: 256
+itemcf_neighbors: [20, 50, 100]
+seeds: [42, 43, 44]
+primary_seed: 42
+ablation_seed: 42
+candidate_topk: 100
+bootstrap_repeats: 500
+bootstrap_seed: 20261028

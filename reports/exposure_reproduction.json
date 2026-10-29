@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "scope": "same-machine independent full rerun, not a fresh environment",
+  "directories": [
+    "experiments/exposure_evaluation",
+    "experiments/exposure_reproduction"
+  ],
+  "components": {
+    "synthetic": {
+      "all_output_hashes_identical": true,
+      "output_files_compared": 8,
+      "complete_result_numeric_comparison": "PASS",
+      "canonical_component": "1ff58a87884241963464f9c38a1da1f26529c3717da109827d58d65b2b5af86d",
+      "independent_component": "c94ceaff6b03f2d34be268afea3bc2822a6f26fa05ee842b81c324e4f49c09e8"
+    },
+    "real": {
+      "all_output_hashes_identical": true,
+      "output_files_compared": 3,
+      "complete_result_numeric_comparison": "PASS",
+      "canonical_component": "99cc36663b14c7c33a7ea9e2ff846e1c74568fcf4c178589ab0142be7dc18db7",
+      "independent_component": "22f73a0a5e5efe30e9b29e5e64f8cf36c01ff8d151cd816577db2b45f8777d5c"
+    }
+  },
+  "source_signature_checked": true
+}

@@ -1,0 +1,11 @@
+# A separately recorded follow-up after all four unrestricted variants failed.
+output_directory: experiments/ranking_v3_frozen_top20
+learning_rate: 0.0003
+epochs: 6
+patience: 2
+short_history: 5
+branch_hidden: 64
+primary_seed: 42
+seeds: [42, 43, 44]
+bootstrap_repeats: 500
+bootstrap_seed: 20261028

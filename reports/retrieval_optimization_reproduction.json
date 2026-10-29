@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "same_machine_retraining": true,
+  "fresh_environment_verified": false,
+  "seed": 42,
+  "parameters_identical": true,
+  "validation_metric_identical": true,
+  "alternate_slash_reuse": true,
+  "output_directory": "experiments/retrieval_v2_reproduction_canonical/seed42",
+  "trained_parameter_sha256": "9f0366a59c20489145f909a2767bd947b644f3cf25d8abd03920b74e32c0c29d",
+  "entry_script_sha256": "30d86d36863163aeff372731d20117577a2b548ecdb100e5a8e717294ee301b5"
+}

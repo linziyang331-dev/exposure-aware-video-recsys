@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "same-machine independent complete offline training, not a fresh environment",
+  "directories": [
+    "experiments/offline_rl_cql",
+    "experiments/offline_rl_reproduction"
+  ],
+  "output_files_compared": 389,
+  "all_output_sha256_identical": true,
+  "complete_result_numeric_comparison": "PASS",
+  "trained_models_each_run": 36,
+  "canonical_component": "5faf015befbc5914807ac43c1767f04ae8beaa2fe64345609c94864989296580",
+  "independent_component": "ec166f65a06643255b464eef4ee5af61e448d71ed3b8203591cdac6a6ce1295a"
+}

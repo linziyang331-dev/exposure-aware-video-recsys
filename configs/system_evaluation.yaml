@@ -1,0 +1,11 @@
+output_directory: experiments/system_evaluation_main
+prepared_directory: data/processed/kuairand_pure
+cache_directory: .runtime/retrieval_cache
+device: cuda
+deep_audit: true
+bootstrap_repeats: 500
+bootstrap_seed: 20261029
+probe_queries_per_partition: 512
+benchmark_batches: [1, 32]
+warmup_batches: 8
+measurement_batches: 64

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-10-29T02:47:23.092551+00:00",
+  "formal_output": "experiments/exposure_evaluation",
+  "tests": 105,
+  "component_fingerprints": {
+    "synthetic": "1ff58a87884241963464f9c38a1da1f26529c3717da109827d58d65b2b5af86d",
+    "real": "99cc36663b14c7c33a7ea9e2ff846e1c74568fcf4c178589ab0142be7dc18db7"
+  },
+  "report_and_summary_match_canonical_component": true,
+  "verification_bound_to_current_components": true,
+  "frozen_evidence_files_checked": {
+    "din": 310,
+    "v2": 89
+  },
+  "same_machine_full_reproduction": "PASS",
+  "environment": "PASS",
+  "real_causal_ope_claimed": false,
+  "all_plan_tasks_completed": true,
+  "no_new_dependency_installation": true
+}

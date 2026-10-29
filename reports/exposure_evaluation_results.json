@@ -1,0 +1,182 @@
+{
+  "status": "COMPLETE",
+  "smoke": false,
+  "real_ope_identified": false,
+  "real_ope_status": "NOT_IDENTIFIABLE_FROM_AVAILABLE_METADATA",
+  "real_propensity_fabricated": false,
+  "original_top20": {
+    "standard/test": {
+      "v2": {
+        "queries": 75430,
+        "users": 19630,
+        "recall@20": 0.10357947766140793,
+        "ndcg@20": 0.038618581180176074,
+        "recall@100": 0.32510937292854303,
+        "ndcg@100": 0.07807607616676311,
+        "user_macro": {
+          "recall@20": 0.11139746712149082,
+          "ndcg@20": 0.0416375155141097,
+          "recall@100": 0.3346494735156576,
+          "ndcg@100": 0.08149765606555268,
+          "mrr@100": 0.027763671432802124
+        },
+        "mrr@100": 0.02597129577447432
+      },
+      "din": {
+        "queries": 75430,
+        "users": 19630,
+        "recall@20": 0.13448230147156304,
+        "ndcg@20": 0.05484046739000875,
+        "recall@100": 0.32510937292854303,
+        "ndcg@100": 0.08977317270585529,
+        "user_macro": {
+          "recall@20": 0.14015473123318106,
+          "ndcg@20": 0.05727660158475624,
+          "recall@100": 0.3346494735156576,
+          "ndcg@100": 0.09287978114895915,
+          "mrr@100": 0.03929674234113941
+        },
+        "mrr@100": 0.03772160541944631
+      }
+    },
+    "random/test": {
+      "v2": {
+        "queries": 160735,
+        "users": 21299,
+        "recall@20": 0.003826173515413569,
+        "ndcg@20": 0.0012804140532123218,
+        "recall@100": 0.022297570535353223,
+        "ndcg@100": 0.004487267465154795,
+        "user_macro": {
+          "recall@20": 0.004377450389029142,
+          "ndcg@20": 0.0014716477525461326,
+          "recall@100": 0.024949428387570128,
+          "ndcg@100": 0.0050392573567247445,
+          "mrr@100": 0.0011078183206888507
+        },
+        "mrr@100": 0.0009714374081800102
+      },
+      "din": {
+        "queries": 160735,
+        "users": 21299,
+        "recall@20": 0.0051637788907207514,
+        "ndcg@20": 0.0018557501353775538,
+        "recall@100": 0.022297570535353223,
+        "ndcg@100": 0.004918719717475093,
+        "user_macro": {
+          "recall@20": 0.005679339438996519,
+          "ndcg@20": 0.0020640425567652206,
+          "recall@100": 0.024949428387570128,
+          "ndcg@100": 0.005481047243139679,
+          "mrr@100": 0.0015120392117076652
+        },
+        "mrr@100": 0.0013545308981713243
+      }
+    }
+  },
+  "calibration_logloss_deltas": {
+    "standard/test": {
+      "platt_standard_validation": -0.0012195229244346129,
+      "platt_random_validation": 0.1464499076999285
+    },
+    "random/test": {
+      "platt_standard_validation": 0.007263126877104287,
+      "platt_random_validation": -0.12970476791249913
+    }
+  },
+  "synthetic_known_values": {
+    "uniform": 0.3699208708799441,
+    "reward_softmax": 0.5508396879183143
+  },
+  "synthetic_config": {
+    "world_seed": 20261029,
+    "n_contexts": 4096,
+    "n_actions": 10,
+    "context_dim": 5,
+    "strengths": [
+      0.0,
+      1.5,
+      3.0
+    ],
+    "sample_sizes": [
+      1000,
+      5000,
+      20000
+    ],
+    "repeats": 40,
+    "clips": [
+      null,
+      5.0,
+      20.0
+    ],
+    "target_policies": [
+      "uniform",
+      "reward_softmax"
+    ],
+    "exploration": 0.05,
+    "reward_training_rows": 10000,
+    "coverage_rows": 5000,
+    "coverage_repeats": 40,
+    "coverage_bootstrap_repeats": 200,
+    "learning_rows": 10000,
+    "learning_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ]
+  },
+  "synthetic_weighted_learning": {
+    "unweighted": {
+      "seeds": 5,
+      "true_uniform_logloss_mean": 0.7368411636643047,
+      "sample_std": 0.008099778060169144,
+      "true_greedy_policy_value_mean": 0.34940419340696516
+    },
+    "ips": {
+      "seeds": 5,
+      "true_uniform_logloss_mean": 0.6320442107079478,
+      "sample_std": 0.0019901092173504513,
+      "true_greedy_policy_value_mean": 0.46543158339884066
+    },
+    "ips_clip5": {
+      "seeds": 5,
+      "true_uniform_logloss_mean": 0.6409978435116597,
+      "sample_std": 0.003395837547486474,
+      "true_greedy_policy_value_mean": 0.4775154449288344
+    }
+  },
+  "verification": {
+    "status": "PASS",
+    "synthetic": {
+      "status": "PASS",
+      "monte_carlo_rows_checked": 10800,
+      "aggregate_rows_recomputed": 1350,
+      "representative_estimators_and_bootstrap_recomputed": true,
+      "coverage_intervals_checked": 800,
+      "coverage_logs_replayed": 1,
+      "weighted_learning_true_risk_recomputed": true
+    },
+    "real": {
+      "status": "PASS",
+      "all_real_cohorts_calibration_and_uncertainty_recomputed": true,
+      "numeric_tolerance": {
+        "relative": 1e-08,
+        "absolute": 1e-10
+      },
+      "original_ranking_and_prediction_inputs_verified": true,
+      "no_real_propensity_fabricated": true
+    },
+    "component_fingerprints": {
+      "synthetic": "1ff58a87884241963464f9c38a1da1f26529c3717da109827d58d65b2b5af86d",
+      "real": "99cc36663b14c7c33a7ea9e2ff846e1c74568fcf4c178589ab0142be7dc18db7"
+    }
+  },
+  "output_directory": "experiments/exposure_evaluation",
+  "limits": [
+    "Single-action synthetic OPE, not Top20 slate or RL value",
+    "Real source differences and calibration are observational",
+    "Existing test sets have been viewed; no independent new-test claim"
+  ]
+}

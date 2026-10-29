@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "completed_components_reused_without_rewrite": true,
+  "component_file_sha256": {
+    "synthetic": "880b9edb8b8af8ee6a431d82dd6af1b29312df6ad77ced5fa1fb2abe76c3ac27",
+    "real": "2f79518f2bf055403d502f4ed0b3069e258e61015f2dc7c58f5fba4d447574bd"
+  }
+}

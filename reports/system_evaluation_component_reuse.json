@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "completed_evaluation_and_report_manifest_unchanged": true,
+  "sha256": {
+    "evaluation/component.json": "82db4779f79dbde11ef90c6ec24db923d375efc1cd3a4a80b17b22a3f9abfe91",
+    "report_delivery.json": "7907612a97810a84bf86042ae40f424cc45d842bef8410110a54168fafd1dd31"
+  }
+}
